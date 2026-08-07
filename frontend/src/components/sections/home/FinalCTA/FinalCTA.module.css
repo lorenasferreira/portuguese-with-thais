@@ -1,0 +1,162 @@
+.section {
+  position: relative;
+  overflow: hidden;
+
+  padding-block: clamp(6rem, 11vw, 10rem);
+
+  color: var(--color-text-light);
+  background-color: var(--color-primary-dark);
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 1px;
+  height: 100%;
+
+  background-color: rgba(246, 250, 248, 0.08);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 940px;
+}
+
+.eyebrow {
+  margin: 0 0 1.5rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(3.4rem, 7vw, 7.5rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.title span {
+  display: block;
+
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.description {
+  max-width: 680px;
+  margin: 2rem 0 0;
+
+  color: rgba(246, 250, 248, 0.72);
+
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.8;
+}
+
+.actions {
+  margin-top: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.primaryButton {
+  min-height: 54px;
+  padding-inline: 1.8rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-primary-dark);
+  background-color: var(--color-accent);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.primaryButton:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+.secondaryLink {
+  padding-bottom: 0.25rem;
+
+  color: var(--color-text-light);
+  border-bottom: 1px solid rgba(246, 250, 248, 0.5);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sideNote {
+  position: absolute;
+  right: var(--page-padding);
+  bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  color: rgba(246, 250, 248, 0.42);
+
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding-block: 5rem 6rem;
+  }
+
+  .section::before {
+    display: none;
+  }
+
+  .title {
+    font-size: clamp(3rem, 14vw, 4.7rem);
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primaryButton {
+    width: 100%;
+  }
+
+  .secondaryLink {
+    width: fit-content;
+  }
+
+  .sideNote {
+    right: auto;
+    left: var(--page-padding);
+  }
+}

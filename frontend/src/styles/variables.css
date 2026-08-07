@@ -1,0 +1,22 @@
+:root {
+  --color-primary: #0b2b26;
+  --color-primary-dark: #001f18;
+
+  --color-accent: #d4af37;
+  --color-accent-hover: #bd992e;
+
+  --color-background: #f6faf8;
+  --color-surface: #d9dedc;
+
+  --color-text: #18201e;
+  --color-text-light: #f6faf8;
+  --color-border: #d8dfdc;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", Arial, sans-serif;
+
+  --container-width: 1440px;
+  --page-padding: clamp(1.4rem, 4vw, 4rem);
+
+  --transition: 180ms ease;
+}

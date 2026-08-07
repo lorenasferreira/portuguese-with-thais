@@ -1,0 +1,133 @@
+.intro {
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
+}
+
+.container {
+  width: min(100%, var(--container-width));
+  min-height: 620px;
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 9rem) var(--page-padding);
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 6rem);
+}
+
+.originLabel {
+  align-self: stretch;
+  min-height: 190px;
+  padding-right: 1.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  border-right: 1px solid rgba(246, 250, 248, 0.28);
+
+  color: var(--color-accent);
+
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.originLabel span {
+  display: inline-block;
+}
+
+.originLabel span + span::before {
+  content: "/";
+  margin-bottom: 0.8rem;
+}
+
+.headingColumn {
+  max-width: 730px;
+}
+
+.title {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 5.4vw, 6rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.title span {
+  display: block;
+  margin-top: 0.2em;
+
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.textColumn {
+  max-width: 480px;
+  padding-top: 3.7rem;
+}
+
+.textColumn p {
+  margin: 0;
+
+  color: rgba(246, 250, 248, 0.8);
+
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  line-height: 1.85;
+}
+
+.textColumn p + p {
+  margin-top: 1.75rem;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: auto 1fr;
+  }
+
+  .textColumn {
+    grid-column: 2;
+    max-width: 650px;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    min-height: auto;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+.originLabel {
+  min-height: auto;
+  padding: 0 0 1rem;
+
+  justify-content: flex-start;
+
+  border-right: 0;
+  border-bottom: 1px solid rgba(246, 250, 248, 0.28);
+
+  writing-mode: initial;
+  transform: none;
+}
+
+  .title {
+    font-size: clamp(2.8rem, 13vw, 4.2rem);
+    line-height: 1.02;
+  }
+
+  .textColumn {
+    grid-column: auto;
+  }
+}

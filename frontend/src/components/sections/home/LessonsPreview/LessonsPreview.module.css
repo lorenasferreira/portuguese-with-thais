@@ -1,0 +1,64 @@
+.section {
+  padding-block: clamp(5rem, 9vw, 8rem);
+  background-color: var(--color-background);
+}
+
+.grid {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.footer {
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.allLessonsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.allLessonsLink::after {
+  content: "→";
+
+  transition: transform var(--transition);
+}
+
+.allLessonsLink:hover::after {
+  transform: translateX(6px);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-block: 4.5rem;
+  }
+
+  .grid {
+    margin-top: 2.5rem;
+    gap: 1.25rem;
+  }
+
+  .footer {
+    margin-top: 2.25rem;
+    justify-content: flex-start;
+  }
+}

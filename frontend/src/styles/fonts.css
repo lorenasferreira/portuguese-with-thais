@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/Inter[opsz,wght].ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../assets/fonts/playfair-display/PlayfairDisplay[wght].ttf")
+    format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../assets/fonts/playfair-display/PlayfairDisplay-Italic[wght].ttf")
+    format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
+}

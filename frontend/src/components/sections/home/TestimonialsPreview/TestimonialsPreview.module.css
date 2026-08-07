@@ -1,0 +1,268 @@
+.section {
+  padding-block: clamp(5rem, 8vw, 7rem);
+
+  color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+.header {
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heading {
+  max-width: 640px;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 4.5vw, 4.6rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.description {
+  max-width: 520px;
+  margin: 1rem 0 0;
+
+  color: rgba(24, 32, 30, 0.68);
+
+  line-height: 1.7;
+}
+
+.metrics {
+  margin: 0;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.metric {
+  min-width: 130px;
+  padding-inline: 1.5rem;
+
+  border-left: 1px solid var(--color-border);
+}
+
+.metric dd {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1;
+}
+
+.metric dd span {
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+}
+
+.metric dt {
+  margin-top: 0.45rem;
+
+  color: rgba(24, 32, 30, 0.58);
+
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+}
+
+.featured {
+  min-height: 360px;
+  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3.5rem) 2.5rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-right: 1px solid var(--color-border);
+}
+
+.featured blockquote {
+  max-width: 700px;
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-style: italic;
+  line-height: 1.28;
+}
+
+.secondaryList {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.secondary {
+  min-height: 180px;
+  padding: clamp(2rem, 4vw, 3rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.secondary + .secondary {
+  border-top: 1px solid var(--color-border);
+}
+
+.secondary blockquote {
+  margin: 0 0 2rem;
+
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.testimonialFooter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.testimonialFooter div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.testimonialFooter strong {
+  font-size: 0.68rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.testimonialFooter span {
+  color: rgba(24, 32, 30, 0.55);
+
+  font-size: 0.68rem;
+}
+
+.testimonialFooter a,
+.allStoriesLink {
+  color: var(--color-primary);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.testimonialFooter a {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.bottom {
+  padding-top: 2rem;
+
+  display: flex;
+  justify-content: flex-end;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.allStoriesLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.allStoriesLink::after {
+  content: "→";
+
+  transition: transform var(--transition);
+}
+
+.allStoriesLink:hover::after {
+  transform: translateX(5px);
+}
+
+@media (max-width: 900px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .metrics {
+    width: 100%;
+  }
+
+  .metric {
+    flex: 1;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .featured {
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-block: 4.5rem;
+  }
+
+  .metrics {
+    justify-content: space-between;
+  }
+
+  .metric {
+    min-width: 0;
+    padding-inline: 1rem;
+  }
+
+  .metric:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .featured {
+    min-height: auto;
+    padding-block: 2.5rem;
+  }
+
+  .secondary {
+    min-height: auto;
+    padding: 2.25rem 0;
+  }
+
+  .testimonialFooter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bottom {
+    justify-content: flex-start;
+  }
+}

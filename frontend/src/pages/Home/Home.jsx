@@ -1,10 +1,16 @@
-import styles from "./Home.module.css";
+import Header from "../../components/layout/Header/Header";
+import Hero from "../../components/sections/home/Hero/Hero";
+import IntroSection from "../../components/sections/home/IntroSection/IntroSection";
 
 function Home() {
   return (
-    <main className={styles.home}>
-      <h1>Portuguese with Thaís</h1>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <IntroSection />
+      </main>
+    </>
   );
 }
 

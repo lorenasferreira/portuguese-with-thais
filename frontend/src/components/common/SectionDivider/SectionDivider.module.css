@@ -1,0 +1,44 @@
+.divider {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.line {
+  height: 1px;
+  flex: 1;
+
+  background-color: currentColor;
+  opacity: 0.25;
+}
+
+.label {
+  flex-shrink: 0;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.dark {
+  color: var(--color-primary);
+}
+
+.light {
+  color: var(--color-text-light);
+}
+
+@media (max-width: 600px) {
+  .divider {
+    gap: 0.75rem;
+  }
+
+  .label {
+    max-width: 65%;
+    text-align: center;
+    line-height: 1.5;
+  }
+}
