@@ -26,7 +26,7 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <a href="/" className={styles.logo}>
-          Portuguese with Thaís
+          Portuguese <span>with</span> Thaís
         </a>
 
         <nav

@@ -1,7 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 
 import SectionContainer from "../../../common/SectionContainer/SectionContainer";
-import SectionHeading from "../../../common/SectionHeading/SectionHeading";
 
 import styles from "./BeyondClassroom.module.css";
 
@@ -17,46 +16,54 @@ function BeyondClassroom() {
     <section className={styles.section} id="beyond-classroom">
       <SectionContainer>
         <div className={styles.layout}>
-          <div
-            className={styles.imagePlaceholder}
-            role="img"
-            aria-label="Placeholder for Brazilian cultural imagery"
-          >
-            <span>Cultural Immersion</span>
+          <div className={styles.visual}>
+            <div
+              className={styles.imagePlaceholder}
+              role="img"
+              aria-label="Placeholder for Brazilian cultural imagery"
+            >
+              <span>Brazil lives between the lines.</span>
+            </div>
 
-            <div className={styles.imageLabel}>
-              <strong>São Paulo, BR.</strong>
-              <span>Where the journey begins</span>
+            <div className={styles.visualNote}>
+              <span>São Paulo</span>
+              <span>Culture / Language / Life</span>
             </div>
           </div>
 
           <div className={styles.content}>
-            <SectionHeading
-              eyebrow="Beyond the Classroom"
-              title="Portuguese is only the beginning."
-              description="Learning a language is also learning the people behind it. Every lesson invites you to discover Brazilian culture through music, literature, everyday conversations and the small details that make the language come alive."
-              maxWidth="620px"
-            />
+            <div className={styles.eyebrow}>
+              <span className={styles.eyebrowLine} />
+              <span>Beyond the Classroom</span>
+            </div>
 
-            <ol className={styles.topicList}>
+            <h2 className={styles.title}>
+              Portuguese is only
+              <span>the beginning.</span>
+            </h2>
+
+            <p className={styles.description}>
+              Learning a language is also learning the people behind it.
+              Discover Brazil through music, literature, everyday expressions
+              and the small details that make Portuguese come alive.
+            </p>
+
+            <ul className={styles.topicList}>
               {topics.map((topic, index) => (
-                <li key={topic} className={styles.topicItem}>
+                <li key={topic} className={styles.topic}>
                   <span className={styles.topicNumber}>
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <span className={styles.topicTitle}>{topic}</span>
+                  <span>{topic}</span>
 
-                  <FaArrowRight
-                    className={styles.topicIcon}
-                    aria-hidden="true"
-                  />
+                  <FaArrowRight aria-hidden="true" />
                 </li>
               ))}
-            </ol>
+            </ul>
 
             <a href="/the-brazilian-soul" className={styles.cta}>
-              Explore Brazilian Culture
+              Explore the Brazilian Soul
               <FaArrowRight aria-hidden="true" />
             </a>
           </div>

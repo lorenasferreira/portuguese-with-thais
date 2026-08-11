@@ -27,6 +27,11 @@
   white-space: nowrap;
 }
 
+.logo span {
+  font-style: italic;
+  font-weight: 400;
+}
+
 .navigation {
   display: flex;
   align-items: center;

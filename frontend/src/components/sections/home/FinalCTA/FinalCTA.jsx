@@ -10,8 +10,9 @@ function FinalCTA() {
           <p className={styles.eyebrow}>Ready when you are</p>
 
           <h2 className={styles.title}>
-            Ready to experience
-            <span>Brazilian Portuguese?</span>
+            <span className={styles.titleLead}>Ready to experience</span>
+
+            <span className={styles.titleLanguage}>Brazilian Portuguese?</span>
           </h2>
 
           <p className={styles.description}>
@@ -31,11 +32,7 @@ function FinalCTA() {
         </div>
 
         <div className={styles.sideNote}>
-          <span>São Paulo</span>
-          <span aria-hidden="true">/</span>
-          <span>Paris</span>
-          <span aria-hidden="true">/</span>
-          <span>Worldwide</span>
+          <span>Available Worldwide</span>
         </div>
       </SectionContainer>
     </section>

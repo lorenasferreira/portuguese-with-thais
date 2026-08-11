@@ -1,550 +1,107 @@
-# PORTUGUESE WITH THAÍS
+# Portuguese with Thaís — Roadmap
 
-## Status
+## Current Status
 
-# Estado Atual
+**Home MVP completed — August 11, 2026.**
 
-## Em andamento
+⏸️ Development paused until client payment and first review.
 
-Sprint 2
-
-Página Home
-
-Seção atual:
-
-Lessons Preview
-
-Último componente criado:
-
-SectionContainer
-
-Próximo componente:
-
-BeyondTheClassroomPreview
-
-Próxima decisão importante:
-
-Definir o Design System oficial.
----
-
-# Visão do Projeto
-
-Criar uma marca digital premium para a professora Thaís, posicionando o ensino de português como uma experiência cultural brasileira, e não apenas como aulas de idioma.
-
-O objetivo não é apenas vender aulas.
-
-É fazer o visitante desejar conhecer o Brasil através da língua portuguesa.
+The Home is ready for the first presentation.
 
 ---
 
-# Posicionamento
+# Phase 1 — Foundation ✅
 
-Portuguese Beyond Grammar.
-
-ou
-
-Discover Brazil Through Language.
-
-Toda decisão de design e conteúdo deve reforçar essa ideia.
-
-O equilíbrio do projeto será:
-
-❤️ emoção
-+
-🧠 clareza
-+
-🎯 conversão
+- [x] React + Vite setup
+- [x] GitHub repository
+- [x] Project structure
+- [x] Visual direction
+- [x] Local fonts
+- [x] Reusable components
+- [x] Initial Design System
 
 ---
 
-# Público
+# Phase 2 — Home ✅
 
-Adultos estrangeiros que desejam:
+- [x] Header
+- [x] Hero
+- [x] Intro / Manifesto
+- [x] Lessons Preview
+- [x] Beyond the Classroom
+- [x] Method Preview
+- [x] Testimonials Preview
+- [x] Final CTA
+- [x] Footer
+- [x] Scroll to Top
+- [x] Desktop refinement
+- [x] Tablet responsiveness
+- [x] Mobile responsiveness
 
-• aprender português
-• morar no Brasil
-• trabalhar com brasileiros
-• viajar
-• compreender melhor a cultura brasileira
-• ter uma experiência personalizada
-
----
-
-# Stack
-
-## Frontend
-
-- React 19
-- Vite
-- React Router DOM
-- CSS Modules
-- React Icons
-
-## Backend (Futuro)
-
-- Java
-- Spring Boot
-- Spring Data JPA
-- PostgreSQL
-
-## Deploy
-
-Frontend → Vercel
-
-Backend → Railway
-
-Banco → PostgreSQL
+**Milestone:** Home ready for client review.
 
 ---
 
-# Arquitetura
+# Phase 3 — Client Review
 
-portuguese-with-thais/
-
-frontend/
-
-backend/
-
-Monorepo.
-
-Git iniciado na raiz.
-
----
-
-# Convenções
-
-• Um componente = uma pasta
-
-• Um componente = um CSS Module
-
-• Fontes locais
-
-• Componentes reutilizáveis
-
-• Desktop First
-
-Desktop
-
-↓
-
-Tablet
-
-↓
-
-Mobile
+- [ ] Receive first payment
+- [ ] Present Home
+- [ ] Collect feedback
+- [ ] Confirm final content
+- [ ] Confirm photos
+- [ ] Confirm English-only scope
+- [ ] Confirm lesson formats
+- [ ] Confirm booking workflow
+- [ ] Confirm level test / quiz requirements
+- [ ] Apply approved Home changes
 
 ---
 
-# Design
+# Phase 4 — Internal Pages
 
-Inspirado em:
+- [ ] About
+- [ ] Lessons
+- [ ] Method
+- [ ] The Brazilian Soul
+- [ ] Testimonials
+- [ ] FAQ
+- [ ] Book a Lesson
 
-• Bora Portuguese
-
-Mas nunca copiar layouts.
-
-Apenas referências.
-
-Características:
-
-• Editorial
-
-• Elegante
-
-• Minimalista
-
-• Brasileiro contemporâneo
-
-Evitar:
-
-❌ verde e amarelo clichê
-
-❌ elementos turísticos
-
-❌ excesso de ilustrações
-
-Priorizar:
-
-✔ arquitetura
-
-✔ literatura
-
-✔ natureza
-
-✔ design brasileiro
-
-✔ textura
-
-✔ sofisticação
+Each Home preview should lead to its corresponding full page.
 
 ---
 
-# Estrutura do Site
+# Phase 5 — Final Integration
 
-Home
-
-About
-
-Lessons
-
-Method
-
-The Brazilian Soul
-
-Testimonials
-
-FAQ
-
-Book a Lesson
+- [ ] Final navigation and routes
+- [ ] Booking integration
+- [ ] Final external links
+- [ ] Final testimonials
+- [ ] Final social links
+- [ ] Replace remaining placeholder content
 
 ---
 
-# Estrutura da Home
+# Phase 6 — Launch
 
-Hero
-
-↓
-
-Manifesto
-
-↓
-
-Preview das aulas
-
-↓
-
-Preview do Método
-
-↓
-
-Preview da Brazilian Soul
-
-↓
-
-Testimonials
-
-↓
-
-CTA
-
-↓
-
-Footer
+- [ ] SEO
+- [ ] Accessibility review
+- [ ] Performance review
+- [ ] Final responsive QA
+- [ ] Production deployment
+- [ ] Custom domain
 
 ---
 
-# Página About
+# Next Step
 
-Objetivo:
+**STOP DEVELOPMENT HERE.**
 
-Apresentar a Thaís.
+When the project resumes:
 
-Conteúdo:
+1. Review the Home with Thaís
+2. Confirm remaining requirements
+3. Apply approved feedback
+4. Start the About page
 
-• história
-
-• trajetória
-
-• por que ensina
-
-• filosofia
-
-• valores
-
-• fotos
-
-• CTA
-
----
-
-# Página Lessons
-
-Objetivo:
-
-Mostrar os formatos das aulas.
-
-Conteúdo:
-
-• aulas particulares
-
-• grupos
-
-• conversação
-
-• calendário
-
-• preços (caso queira)
-
-• CTA
-
----
-
-# Página Method
-
-Mostrar como ela ensina.
-
-Não vender.
-
-Explicar.
-
-Conteúdo:
-
-• metodologia
-
-• cultura
-
-• personalização
-
-• exemplos
-
-• materiais
-
----
-
-# Página The Brazilian Soul
-
-Página editorial.
-
-Objetivo:
-
-Fazer o aluno explorar o Brasil.
-
-Possíveis conteúdos:
-
-• Literatura
-
-• Música
-
-• Playlist Spotify
-
-• Ukulele
-
-• Vídeos
-
-• Filmes
-
-• Expressões
-
-• Cultura
-
-• Gastronomia
-
-• Arquitetura
-
-• Café
-
-• Lugares
-
-• Curiosidades
-
-No futuro poderá funcionar como um mini blog.
-
----
-
-# Página Testimonials
-
-Histórias reais.
-
-Texto
-
-Fotos
-
-Vídeos (futuro)
-
----
-
-# FAQ
-
-Perguntas frequentes.
-
----
-
-# Booking
-
-Calendário
-
-Integração futura
-
----
-
-# Backend (Futuro)
-
-Contato
-
-Booking
-
-Painel Admin
-
-Depoimentos
-
-Blog
-
----
-
-# ROADMAP
-
-## Sprint 1
-
-03–04 Agosto
-
-✅ Projeto React
-
-✅ GitHub
-
-✅ Estrutura
-
-✅ Header
-
-✅ Hero
-
-✅ Intro
-
-✅ InfoCard
-
-✅ SectionHeading
-
-✅ SectionContainer
-
-✅ SectionDivider
-
-✅ Lessons Preview
-
-✅ Design System inicial
-
----
-
-## Sprint 2
-
-05–06 Agosto
-
-⬜ Beyond the Classroom Preview
-
-⬜ Method Preview
-
-⬜ Testimonials Preview
-
-⬜ Final CTA
-
-⬜ Footer
-
-⬜ Polish da Home
-
----
-
-## Sprint 3
-
-07–09 Agosto
-
-Página About
-
----
-
-## Sprint 4
-
-10–12 Agosto
-
-Página Lessons
-
----
-
-## Sprint 5
-
-13–15 Agosto
-
-Página Method
-
----
-
-## Sprint 6
-
-16–18 Agosto
-
-Página Brazilian Soul
-
----
-
-## Sprint 7
-
-19–20 Agosto
-
-Testimonials
-
-FAQ
-
-Booking
-
----
-
-## Sprint 8
-
-⬜ Aprovação da Thaís
-
-⬜ Ajustes finais
-
-⬜ Fotos reais
-
-⬜ Textos finais
-
-⬜ SEO
-
-⬜ Deploy
-
-⬜ Domínio
-
----
-
-# Futuro
-
-Blog
-
-Newsletter
-
-Área do aluno
-
-Painel Admin
-
-Sistema de agendamento próprio
-
-Pagamento online
-
-Integração com Google Calendar
-
-Integração Zoom
-
----
-
-# Dev Log
-
-## 03/08
-
-✅ Projeto criado.
-
-✅ GitHub.
-
-✅ Arquitetura.
-
-✅ Moodboard.
-
-✅ Hero.
-
----
-
-## 04/08
-
-✅ Intro.
-
-✅ Lessons Preview.
-
-✅ InfoCard.
-
-✅ SectionHeading.
-
-✅ SectionContainer.
-
-✅ SectionDivider.
-
-✅ Design System criado.
-
-Próximo passo:
-
-➡️ Beyond the Classroom Preview.
+Do not start new features before the first client review.

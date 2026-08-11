@@ -8,8 +8,8 @@ function IntroSection() {
           className={styles.originLabel}
           aria-label="Established in 2024, São Paulo"
         >
-          <span>EST. 2024 </span>
-          <span>SÃO PAULO</span>
+          <span>EST. 2024</span>
+          <span> SÃO PAULO</span>
         </div>
         <div className={styles.headingColumn}>
           <h2 className={styles.title}>

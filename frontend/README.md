@@ -1,16 +1,109 @@
-# React + Vite
+# Portuguese with Thaís
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website developed for **Portuguese with Thaís**, a Brazilian Portuguese teacher focused on language, culture and real-world communication.
 
-Currently, two official plugins are available:
+## About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project aims to position Brazilian Portuguese as more than a language to study — as a cultural experience.
 
-## React Compiler
+The website combines an editorial visual identity with a clear user journey designed to introduce Thaís, her teaching approach and her lessons.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Current Status
 
-## Expanding the ESLint configuration
+🚧 In development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Completed
+
+- Project architecture
+- Visual identity
+- Design system
+- Responsive Home
+- Hero
+- Brand introduction
+- Lessons Preview
+- Method Preview
+- Beyond the Classroom
+- Testimonials Preview
+- Final CTA
+- Footer
+
+### Next
+
+- About
+- Lessons
+- Method
+- The Brazilian Soul
+- Testimonials
+- FAQ
+- Booking flow
+- Final content and photography
+- SEO
+- Accessibility review
+- Performance review
+
+## Planned Pages
+
+- Home
+- About
+- Lessons
+- Method
+- The Brazilian Soul
+- Testimonials
+- FAQ
+- Book a Lesson
+
+The Home works as an introduction to the brand and learning experience.
+
+Navigation items will lead to dedicated pages rather than functioning only as anchors to Home sections.
+
+## Tech Stack
+
+### Frontend
+
+- React 19
+- Vite
+- React Router DOM
+- CSS Modules
+- React Icons
+
+### Planned Backend
+
+Backend requirements will be defined after the booking and payment workflow is confirmed with the client.
+
+Potential technologies:
+
+- Java
+- Spring Boot
+- Spring Data JPA
+- PostgreSQL
+
+## Deployment
+
+Frontend deployment: Vercel
+
+## Design Direction
+
+- Editorial
+- Contemporary
+- Minimal
+- Warm
+- Brazilian without visual clichés
+- Culture-led rather than tourism-led
+
+## Development
+
+Install dependencies:
+
+npm install
+
+Start development server:
+
+npm run dev
+
+Create production build:
+
+npm run build
+
+## Author
+
+Designed and developed by Lorena Ferreira.

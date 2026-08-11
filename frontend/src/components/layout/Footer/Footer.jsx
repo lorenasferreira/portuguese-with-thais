@@ -16,7 +16,7 @@ const navigationLinks = [
 const socialLinks = [
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/portuguesewiththais/",
     icon: <FaInstagram aria-hidden="true" />,
   },
   {
@@ -46,10 +46,6 @@ function Footer() {
             <p className={styles.tagline}>
               Brazilian Portuguese,
               <span>beyond grammar.</span>
-            </p>
-
-            <p className={styles.location}>
-              Made in São Paulo. Shared from Paris.
             </p>
           </div>
 

@@ -19,8 +19,8 @@
 
 .logo {
   font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
-  font-weight: 600;
+  font-size: clamp(0.9rem, 1vw, 0.9rem);
+  font-weight: 400;
 }
 
 .tagline {
@@ -37,17 +37,6 @@
 
   color: var(--color-accent);
   font-style: italic;
-}
-
-.location {
-  margin: 2rem 0 0;
-
-  color: rgba(246, 250, 248, 0.55);
-
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .navigationArea {

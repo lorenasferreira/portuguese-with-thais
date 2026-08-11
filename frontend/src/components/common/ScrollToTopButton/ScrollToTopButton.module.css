@@ -1,0 +1,42 @@
+.button {
+  position: fixed;
+  right: clamp(1.25rem, 3vw, 2.5rem);
+  bottom: clamp(1.25rem, 3vw, 2.5rem);
+  z-index: 50;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
+  border: 1px solid rgba(246, 250, 248, 0.2);
+
+  font-size: 1.15rem;
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity var(--transition),
+    visibility var(--transition),
+    transform var(--transition),
+    background-color var(--transition);
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+}

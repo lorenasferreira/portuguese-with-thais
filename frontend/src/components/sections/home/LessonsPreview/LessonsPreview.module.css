@@ -1,49 +1,179 @@
 .section {
-  padding-block: clamp(5rem, 9vw, 8rem);
+  padding-block: clamp(5.5rem, 9vw, 8rem);
+
+  color: var(--color-primary);
   background-color: var(--color-background);
 }
 
-.grid {
-  margin-top: clamp(3rem, 6vw, 4.5rem);
-
+.top {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: minmax(150px, 0.4fr) minmax(0, 1.6fr);
+  gap: clamp(2rem, 6vw, 6rem);
 }
 
-.footer {
-  margin-top: 3rem;
+.sectionLabel {
+  padding-top: 0.45rem;
 
   display: flex;
-  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+
+  color: var(--color-accent-subtle, #a88422);
+
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
+.labelLine {
+  width: 42px;
+  height: 1px;
+  margin-top: 0.5rem;
+
+  background-color: currentColor;
+  opacity: 0.45;
+}
+
+.intro {
+  max-width: 760px;
+}
+
+.intro h2 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.intro h2 span {
+  display: block;
+  font-style: italic;
+}
+
+.intro > p {
+  max-width: 570px;
+  margin: 1.5rem 0 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  line-height: 1.75;
+}
+
+.experiences {
+  margin-top: clamp(4rem, 7vw, 6rem);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.experience {
+  min-height: 190px;
+  padding-block: clamp(2rem, 4vw, 3rem);
+
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    padding-inline var(--transition),
+    background-color var(--transition);
+}
+
+.experience:hover {
+  padding-inline: 1rem;
+  background-color: rgba(8, 43, 38, 0.025);
+}
+
+.number {
+  color: var(--color-accent);
+
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-style: italic;
+  line-height: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(280px, 1.25fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.content h3 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3vw, 3rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.content p {
+  max-width: 520px;
+  margin: 0;
+
+  color: var(--color-text);
+
+  line-height: 1.75;
+}
+
+.link,
 .allLessonsLink {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.8rem;
 
   color: var(--color-primary);
 
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.allLessonsLink::after {
-  content: "→";
-
+.link svg,
+.allLessonsLink svg {
   transition: transform var(--transition);
 }
 
-.allLessonsLink:hover::after {
-  transform: translateX(6px);
+.link:hover svg,
+.allLessonsLink:hover svg {
+  transform: translateX(5px);
 }
 
-@media (max-width: 1000px) {
-  .grid {
+.footer {
+  padding-top: 2rem;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .top {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .experience {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .link {
+    grid-column: 2;
   }
 }
 
@@ -52,13 +182,45 @@
     padding-block: 4.5rem;
   }
 
-  .grid {
-    margin-top: 2.5rem;
-    gap: 1.25rem;
+  .labelLine {
+    width: 28px;
+  }
+
+  .intro h2 {
+    font-size: clamp(2.4rem, 11vw, 3.5rem);
+  }
+
+  .experiences {
+    margin-top: 3rem;
+  }
+
+  .experience {
+    min-height: auto;
+    padding-block: 2.5rem;
+
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .content {
+    gap: 1rem;
+  }
+
+  .link {
+    grid-column: auto;
   }
 
   .footer {
-    margin-top: 2.25rem;
+    width: 100%;
     justify-content: flex-start;
+  }
+
+  .allLessonsLink {
+    width: 100%;
+    justify-content: space-between;
   }
 }

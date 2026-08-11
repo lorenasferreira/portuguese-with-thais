@@ -7,6 +7,7 @@ import TestimonialsPreview from "./components/sections/home/TestimonialsPreview/
 import MethodPreview from "./components/sections/home/MethodPreview/MethodPreview";
 import FinalCTA from "./components/sections/home/FinalCTA/FinalCTA";
 import Footer from "./components/layout/Footer/Footer";
+import ScrollToTopButton from "./components/common/ScrollToTopButton/ScrollToTopButton";
 
 function App() {
   return (
@@ -22,8 +23,8 @@ function App() {
         <MethodPreview />
         <FinalCTA />
       </main>
-      
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

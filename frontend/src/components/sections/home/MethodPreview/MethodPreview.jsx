@@ -1,67 +1,79 @@
+import { FaArrowRight } from "react-icons/fa";
+
 import SectionContainer from "../../../common/SectionContainer/SectionContainer";
-import SectionHeading from "../../../common/SectionHeading/SectionHeading";
+
+import methodStudy from "../../../../assets/images/method/method-study.jpg";
 
 import styles from "./MethodPreview.module.css";
-
-const methodPillars = [
-  {
-    number: "01",
-    title: "Strong Foundations",
-    description:
-      "Clear grammar and language structure explained through practical examples you can actually use.",
-  },
-  {
-    number: "02",
-    title: "Real Brazilian Portuguese",
-    description:
-      "Natural vocabulary, pronunciation, expressions and conversations from everyday life in Brazil.",
-  },
-  {
-    number: "03",
-    title: "Lessons Built Around You",
-    description:
-      "Personalized sessions shaped around your goals, pace, interests and learning style.",
-  },
-];
 
 function MethodPreview() {
   return (
     <section className={styles.section} id="method">
       <SectionContainer>
         <div className={styles.header}>
-          <SectionHeading
-            eyebrow="The Method"
-            title="Structure gives you confidence. Culture makes the language come alive."
-            description="Thaís combines academic knowledge, real conversation and cultural context to create lessons that feel clear, personal and useful."
-            maxWidth="820px"
-          />
+          <span>Method & Approach</span>
 
-          <a href="/method" className={styles.headerLink}>
+          <em className={styles.subtitle}>Designed around real life</em>
+        </div>
+
+        <div className={styles.topGrid}>
+          <article className={styles.mainCard}>
+            <span className={styles.accentSquare} />
+
+            <h3>Learning built around you.</h3>
+
+            <p>
+              Every lesson is shaped around your goals, pace and interests.
+              Language structure becomes practical when it connects with the
+              situations you actually want to navigate.
+            </p>
+
+            <ul>
+              <li>Personalized learning</li>
+              <li>Flexible progression</li>
+              <li>Real-world Portuguese</li>
+            </ul>
+          </article>
+
+          <article className={styles.highlightCard}>
+            <span>Beyond Grammar</span>
+
+            <h3>
+              Culture
+              <br />
+              &amp; Context
+            </h3>
+
+            <p>
+              Music, literature, expressions and everyday Brazilian life bring
+              meaning to the language beyond the textbook.
+            </p>
+          </article>
+        </div>
+
+        <div className={styles.visualRow}>
+          <article className={styles.smallCard}>
+            <span>Conversation Practice</span>
+
+            <h3>Confidence grows through connection.</h3>
+
+            <p>
+              Speak first. Refine as you go. Portuguese becomes natural through
+              meaningful interaction.
+            </p>
+          </article>
+
+          <div className={styles.imageWrapper}>
+            <img src={methodStudy} alt="Student studying in a quiet library" />
+          </div>
+        </div>
+
+        <div className={styles.footer}>
+          <a href="/method">
             Discover the Method
+            <FaArrowRight aria-hidden="true" />
           </a>
         </div>
-
-        <div className={styles.grid}>
-          {methodPillars.map((pillar, index) => (
-            <article
-              key={pillar.number}
-              className={`${styles.pillar} ${
-                index === 1 ? styles.pillarOffset : ""
-              }`}
-            >
-              <span className={styles.number}>{pillar.number}</span>
-
-              <div className={styles.pillarContent}>
-                <h3>{pillar.title}</h3>
-                <p>{pillar.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <a href="/method" className={styles.mobileLink}>
-          Discover the Method
-        </a>
       </SectionContainer>
     </section>
   );
