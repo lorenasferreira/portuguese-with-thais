@@ -43,6 +43,33 @@ function MusicSection() {
             ))}
           </div>
         </div>
+
+        <div className={styles.playlist}>
+          <div className={styles.playlistIntro}>
+            <span>Thais&apos; Brazilian Playlist</span>
+
+            <h3>
+              Keep listening
+              <span>beyond the lesson.</span>
+            </h3>
+
+            <p>
+              A selection of Brazilian music to explore pronunciation, rhythm,
+              vocabulary and culture through the songs Thais recommends.
+            </p>
+          </div>
+
+          <div className={styles.spotify}>
+            <iframe
+              src="https://open.spotify.com/embed/playlist/6yYlhZC2IguO7nJYgJGotf"
+              title="Thais' Brazilian playlist"
+              width="100%"
+              height="352"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </SectionContainer>
     </section>
   );

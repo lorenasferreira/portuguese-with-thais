@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 import styles from "./Header.module.css";
 
@@ -86,9 +87,9 @@ function Header() {
       ref={headerRef}
     >
       <div className={styles.container}>
-        <a href="/" className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           Portuguese <span>with</span> Thais
-        </a>
+        </Link>
 
         <nav
           className={`${styles.navigation} ${
@@ -97,18 +98,18 @@ function Header() {
           aria-label="Main navigation"
         >
           {navigationLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={closeMenu}>
+            <Link key={link.href} to={link.href} onClick={closeMenu}>
               {link.label}
-            </a>
+            </Link>
           ))}
 
-          <a
-            href="/book-a-lesson"
+          <Link
+            to="/book-a-lesson"
             className={styles.bookingButton}
             onClick={closeMenu}
           >
             Book a Lesson
-          </a>
+          </Link>
         </nav>
 
         <button
