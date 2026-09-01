@@ -33,7 +33,7 @@ function Hero() {
       <div
         className={styles.imagePlaceholder}
         role="img"
-        aria-label="Placeholder for a portrait of Thaís"
+        aria-label="Placeholder for a portrait of Thais"
       >
         <span>Photo placeholder</span>
       </div>

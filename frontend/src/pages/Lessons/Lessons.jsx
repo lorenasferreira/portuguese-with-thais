@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaCheck } from "react-icons/fa";
+import LevelQuiz from "./sections/LevelQuiz/LevelQuiz";
 
 import SectionContainer from "../../components/common/SectionContainer/SectionContainer";
 
@@ -176,7 +177,7 @@ function Lessons() {
           </div>
         </SectionContainer>
       </section>
-
+      <LevelQuiz />
       <section className={styles.pricing}>
         <SectionContainer>
           <div className={styles.pricingHeader}>

@@ -1,4 +1,5 @@
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import SectionContainer from "../../common/SectionContainer/SectionContainer";
 
@@ -33,9 +34,9 @@ function Footer() {
       <SectionContainer>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <a href="/" className={styles.logo}>
+            <Link to="/" className={styles.logo}>
               Portuguese with Thais
-            </a>
+            </Link>
 
             <p className={styles.tagline}>
               Brazilian Portuguese,
@@ -50,7 +51,7 @@ function Footer() {
               <ul className={styles.linkList}>
                 {navigationLinks.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href}>{link.label}</a>
+                    <Link to={link.href}>{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -59,9 +60,9 @@ function Footer() {
             <div>
               <p className={styles.columnTitle}>Start learning</p>
 
-              <a href="/book-a-lesson" className={styles.bookingLink}>
+              <Link to="/book-a-lesson" className={styles.bookingLink}>
                 Book a lesson
-              </a>
+              </Link>
 
               <div className={styles.socials}>
                 {socialLinks.map((social) => (
