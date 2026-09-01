@@ -4,16 +4,19 @@ import { FiMenu, FiX } from "react-icons/fi";
 import styles from "./Header.module.css";
 
 const navigationLinks = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Lessons", href: "/lessons" },
   { label: "How It Works", href: "/method" },
   { label: "The Brazilian Soul", href: "/the-brazilian-soul" },
-  { label: "Testimonials", href: "/testimonials" },
 ];
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
   const headerRef = useRef(null);
+  const scrollTimeoutRef = useRef(null);
 
   function toggleMenu() {
     setIsMenuOpen((currentValue) => !currentValue);
@@ -41,8 +44,47 @@ function Header() {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    function handleScroll() {
+      const isAtTop = window.scrollY <= 10;
+
+      setIsHeaderVisible(true);
+
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+
+      if (!isAtTop && !isMenuOpen) {
+        scrollTimeoutRef.current = setTimeout(() => {
+          setIsHeaderVisible(false);
+        }, 900);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsHeaderVisible(true);
+    }
+  }, [isMenuOpen]);
+
   return (
-    <header className={styles.header} ref={headerRef}>
+    <header
+      className={`${styles.header} ${
+        isHeaderVisible ? styles.headerVisible : styles.headerHidden
+      }`}
+      ref={headerRef}
+    >
       <div className={styles.container}>
         <a href="/" className={styles.logo}>
           Portuguese <span>with</span> Thais

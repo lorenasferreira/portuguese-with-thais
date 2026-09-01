@@ -1,10 +1,28 @@
 .header {
-  position: relative;
-  z-index: 20;
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
 
   width: 100%;
+
   border-bottom: 1px solid var(--color-border);
+
   background-color: var(--color-background);
+
+  transition:
+    transform 300ms ease,
+    opacity 300ms ease;
+}
+
+.headerVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headerHidden {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
 .container {
@@ -23,7 +41,9 @@
   font-family: var(--font-heading);
   font-size: clamp(1.2rem, 2vw, 1.75rem);
   font-weight: 600;
+
   color: var(--color-primary);
+
   white-space: nowrap;
 }
 
@@ -43,11 +63,13 @@
 
 .navigation > a:not(.bookingButton) {
   position: relative;
+
   padding: 0.5rem 0;
 }
 
 .navigation > a:not(.bookingButton)::after {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: 0;
@@ -56,6 +78,7 @@
   height: 1px;
 
   background-color: var(--color-primary);
+
   transition: width var(--transition);
 }
 
@@ -81,6 +104,7 @@
 
 .bookingButton:hover {
   background-color: var(--color-primary-dark);
+
   transform: translateY(-1px);
 }
 
@@ -88,10 +112,12 @@
   display: none;
 
   padding: 0;
+
   color: var(--color-primary);
   background: transparent;
 
   font-size: 1.6rem;
+
   cursor: pointer;
 }
 
@@ -120,6 +146,7 @@
     gap: 1.25rem;
 
     background-color: var(--color-background);
+
     border-bottom: 1px solid var(--color-border);
   }
 
@@ -129,6 +156,7 @@
 
   .bookingButton {
     width: 100%;
+
     text-align: center;
   }
 }

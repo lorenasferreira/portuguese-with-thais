@@ -23,7 +23,7 @@
   width: 42px;
   height: 1px;
 
-  background-color: var(--color-accent-subtle, #a88422);
+  background-color: var(--color-accent);
 }
 
 .heading p {
@@ -33,7 +33,6 @@
 
   font-family: var(--font-body);
   font-size: clamp(1.35rem, 2vw, 1.8rem);
-  font-style: normal;
   font-weight: 500;
 }
 
@@ -41,126 +40,182 @@
   font-family: var(--font-heading);
   font-size: 1.08em;
   font-style: italic;
+  font-weight: 400;
 }
 
-.reviews {
-  margin-top: clamp(3rem, 6vw, 5rem);
-
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  align-items: center;
-  gap: clamp(3rem, 7vw, 7rem);
-}
-
-.featured {
+.carousel {
   position: relative;
 
-  padding-left: clamp(1.5rem, 3vw, 3rem);
+  max-width: 1100px;
+
+  margin: clamp(4rem, 7vw, 6rem) auto 0;
+  padding: clamp(1rem, 3vw, 2rem) clamp(1.5rem, 5vw, 5rem);
 }
 
 .quoteMark {
   position: absolute;
-  top: -1.3rem;
-  left: -0.25rem;
+  top: -2rem;
+  left: 0;
 
-  color: rgba(212, 175, 55, 0.28);
+  color: color-mix(in srgb, var(--color-accent) 28%, transparent);
 
   font-family: var(--font-heading);
-  font-size: 5rem;
+  font-size: clamp(5rem, 10vw, 9rem);
   line-height: 1;
 }
 
-.featured blockquote {
-  max-width: 760px;
+.review {
+  min-height: 310px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  animation: revealReview 500ms ease;
+}
+
+.review blockquote {
+  max-width: 900px;
   margin: 0;
 
   font-family: var(--font-body);
-  font-size: clamp(1.45rem, 2vw, 2rem);
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.7;
+  font-size: clamp(1.5rem, 2.5vw, 2.35rem);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.65;
 }
 
-.featured footer,
-.secondary footer {
+.review footer {
   display: flex;
   align-items: center;
   gap: 0.65rem;
 
-  font-size: 0.65rem;
+  margin-top: 2rem;
+
+  font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  justify-content: center;
 }
 
-.featured footer {
-  margin-top: 1.75rem;
-}
-
-.featured footer strong,
-.secondary footer strong {
+.review footer strong {
   color: var(--color-primary);
 }
 
-.featured footer span,
-.secondary footer span {
-  color: var(--color-accent-subtle, #a88422);
+.review footer span {
+  color: var(--color-accent);
 }
 
-.featured footer span::before,
-.secondary footer span::before {
+.review footer span::before {
   content: "—";
+
   margin-right: 0.65rem;
 }
 
-.secondaryColumn {
-  border-left: 1px solid var(--color-border);
-}
+.controls {
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 
-.secondary {
-  padding: clamp(2rem, 3vw, 2.75rem);
-}
+  margin-top: clamp(2rem, 5vw, 4rem);
+  padding-top: 1.5rem;
 
-.secondary + .secondary {
   border-top: 1px solid var(--color-border);
 }
 
-.secondary blockquote {
-  margin: 1.4rem 0 0;
-
-  color: rgba(8, 43, 38, 0.76);
-
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 1.25vw, 1.12rem);
-  font-style: italic;
-  line-height: 1.75;
-}
-
-.bottom {
-  margin-top: 3rem;
+.dots {
+  grid-column: 2;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
 }
 
-.bottom a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
+.dot {
+  width: 26px;
+  height: 2px;
+  padding: 0;
+
+  border: 0;
+
+  background-color: var(--color-border);
+
+  cursor: pointer;
+
+  transition:
+    width var(--transition),
+    background-color var(--transition);
+}
+
+.activeDot {
+  width: 48px;
+
+  background-color: var(--color-accent);
+}
+
+.arrows {
+  display: contents;
+}
+
+.arrows button:first-of-type {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.arrows > span {
+  display: none;
+}
+
+.arrows button:last-of-type {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.arrows button {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid var(--color-border);
 
   color: var(--color-primary);
+  background: transparent;
 
-  font-size: 0.68rem;
+  cursor: pointer;
+
+  transition:
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.arrows button:hover {
+  border-color: var(--color-accent);
+
+  transform: translateY(-2px);
+}
+
+.arrows svg {
+  font-size: 0.7rem;
+}
+
+.arrows span {
+  min-width: 52px;
+
+  text-align: center;
+
+  font-size: 0.65rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.bottom svg {
-  transition: transform var(--transition);
-}
-
-.bottom a:hover svg {
-  transform: translateX(5px);
+  letter-spacing: 0.08em;
 }
 
 .decorations {
@@ -175,6 +230,7 @@
   position: absolute;
 
   color: var(--color-accent);
+
   opacity: 0.075;
 
   stroke-width: 0.8;
@@ -216,19 +272,30 @@
   transform: rotate(10deg);
 }
 
+@keyframes revealReview {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 800px) {
-  .reviews {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  .carousel {
+    padding-inline: 2rem;
   }
 
-  .secondaryColumn {
-    border-left: 0;
-    border-top: 1px solid var(--color-border);
+  .review {
+    min-height: 330px;
   }
 
-  .secondary {
-    padding-inline: 0;
+  .coffeeDecor,
+  .penDecor {
+    display: none;
   }
 
   .bookDecor {
@@ -238,14 +305,6 @@
     left: auto;
     right: -30px;
     top: 15%;
-  }
-
-  .coffeeDecor {
-    display: none;
-  }
-
-  .penDecor {
-    display: none;
   }
 
   .leafDecor {
@@ -262,10 +321,6 @@
     padding-block: 4.5rem;
   }
 
-  .heading {
-    align-items: center;
-  }
-
   .headingLine {
     width: 28px;
   }
@@ -274,57 +329,60 @@
     font-size: 1.45rem;
   }
 
-  .reviews {
-    display: block;
-    margin-top: 3rem;
-  }
-
-  .featured {
-    padding: 0 0 2.75rem 1.5rem;
+  .carousel {
+    margin-top: 3.5rem;
+    padding-inline: 1.5rem;
   }
 
   .quoteMark {
-    top: -0.8rem;
-    left: -0.2rem;
+    top: -1.7rem;
+    left: 0;
 
-    font-size: 3.2rem;
+    font-size: 5rem;
   }
 
-  .featured blockquote {
-    font-size: 1.35rem;
-    line-height: 1.75;
+  .review {
+    min-height: 360px;
   }
 
-  .featured footer {
+  .review blockquote {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+    line-height: 1.55;
+  }
+
+  .review footer {
+    flex-wrap: wrap;
+
     margin-top: 1.5rem;
   }
 
-  .secondaryColumn {
-    margin-top: 0;
-
-    border-top: 1px solid var(--color-border);
+  .controls {
+    align-items: flex-end;
   }
 
-  .secondary {
-    padding: 2.25rem 0;
-     padding-left: clamp(2rem, 5vw, 5rem);
+  .dots {
+    gap: 0.45rem;
   }
 
-  .secondary blockquote {
-    margin-top: 1.25rem;
-
-    font-size: 1rem;
-    line-height: 1.8;
+  .dot {
+    width: 16px;
   }
 
-  .bottom {
-    margin-top: 1rem;
-
-    justify-content: flex-end;
+  .activeDot {
+    width: 30px;
   }
 
-  .bottom a {
-    width: auto;
+  .arrows {
+    gap: 0.65rem;
+  }
+
+  .arrows button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .arrows span {
+    display: none;
   }
 
   .bookDecor {

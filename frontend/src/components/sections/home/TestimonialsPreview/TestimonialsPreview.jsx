@@ -1,4 +1,5 @@
-import { FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import {
   PiBookOpenTextThin,
   PiCoffeeThin,
@@ -35,7 +36,27 @@ const testimonials = [
 ];
 
 function TestimonialsPreview() {
-  const [featured, ...secondary] = testimonials;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const showPrevious = () => {
+    setActiveIndex((current) =>
+      current === 0 ? testimonials.length - 1 : current - 1,
+    );
+  };
+
+  const showNext = () => {
+    setActiveIndex((current) =>
+      current === testimonials.length - 1 ? 0 : current + 1,
+    );
+  };
+
+  useEffect(() => {
+    const interval = window.setInterval(showNext, 6500);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const activeTestimonial = testimonials[activeIndex];
 
   return (
     <section className={styles.section} id="testimonials">
@@ -50,44 +71,69 @@ function TestimonialsPreview() {
         <div className={styles.inner}>
           <div className={styles.heading}>
             <span className={styles.headingLine} />
+
             <p>
               In Their <span>Own</span> Words
             </p>
           </div>
 
-          <div className={styles.reviews}>
-            <article className={styles.featured}>
-              <span className={styles.quoteMark} aria-hidden="true">
-                “
-              </span>
+          <div className={styles.carousel}>
+            <span className={styles.quoteMark} aria-hidden="true">
+              “
+            </span>
 
-              <blockquote>{featured.quote}</blockquote>
+            <div
+              className={styles.review}
+              key={activeTestimonial.id}
+              aria-live="polite"
+            >
+              <blockquote>{activeTestimonial.quote}</blockquote>
 
               <footer>
-                <strong>{featured.author}</strong>
-                <span>{featured.country}</span>
+                <strong>{activeTestimonial.author}</strong>
+                <span>{activeTestimonial.country}</span>
               </footer>
-            </article>
-
-            <div className={styles.secondaryColumn}>
-              {secondary.map((testimonial) => (
-                <article key={testimonial.id} className={styles.secondary}>
-                  <footer>
-                    <strong>{testimonial.author}</strong>
-                    <span>{testimonial.country}</span>
-                  </footer>
-
-                  <blockquote>“{testimonial.quote}”</blockquote>
-                </article>
-              ))}
             </div>
-          </div>
 
-          <div className={styles.bottom}>
-            <a href="/testimonials">
-              Read all student stories
-              <FaArrowRight aria-hidden="true" />
-            </a>
+            <div className={styles.controls}>
+              <div className={styles.dots}>
+                {testimonials.map((testimonial, index) => (
+                  <button
+                    key={testimonial.id}
+                    type="button"
+                    className={`${styles.dot} ${
+                      index === activeIndex ? styles.activeDot : ""
+                    }`}
+                    onClick={() => setActiveIndex(index)}
+                    aria-label={`Show review from ${testimonial.author}`}
+                    aria-current={index === activeIndex ? "true" : undefined}
+                  />
+                ))}
+              </div>
+
+              <div className={styles.arrows}>
+                <button
+                  type="button"
+                  onClick={showPrevious}
+                  aria-label="Previous testimonial"
+                >
+                  <FaArrowLeft aria-hidden="true" />
+                </button>
+
+                <span>
+                  {String(activeIndex + 1).padStart(2, "0")} /{" "}
+                  {String(testimonials.length).padStart(2, "0")}
+                </span>
+
+                <button
+                  type="button"
+                  onClick={showNext}
+                  aria-label="Next testimonial"
+                >
+                  <FaArrowRight aria-hidden="true" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </SectionContainer>
