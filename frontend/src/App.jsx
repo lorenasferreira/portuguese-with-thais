@@ -6,6 +6,7 @@ import ScrollToTopButton from "./components/common/ScrollToTopButton/ScrollToTop
 import About from "./pages/About/About";
 import Lessons from "./pages/Lessons/Lessons";
 import Method from "./pages/Method/Method";
+import BrazilianSoul from "./pages/BrazilianSoul/BrazilianSoul";
 
 import Home from "./pages/Home/Home";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/method" element={<Method />} />
+        <Route path="/the-brazilian-soul" element={<BrazilianSoul />} />
       </Routes>
 
       <Footer />

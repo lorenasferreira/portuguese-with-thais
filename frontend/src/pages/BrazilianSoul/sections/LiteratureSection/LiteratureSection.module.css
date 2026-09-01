@@ -12,6 +12,7 @@
 
 .label {
   display: block;
+
   margin-bottom: 1.25rem;
 
   font-size: 0.7rem;
@@ -45,59 +46,51 @@
   line-height: 1.8;
 }
 
-.gallery {
+.library {
+  border-top: 1px solid var(--color-border);
+}
+
+.book {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: clamp(2rem, 4vw, 4rem);
-}
-
-.largeVisual img,
-.smallVisual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.largeVisual {
-  min-height: 650px;
-}
-
-.smallVisual {
-  min-height: 320px;
-}
-
-.side {
-  display: flex;
-  flex-direction: column;
-}
-
-.side blockquote {
-  margin: 2rem 0;
-
-  font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
-  font-style: italic;
-  line-height: 1.35;
-}
-
-.side a {
-  display: inline-flex;
+  grid-template-columns: 50px 120px 0.9fr 1.1fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
   align-items: center;
-  gap: 0.7rem;
-  align-self: flex-start;
 
-  margin-top: auto;
+  padding: clamp(2rem, 4vw, 3rem) 0;
 
-  font-size: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.number {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.level {
+  font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
-  transition: transform var(--transition);
 }
 
-.side a:hover {
-  transform: translateX(4px);
+.book h3 {
+  margin: 0 0 0.35rem;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+  font-weight: 400;
+}
+
+.author {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.book p {
+  max-width: 570px;
+  margin: 0;
+
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {
@@ -105,8 +98,7 @@
     padding: 5rem 0;
   }
 
-  .header,
-  .gallery {
+  .header {
     grid-template-columns: 1fr;
   }
 
@@ -115,15 +107,14 @@
     margin-left: 0.2em;
   }
 
-  .largeVisual {
-    min-height: 430px;
+  .book {
+    grid-template-columns: 35px 1fr;
+    gap: 0.8rem 1.5rem;
   }
 
-  .smallVisual {
-    min-height: 320px;
-  }
-
-  .side a {
-    margin-top: 1rem;
+  .level,
+  .book > div,
+  .book p {
+    grid-column: 2;
   }
 }

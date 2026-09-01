@@ -1,17 +1,20 @@
 .hero {
-  padding: clamp(7rem, 11vw, 10rem) 0 clamp(6rem, 9vw, 9rem);
+  padding: clamp(7rem, 11vw, 10rem) 0 clamp(6rem, 10vw, 9rem);
 }
 
-.top {
-  max-width: 1050px;
-  margin: 0 auto clamp(4rem, 8vw, 7rem);
+.header {
+  display: grid;
+  grid-template-columns: 0.45fr 1.1fr 0.65fr;
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: end;
 
-  text-align: center;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
 }
 
 .eyebrow {
-  display: block;
-  margin-bottom: 1.5rem;
+  align-self: start;
+
+  padding-top: 0.7rem;
 
   font-size: 0.7rem;
   font-weight: 600;
@@ -19,16 +22,16 @@
   text-transform: uppercase;
 }
 
-.top h1 {
+.header h1 {
   margin: 0;
 
   font-family: var(--font-body);
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: clamp(4rem, 7vw, 7rem);
   font-weight: 200;
-  line-height: 0.9;
+  line-height: 0.92;
 }
 
-.top h1 span {
+.header h1 span {
   display: block;
 
   font-family: var(--font-heading);
@@ -36,61 +39,58 @@
   font-weight: 400;
 }
 
-.top > p {
-  max-width: 600px;
-  margin: 2rem auto 0;
+.header p {
+  margin: 0;
 
-  font-size: 1rem;
   line-height: 1.8;
 }
 
 .visual {
   position: relative;
 
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
-.imageWrapper {
-  min-height: 560px;
-  overflow: hidden;
-}
+.visual img {
+  display: block;
 
-.imageWrapper img {
   width: 100%;
-  height: 100%;
-  min-height: 560px;
+  max-height: 720px;
+
   object-fit: cover;
-  object-position: center;
 }
 
 .note {
   position: absolute;
-  right: -2rem;
+  right: -1.5rem;
   bottom: -2rem;
 
-  width: min(340px, 40%);
+  max-width: 330px;
   padding: 1.75rem;
 
   background-color: var(--color-primary);
   color: var(--color-text-light);
 }
 
-.note > span {
+.note span {
   display: block;
-  margin-bottom: 1rem;
+
+  margin-bottom: 0.8rem;
 
   color: var(--color-accent);
 
-  font-size: 0.68rem;
+  font-size: 0.65rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .note p {
   margin: 0;
 
   font-family: var(--font-heading);
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: 1.3rem;
   font-style: italic;
   line-height: 1.4;
 }
@@ -100,23 +100,20 @@
     padding: 5.5rem 0 5rem;
   }
 
-  .top {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
     margin-bottom: 3rem;
-    text-align: left;
   }
 
-  .top h1 {
+  .header h1 {
     font-size: clamp(3.2rem, 14vw, 5rem);
   }
 
-  .top h1 span {
+  .header h1 span {
     display: inline;
     margin-left: 0.2em;
-  }
-
-  .imageWrapper,
-  .imageWrapper img {
-    min-height: 420px;
   }
 
   .note {
@@ -125,6 +122,8 @@
     bottom: auto;
 
     width: calc(100% - 2rem);
+    max-width: none;
+
     margin: -2rem 0 0 auto;
   }
 }

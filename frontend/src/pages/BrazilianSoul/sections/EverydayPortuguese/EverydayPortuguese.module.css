@@ -7,11 +7,12 @@
   grid-template-columns: 1.2fr 0.7fr;
   gap: clamp(3rem, 7vw, 8rem);
 
-  margin-bottom: clamp(4rem, 8vw, 7rem);
+  margin-bottom: clamp(5rem, 9vw, 8rem);
 }
 
 .label {
   display: block;
+
   margin-bottom: 1.25rem;
 
   font-size: 0.7rem;
@@ -45,59 +46,50 @@
   line-height: 1.8;
 }
 
-.gallery {
+.expressions {
+  border-top: 1px solid var(--color-border);
+}
+
+.expressions article {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: clamp(2rem, 4vw, 4rem);
+  grid-template-columns: 1fr 0.8fr;
+  gap: clamp(3rem, 7vw, 8rem);
+  align-items: center;
+
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+
+  border-bottom: 1px solid var(--color-border);
 }
 
-.largeVisual img,
-.smallVisual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.largeVisual {
-  min-height: 650px;
-}
-
-.smallVisual {
-  min-height: 320px;
-}
-
-.side {
-  display: flex;
-  flex-direction: column;
-}
-
-.side blockquote {
-  margin: 2rem 0;
+.expression h3 {
+  margin: 0;
 
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  font-size: clamp(3rem, 7vw, 7rem);
   font-style: italic;
-  line-height: 1.35;
+  font-weight: 400;
+  line-height: 0.9;
 }
 
-.side a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  align-self: flex-start;
+.expression span {
+  display: block;
 
-  margin-top: auto;
+  margin-top: 1rem;
 
-  font-size: 0.75rem;
+  color: var(--color-primary);
+
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-
-  transition: transform var(--transition);
 }
 
-.side a:hover {
-  transform: translateX(4px);
+.expressions p {
+  max-width: 520px;
+
+  margin: 0;
+
+  line-height: 1.8;
 }
 
 @media (max-width: 768px) {
@@ -106,7 +98,7 @@
   }
 
   .header,
-  .gallery {
+  .expressions article {
     grid-template-columns: 1fr;
   }
 
@@ -115,15 +107,11 @@
     margin-left: 0.2em;
   }
 
-  .largeVisual {
-    min-height: 430px;
+  .expressions article {
+    gap: 1.5rem;
   }
 
-  .smallVisual {
-    min-height: 320px;
-  }
-
-  .side a {
-    margin-top: 1rem;
+  .expression h3 {
+    font-size: clamp(3rem, 17vw, 5rem);
   }
 }

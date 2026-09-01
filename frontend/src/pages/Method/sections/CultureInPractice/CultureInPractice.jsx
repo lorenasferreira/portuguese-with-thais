@@ -28,12 +28,18 @@ function CultureInPractice() {
 
         <div className={styles.gallery}>
           <div className={styles.largeVisual}>
-            <span>Film / Brazilian culture</span>
+            <img
+              src="/images/method/brazilian-culture-collage.png"
+              alt="Brazilian culture collage with cinema, literature and music"
+            />
           </div>
 
           <div className={styles.side}>
             <div className={styles.smallVisual}>
-              <span>Music / pandeiro</span>
+              <img
+                src="/images/method/pandeiro-salvador.png"
+                alt="Hands playing pandeiro in Salvador"
+              />
             </div>
 
             <blockquote>
