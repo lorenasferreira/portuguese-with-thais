@@ -13,58 +13,64 @@ function MethodPreview() {
         <div className={styles.header}>
           <span>Method & Approach</span>
 
-          <em className={styles.subtitle}>Designed around real life</em>
+          <em className={styles.subtitle}>Portuguese beyond the textbook</em>
         </div>
 
         <div className={styles.topGrid}>
           <article className={styles.mainCard}>
             <span className={styles.accentSquare} />
 
-            <h3>Learning built around you.</h3>
+            <h3>Lessons shaped around you.</h3>
 
             <p>
-              Every lesson is shaped around your goals, pace and interests.
-              Language structure becomes practical when it connects with the
-              situations you actually want to navigate.
+              Your goals, interests and learning pace guide every lesson.
+              Instead of following a one-size-fits-all formula, each class
+              adapts to the way you learn and the Portuguese you actually want
+              to use.
             </p>
 
             <ul>
               <li>Personalized learning</li>
               <li>Flexible progression</li>
-              <li>Real-world Portuguese</li>
+              <li>Goals that matter to you</li>
             </ul>
           </article>
 
           <article className={styles.highlightCard}>
-            <span>Beyond Grammar</span>
+            <span>Culture in every lesson</span>
 
             <h3>
-              Culture
+              Language
               <br />
-              &amp; Context
+              comes alive.
             </h3>
 
             <p>
-              Music, literature, expressions and everyday Brazilian life bring
-              meaning to the language beyond the textbook.
+              Music, films, literature, Brazilian expressions and everyday
+              references bring context to the language and turn learning into
+              cultural immersion.
             </p>
           </article>
         </div>
 
         <div className={styles.visualRow}>
           <article className={styles.smallCard}>
-            <span>Conversation Practice</span>
+            <span>Real Conversation</span>
 
-            <h3>Confidence grows through connection.</h3>
+            <h3>Speak Portuguese as it is really lived.</h3>
 
             <p>
-              Speak first. Refine as you go. Portuguese becomes natural through
-              meaningful interaction.
+              Conversation is part of the process from the beginning, helping
+              you build confidence, understand natural expressions and
+              communicate beyond rehearsed textbook dialogues.
             </p>
           </article>
 
           <div className={styles.imageWrapper}>
-            <img src={methodStudy} alt="Student studying in a quiet library" />
+            <img
+              src={methodStudy}
+              alt="Student exploring language and culture through study"
+            />
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import SectionContainer from "../../../common/SectionContainer/SectionContainer";
 
@@ -7,21 +8,21 @@ import styles from "./LessonsPreview.module.css";
 const experiences = [
   {
     number: "01",
-    title: "Tailored Experience",
+    title: "One-on-One Portuguese",
     description:
-      "Every learning journey is built around your goals, interests and pace, creating a learning experience that feels genuinely personal.",
+      "Personalized lessons built around your goals, interests and pace.",
   },
   {
     number: "02",
-    title: "The Art of Conversation",
+    title: "Portuguese for Kids",
     description:
-      "Move beyond textbook dialogues through meaningful conversations, real Brazilian expressions and authentic cultural context.",
+      "Playful, engaging lessons using music, culture and age-appropriate activities.",
   },
   {
     number: "03",
-    title: "Professional Confidence",
+    title: "CELPE-Bras Preparation",
     description:
-      "Whether you're relocating, working internationally or expanding your opportunities, learn to communicate naturally and confidently.",
+      "Focused preparation for learners working toward Brazil’s official Portuguese proficiency exam.",
   },
 ];
 
@@ -37,13 +38,14 @@ function LessonsPreview() {
 
           <div className={styles.intro}>
             <h2>
-              Choose how you’ll experience
-              <span>Brazilian Portuguese.</span>
+              Find the Portuguese experience
+              <span>that fits your goals.</span>
             </h2>
 
             <p>
-              Explore a learning experience shaped around conversation,
-              confidence and the way Portuguese is actually lived.
+              From personalized one-on-one lessons to playful classes for kids
+              and CELPE-Bras preparation, choose the path that makes sense for
+              you.
             </p>
           </div>
         </div>
@@ -58,17 +60,17 @@ function LessonsPreview() {
                 <p>{experience.description}</p>
               </div>
 
-              <a href="/lessons" className={styles.link}>
+              <Link to="/lessons" className={styles.link}>
                 Explore
                 <FaArrowRight aria-hidden="true" />
-              </a>
+              </Link>
             </article>
           ))}
         </div>
 
         <div className={styles.footer}>
           <a href="/lessons" className={styles.allLessonsLink}>
-            View all lesson formats
+            Explore all lessons
             <FaArrowRight aria-hidden="true" />
           </a>
         </div>

@@ -1,0 +1,672 @@
+.page {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  padding: clamp(7rem, 11vw, 10rem) 0 clamp(6rem, 9vw, 9rem);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(3rem, 8vw, 9rem);
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 620px;
+}
+
+.eyebrow,
+.sectionLabel,
+.goldLabel {
+  display: block;
+
+  margin-bottom: 1.3rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3.7rem, 6.5vw, 7rem);
+  line-height: 0.95;
+}
+
+.hero h1,
+.storyIntro h2,
+.approach h2,
+.cultureHeader h2 {
+  font-family: var(--font-body);
+  font-weight: 200;
+}
+
+.hero h1 span,
+.storyIntro h2 span,
+.approach h2 span,
+.cultureHeader h2 span {
+  display: block;
+
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.heroContent > p {
+  max-width: 470px;
+
+  margin: 2rem 0 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.heroVisual {
+  position: relative;
+}
+
+.heroImage {
+  display: grid;
+  place-items: center;
+
+  min-height: clamp(540px, 65vw, 760px);
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.imageCaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  padding: 1rem 1.4rem;
+
+  background-color: var(--color-background);
+
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   STORY
+======================================== */
+
+.story {
+  padding: clamp(6rem, 10vw, 10rem) 0;
+}
+
+.storyIntro {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: clamp(3rem, 7vw, 8rem);
+
+  margin-bottom: clamp(5rem, 9vw, 9rem);
+}
+
+.storyIntro h2,
+.cultureHeader h2 {
+  max-width: 780px;
+
+  margin: 0;
+
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  line-height: 1;
+}
+
+.storyIntro > p,
+.cultureHeader > p {
+  align-self: end;
+
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(4rem, 9vw, 10rem);
+  align-items: start;
+}
+
+.storyText p,
+.storyContinuation p {
+  margin: 0 0 1.5rem;
+
+  line-height: 1.8;
+}
+
+.smallImage {
+  display: grid;
+  place-items: center;
+
+  min-height: 280px;
+  margin-top: clamp(3rem, 6vw, 5rem);
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.largeStoryImage {
+  display: grid;
+  place-items: center;
+
+  min-height: 600px;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.storyVisual blockquote {
+  position: relative;
+
+  max-width: 620px;
+
+  margin: 2.5rem 0 0;
+  padding: 0 0 0 2rem;
+
+  border-left: 2px solid var(--color-accent);
+}
+
+.storyVisual blockquote svg {
+  margin-bottom: 1rem;
+
+  color: var(--color-accent);
+}
+
+.storyVisual blockquote p {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  line-height: 1.3;
+}
+
+.storyContinuation {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: clamp(4rem, 8vw, 9rem);
+  align-items: center;
+
+  margin-top: clamp(7rem, 12vw, 12rem);
+}
+
+.wideImage {
+  display: grid;
+  place-items: center;
+
+  min-height: 440px;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   METHOD / APPROACH
+======================================== */
+
+.approach {
+  padding: clamp(6rem, 10vw, 9rem) 0;
+
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: clamp(4rem, 9vw, 10rem);
+}
+
+.goldLabel {
+  color: var(--color-accent);
+}
+
+.approach h2 {
+  margin: 0;
+
+  font-size: clamp(3rem, 5vw, 5.4rem);
+  line-height: 1;
+}
+
+.approachIntro > p {
+  max-width: 500px;
+
+  margin: 2rem 0;
+
+  line-height: 1.8;
+}
+
+.darkLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  margin-top: 1rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: transform var(--transition);
+}
+
+.darkLink:hover {
+  transform: translateX(4px);
+}
+
+.approachContent article {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1.5rem;
+
+  padding: 2rem 0;
+
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-text-light) 18%, transparent);
+}
+
+.approachContent article:first-child {
+  padding-top: 0;
+}
+
+.approachContent article > span {
+  color: var(--color-accent);
+
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+.approachContent h3 {
+  margin: 0 0 0.8rem;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.3vw, 2.3rem);
+  font-weight: 400;
+}
+
+.approachContent p {
+  margin: 0;
+
+  line-height: 1.7;
+}
+
+/* ========================================
+   CULTURE
+======================================== */
+
+.culture {
+  padding: clamp(7rem, 11vw, 11rem) 0;
+}
+
+.cultureHeader {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: clamp(3rem, 7vw, 8rem);
+
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.cultureGallery {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.cultureLarge,
+.cultureColumn article {
+  position: relative;
+}
+
+.cultureImageLarge,
+.cultureImage {
+  display: grid;
+  place-items: center;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cultureImageLarge {
+  min-height: 650px;
+}
+
+.cultureImage {
+  min-height: 290px;
+}
+
+.cultureColumn {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.cultureGallery article > span {
+  display: block;
+
+  margin-top: 1rem;
+
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.cultureGallery h3 {
+  margin: 0.4rem 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+  font-weight: 400;
+}
+
+.cultureGallery p {
+  margin: 0;
+
+  line-height: 1.6;
+}
+
+.cultureFooter {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.cultureFooter a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: transform var(--transition);
+}
+
+.cultureFooter a:hover {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   TESTIMONIAL + CTA
+======================================== */
+
+.closing {
+  padding: clamp(6rem, 10vw, 9rem) 0;
+
+  background-color: var(--color-surface);
+}
+
+.testimonial {
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.quoteMark {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: var(--color-accent);
+
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.testimonial blockquote {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  line-height: 1.35;
+}
+
+.student {
+  display: block;
+
+  margin-top: 1.5rem;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.closingDivider {
+  height: 1px;
+
+  margin: clamp(4rem, 8vw, 7rem) 0;
+
+  background-color: var(--color-border);
+}
+
+.cta {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.cta > span {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cta h2 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 2.5rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 150px;
+  padding: 0.9rem 1.3rem;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.primaryButton {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-text);
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .heroGrid,
+  .storyIntro,
+  .cultureHeader,
+  .approachGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .storyGrid,
+  .storyContinuation {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .cultureGallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 5.5rem 0 4.5rem;
+  }
+
+  .heroGrid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2.5rem;
+  }
+
+  .heroImage {
+    min-height: 500px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .hero h1 span,
+  .storyIntro h2 span,
+  .approach h2 span,
+  .cultureHeader h2 span {
+    display: inline;
+
+    margin-left: 0.2em;
+  }
+
+  .story,
+  .culture {
+    padding: 5rem 0;
+  }
+
+  .storyIntro {
+    margin-bottom: 4rem;
+  }
+
+  .storyGrid,
+  .storyContinuation,
+  .cultureGallery {
+    grid-template-columns: 1fr;
+  }
+
+  .storyVisual {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .largeStoryImage {
+    min-height: 450px;
+  }
+
+  .storyVisual blockquote {
+    margin-top: 2rem;
+  }
+
+  .storyContinuation {
+    margin-top: 5rem;
+  }
+
+  .wideImage {
+    min-height: 350px;
+  }
+
+  .approach {
+    padding: 5rem 0;
+  }
+
+  .approachGrid {
+    gap: 4rem;
+  }
+
+  .approachContent article {
+    grid-template-columns: 35px 1fr;
+  }
+
+  .cultureGallery {
+    gap: 3rem;
+  }
+
+  .cultureImageLarge {
+    min-height: 450px;
+  }
+
+  .cultureImage {
+    min-height: 320px;
+  }
+
+  .cultureFooter {
+    justify-content: flex-start;
+  }
+
+  .closing {
+    padding: 5rem 0;
+  }
+
+  .ctaActions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}

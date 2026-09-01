@@ -14,9 +14,13 @@
 
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "Hanken Grotesk", Arial, sans-serif;
+  --font-accent: "Bodoni Moda", Georgia, serif;
+  --font-accent: "Italiana", Georgia, serif;
+  --font-accent: "Manrope", Arial, sans-serif;
 
   --container-width: 1440px;
   --page-padding: clamp(1.4rem, 4vw, 4rem);
 
   --transition: 180ms ease;
 }
+

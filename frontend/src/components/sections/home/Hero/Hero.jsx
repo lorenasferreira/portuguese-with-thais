@@ -21,7 +21,7 @@ function Hero() {
 
         <div className={styles.actions}>
           <a href="#booking" className={styles.primaryButton}>
-            Book a lesson
+            Book a Trial
           </a>
 
           <a href="#lessons" className={styles.secondaryButton}>

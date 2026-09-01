@@ -1,31 +1,29 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./components/layout/Header/Header";
-import Hero from "./components/sections/home/Hero/Hero";
-import IntroSection from "./components/sections/home/IntroSection/IntroSection";
-import LessonsPreview from "./components/sections/home/LessonsPreview/LessonsPreview";
-import BeyondClassroom from "./components/sections/home/BeyondClassroom/BeyondClassroom";
-import TestimonialsPreview from "./components/sections/home/TestimonialsPreview/TestimonialsPreview";
-import MethodPreview from "./components/sections/home/MethodPreview/MethodPreview";
-import FinalCTA from "./components/sections/home/FinalCTA/FinalCTA";
 import Footer from "./components/layout/Footer/Footer";
 import ScrollToTopButton from "./components/common/ScrollToTopButton/ScrollToTopButton";
+import About from "./pages/About/About";
+import Lessons from "./pages/Lessons/Lessons";
+import Method from "./pages/Method/Method";
+
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
 
-      <main>
-        <Hero />
-        <IntroSection />
-        <LessonsPreview />
-        <BeyondClassroom />
-        <TestimonialsPreview />
-        <MethodPreview />
-        <FinalCTA />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/lessons" element={<Lessons />} />
+        <Route path="/method" element={<Method />} />
+      </Routes>
+
       <Footer />
       <ScrollToTopButton />
-    </>
+    </BrowserRouter>
   );
 }
 

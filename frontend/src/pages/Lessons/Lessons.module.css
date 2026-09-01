@@ -1,0 +1,522 @@
+.page {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.hero {
+  padding: clamp(7rem, 11vw, 10rem) 0 clamp(6rem, 9vw, 9rem);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(4rem, 8vw, 9rem);
+  align-items: center;
+}
+
+.heroVisual {
+  position: relative;
+}
+
+.heroImage {
+  display: grid;
+  place-items: center;
+
+  min-height: clamp(580px, 65vw, 760px);
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.heroNote {
+  position: absolute;
+  right: -2rem;
+  bottom: 3rem;
+
+  width: min(280px, 45%);
+
+  padding: 1.5rem;
+
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.heroNote span {
+  display: block;
+
+  margin-bottom: 0.75rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroNote p {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.heroContent {
+  max-width: 620px;
+}
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 1.25rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: clamp(3.7rem, 6.5vw, 7rem);
+  font-weight: 200;
+  line-height: 0.95;
+}
+
+.hero h1 span {
+  display: block;
+
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.heroContent > p {
+  max-width: 500px;
+
+  margin: 2rem 0;
+
+  line-height: 1.8;
+}
+
+.heroLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: transform var(--transition);
+}
+
+.heroLink:hover {
+  transform: translateX(4px);
+}
+
+.lessonSection {
+  padding: clamp(6rem, 10vw, 10rem) 0;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.lessonGrid {
+  display: grid;
+  grid-template-columns: 70px 0.8fr 1.1fr;
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+}
+
+.reverse {
+  grid-template-columns: 70px 1.1fr 0.8fr;
+}
+
+.lessonNumber {
+  align-self: start;
+
+  padding-top: 0.35rem;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+}
+
+.lessonContent h2 {
+  max-width: 650px;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+}
+
+.lessonContent > p {
+  max-width: 580px;
+
+  margin: 2rem 0;
+
+  line-height: 1.8;
+}
+
+.lessonList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.lessonList li {
+  padding-bottom: 0.8rem;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lessonImage {
+  display: grid;
+  place-items: center;
+
+  min-height: 520px;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.kids {
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 90%,
+    var(--color-accent) 10%
+  );
+}
+
+/* PRICING */
+
+.pricing {
+  padding: clamp(7rem, 11vw, 10rem) 0;
+}
+
+.pricingHeader {
+  display: grid;
+  grid-template-columns: 1.2fr 0.6fr;
+  gap: clamp(3rem, 7vw, 8rem);
+
+  margin-bottom: clamp(4rem, 7vw, 6rem);
+}
+
+.pricingHeader h2 {
+  font-size: clamp(3rem, 5vw, 5.4rem);
+}
+
+.pricingHeader > p {
+  align-self: end;
+
+  margin: 0;
+
+  line-height: 1.8;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.plan {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 360px;
+  padding: clamp(2rem, 3vw, 2.7rem);
+
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 88%,
+    var(--color-surface) 12%
+  );
+
+  border: 1px solid var(--color-border);
+}
+
+.featured {
+  border: 2px solid var(--color-accent);
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 0.45rem 1.2rem;
+
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.frequency {
+  margin-bottom: 0.8rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.plan h3 {
+  margin: 0 0 2rem;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+  font-weight: 400;
+}
+
+.plan ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.plan li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: 0.9rem;
+}
+
+.plan li svg {
+  color: var(--color-accent);
+}
+
+.price {
+  margin-top: auto;
+  padding-top: 2rem;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+/* TRIAL */
+
+.trial {
+  padding: clamp(6rem, 10vw, 9rem) 0;
+
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.trialGrid {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: clamp(4rem, 8vw, 9rem);
+  align-items: end;
+}
+
+.goldLabel {
+  color: var(--color-accent);
+}
+
+.trial h2 {
+  font-size: clamp(3rem, 5vw, 5.4rem);
+}
+
+.trialInfo {
+  padding-left: clamp(2rem, 5vw, 5rem);
+
+  border-left: 1px solid
+    color-mix(in srgb, var(--color-text-light) 25%, transparent);
+}
+
+.trialInfo > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  margin-bottom: 1.5rem;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.trialInfo strong {
+  color: var(--color-accent);
+
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.trialInfo p {
+  margin: 0 0 2rem;
+
+  line-height: 1.8;
+}
+
+.trialInfo a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: transform var(--transition);
+}
+
+.trialInfo a:hover {
+  transform: translateX(4px);
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .heroGrid,
+  .pricingHeader,
+  .trialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .lessonGrid,
+  .reverse {
+    grid-template-columns: 50px 1fr 1fr;
+  }
+
+  .plans {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trialInfo {
+    padding-left: 0;
+    padding-top: 2rem;
+
+    border-left: none;
+    border-top: 1px solid
+      color-mix(in srgb, var(--color-text-light) 25%, transparent);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 5.5rem 0 4.5rem;
+  }
+
+  .heroGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+   .heroVisual {
+    width: 100%;
+  }
+
+  .heroImage {
+    width: 100%;
+    ;min-height: 480px;
+  }
+
+  .heroNote {
+    right: 1rem;
+    bottom: -1.5rem;
+
+    width: min(260px, 78%);
+  }
+
+  .hero h1 span {
+    display: inline;
+    margin-left: 0.2em;
+  }
+
+  .lessonContent h2 span,
+  .pricingHeader h2 span,
+  .trial h2 span {
+    display: inline;
+  }
+
+  .lessonSection,
+  .pricing,
+  .trial {
+    padding: 5rem 0;
+  }
+
+  .lessonGrid,
+  .reverse {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 2rem;
+  }
+
+  .lessonNumber {
+    order: 1;
+  }
+
+  .lessonContent {
+    order: 2;
+  }
+
+  .lessonImage {
+    order: 3;
+
+    min-height: 380px;
+  }
+
+  .plans {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .plan {
+    min-height: auto;
+  }
+
+  .featured {
+    margin-top: 0.75rem;
+  }
+
+  .trialGrid {
+    gap: 3rem;
+  }
+
+  .trialInfo > div {
+    align-items: end;
+  }
+}
