@@ -14,7 +14,7 @@ const plans = [
     details: ["1 class", "50-minute lesson"],
   },
   {
-    name: "Explorer",
+    name: "Flow",
     frequency: "4 classes / month",
     price: "$150",
     description:
@@ -22,7 +22,7 @@ const plans = [
     details: ["1 class / week", "4 classes / month"],
   },
   {
-    name: "Momentum",
+    name: "Pace",
     frequency: "8 classes / month",
     price: "$305",
     description:
@@ -31,7 +31,7 @@ const plans = [
     featured: true,
   },
   {
-    name: "Immersion",
+    name: "Mastery",
     frequency: "12 classes / month",
     price: "$460",
     description:

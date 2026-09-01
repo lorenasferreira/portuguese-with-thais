@@ -110,6 +110,17 @@
   line-height: 1.7;
 }
 
+.spotify {
+  margin-top: 3rem;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.spotify iframe {
+  display: block;
+  border: 0;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 5rem 0;

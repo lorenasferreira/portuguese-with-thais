@@ -10,25 +10,33 @@ const plans = [
     name: "Single Session",
     frequency: "Pay as you go",
     price: "$40",
+    description:
+      "A flexible option for focused feedback, occasional practice or a single class when you need it.",
     details: ["1 class", "50-minute lesson"],
   },
   {
-    name: "Explorer",
+    name: "Flow",
     frequency: "4 classes / month",
     price: "$150",
+    description:
+      "Build consistency while keeping a comfortable and flexible learning rhythm.",
     details: ["1 class / week", "4 classes / month"],
   },
   {
-    name: "Momentum",
+    name: "Pace",
     frequency: "8 classes / month",
     price: "$305",
+    description:
+      "Build fluency and confidence through a more consistent learning routine.",
     details: ["2 classes / week", "8 classes / month"],
     featured: true,
   },
   {
-    name: "Immersion",
+    name: "Mastery",
     frequency: "12 classes / month",
     price: "$460",
+    description:
+      "A more immersive rhythm for learners looking for faster and deeper progress.",
     details: ["3 classes / week", "12 classes / month"],
   },
 ];

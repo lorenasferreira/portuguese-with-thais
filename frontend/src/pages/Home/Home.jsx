@@ -6,6 +6,7 @@ import TestimonialsPreview from "../../components/sections/home/TestimonialsPrev
 import MethodPreview from "../../components/sections/home/MethodPreview/MethodPreview";
 import PricingPreview from "../../components/sections/home/PricingPreview/PricingPreview";
 import FinalCTA from "../../components/sections/home/FinalCTA/FinalCTA";
+import FAQSection from "../../components/sections/home/FAQSection/FAQSection";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <TestimonialsPreview />
       <MethodPreview />
       <PricingPreview />
+      <FAQSection />
       <FinalCTA />
     </main>
   );

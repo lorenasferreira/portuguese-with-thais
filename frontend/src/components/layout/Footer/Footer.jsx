@@ -1,4 +1,4 @@
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 import SectionContainer from "../../common/SectionContainer/SectionContainer";
 
@@ -17,6 +17,11 @@ const socialLinks = [
     label: "Instagram",
     href: "https://www.instagram.com/portuguesewiththais/",
     icon: <FaInstagram aria-hidden="true" />,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/thais-d-26894577",
+    icon: <FaLinkedinIn aria-hidden="true" />,
   },
 ];
 

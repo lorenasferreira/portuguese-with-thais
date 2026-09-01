@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import Lessons from "./pages/Lessons/Lessons";
 import Method from "./pages/Method/Method";
 import BrazilianSoul from "./pages/BrazilianSoul/BrazilianSoul";
+import BookLesson from "./pages/BookLesson/BookLesson";
 
 import Home from "./pages/Home/Home";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/method" element={<Method />} />
         <Route path="/the-brazilian-soul" element={<BrazilianSoul />} />
+        <Route path="/book-a-lesson" element={<BookLesson />} />
       </Routes>
 
       <Footer />
