@@ -37,8 +37,7 @@
 .intro h2 span {
   display: block;
 
-  font-family: var(--font-heading);
-  font-style: italic;
+  font-family: var(--font-accent);
   font-weight: 400;
 }
 
@@ -82,9 +81,8 @@
 .integrationInner p {
   margin: 0;
 
-  font-family: var(--font-heading);
+  font-family: var(--font-accent);
   font-size: clamp(1.7rem, 3vw, 2.6rem);
-  font-style: italic;
   line-height: 1.4;
 }
 

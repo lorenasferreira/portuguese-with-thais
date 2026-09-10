@@ -1,28 +1,18 @@
 .header {
   position: sticky;
   top: 0;
-
   z-index: 100;
 
   width: 100%;
 
-  border-bottom: 1px solid var(--color-border);
+  background-color: rgba(255, 247, 234, 0.94);
 
-  background-color: var(--color-background);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
-  transition:
-    transform 300ms ease,
-    opacity 300ms ease;
-}
+  border-bottom: 1px solid rgba(23, 63, 52, 0.14);
 
-.headerVisible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.headerHidden {
-  opacity: 0;
-  transform: translateY(-100%);
+  box-shadow: 0 2px 10px rgba(23, 63, 52, 0.02);
 }
 
 .container {
@@ -145,7 +135,10 @@
     align-items: flex-start;
     gap: 1.25rem;
 
-    background-color: var(--color-background);
+    background-color: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     border-bottom: 1px solid var(--color-border);
   }

@@ -14,10 +14,8 @@ const navigationLinks = [
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const headerRef = useRef(null);
-  const scrollTimeoutRef = useRef(null);
 
   function toggleMenu() {
     setIsMenuOpen((currentValue) => !currentValue);
@@ -45,47 +43,8 @@ function Header() {
     };
   }, [isMenuOpen]);
 
-  useEffect(() => {
-    function handleScroll() {
-      const isAtTop = window.scrollY <= 10;
-
-      setIsHeaderVisible(true);
-
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-
-      if (!isAtTop && !isMenuOpen) {
-        scrollTimeoutRef.current = setTimeout(() => {
-          setIsHeaderVisible(false);
-        }, 900);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-    };
-  }, [isMenuOpen]);
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      setIsHeaderVisible(true);
-    }
-  }, [isMenuOpen]);
-
   return (
-    <header
-      className={`${styles.header} ${
-        isHeaderVisible ? styles.headerVisible : styles.headerHidden
-      }`}
-      ref={headerRef}
-    >
+    <header className={styles.header} ref={headerRef}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo}>
           Portuguese <span>with</span> Thais

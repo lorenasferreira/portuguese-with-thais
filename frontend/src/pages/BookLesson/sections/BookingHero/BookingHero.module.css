@@ -28,8 +28,8 @@
 .content h1 span {
   display: block;
 
-  font-family: var(--font-heading);
-  font-style: italic;
+  font-family: var(--font-accent);
+  /* font-style: italic; */
   font-weight: 400;
 }
 

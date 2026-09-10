@@ -1,0 +1,133 @@
+.approach {
+  padding: clamp(6rem, 10vw, 9rem) 0;
+
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: clamp(4rem, 9vw, 10rem);
+}
+
+.goldLabel {
+  display: block;
+
+  margin-bottom: 1.3rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.approachIntro h2 {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: clamp(3rem, 5vw, 5.4rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.approachIntro h2 span {
+  display: block;
+
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.approachIntro > p {
+  max-width: 500px;
+
+  margin: 2rem 0;
+
+  line-height: 1.8;
+}
+
+.darkLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  margin-top: 1rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: transform var(--transition);
+}
+
+.darkLink:hover {
+  transform: translateX(4px);
+}
+
+.approachContent article {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1.5rem;
+
+  padding: 2rem 0;
+
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-text-light) 18%, transparent);
+}
+
+.approachContent article:first-child {
+  padding-top: 0;
+}
+
+.approachContent article > span {
+  color: var(--color-accent);
+
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+.approachContent h3 {
+  margin: 0 0 0.8rem;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.3vw, 2.3rem);
+  font-weight: 400;
+}
+
+.approachContent p {
+  margin: 0;
+
+  line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+  .approachGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .approach {
+    padding: 5rem 0;
+  }
+
+  .approachGrid {
+    gap: 4rem;
+  }
+
+  .approachIntro h2 span {
+    display: inline;
+
+    margin-left: 0.2em;
+  }
+
+  .approachContent article {
+    grid-template-columns: 35px 1fr;
+  }
+}

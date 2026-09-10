@@ -185,8 +185,7 @@
 .playlistIntro h3 span {
   display: block;
 
-  font-family: var(--font-heading);
-  font-style: italic;
+  font-family: var(--font-accent);
   font-weight: 400;
 }
 

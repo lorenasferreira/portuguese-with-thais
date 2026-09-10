@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaCheck } from "react-icons/fa";
-import LevelQuiz from "./sections/LevelQuiz/LevelQuiz";
 
+import PlacementTest from "./sections/PlacementTest/PlacementTest";
 import SectionContainer from "../../components/common/SectionContainer/SectionContainer";
 
 import styles from "./Lessons.module.css";
@@ -50,7 +50,10 @@ function Lessons() {
           <div className={styles.heroGrid}>
             <div className={styles.heroVisual}>
               <div className={styles.heroImage}>
-                <span>Teaching / lifestyle photo</span>
+                <img
+                  src="/images/lessons/lessons-hero.jpeg"
+                  alt="Brazilian Portuguese lesson with Thais"
+                />
               </div>
 
               <div className={styles.heroNote}>
@@ -63,8 +66,8 @@ function Lessons() {
               <span className={styles.eyebrow}>Lessons</span>
 
               <h1>
-                Find the way of learning
-                <span>that fits your life.</span>
+                Learn Brazilian Portuguese
+                <span>at your own rhythm.</span>
               </h1>
 
               <p>
@@ -108,7 +111,10 @@ function Lessons() {
             </div>
 
             <div className={styles.lessonImage}>
-              <span>One-on-one lesson photo</span>
+              <img
+                src="/images/lessons/one-on-one.jpeg"
+                alt="One-on-one Brazilian Portuguese lesson"
+              />
             </div>
           </div>
         </SectionContainer>
@@ -120,7 +126,10 @@ function Lessons() {
             <div className={styles.lessonNumber}>02</div>
 
             <div className={styles.lessonImage}>
-              <span>Kids / music / playful learning</span>
+              <img
+                src="/images/lessons/kids.jpeg"
+                alt="Portuguese learning activities for children"
+              />
             </div>
 
             <div className={styles.lessonContent}>
@@ -172,12 +181,17 @@ function Lessons() {
             </div>
 
             <div className={styles.lessonImage}>
-              <span>Study / exam preparation photo</span>
+              <img
+                src="/images/lessons/celpe-bras.jpeg"
+                alt="CELPE-Bras preparation and study"
+              />
             </div>
           </div>
         </SectionContainer>
       </section>
-      <LevelQuiz />
+
+      <PlacementTest />
+
       <section className={styles.pricing}>
         <SectionContainer>
           <div className={styles.pricingHeader}>

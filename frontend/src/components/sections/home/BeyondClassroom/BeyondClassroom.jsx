@@ -17,16 +17,15 @@ function BeyondClassroom() {
       <SectionContainer>
         <div className={styles.layout}>
           <div className={styles.visual}>
-            <div
-              className={styles.imagePlaceholder}
-              role="img"
-              aria-label="Placeholder for Brazilian cultural imagery"
-            >
-              <span>Brazil lives between the lines.</span>
+            <div className={styles.image}>
+              <img
+                src="/images/home/beyond-classroom.jpg"
+                alt="Brazilian cultural scene"
+              />
             </div>
 
             <div className={styles.visualNote}>
-              <span>São Paulo</span>
+              <span>Brazil</span>
               <span>Culture / Language / Life</span>
             </div>
           </div>
@@ -56,8 +55,6 @@ function BeyondClassroom() {
                   </span>
 
                   <span>{topic}</span>
-
-                  <FaArrowRight aria-hidden="true" />
                 </li>
               ))}
             </ul>

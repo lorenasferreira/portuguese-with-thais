@@ -61,7 +61,7 @@
 .heroNote p {
   margin: 0;
 
-  font-family: var(--font-heading);
+  font-family: var(--font-accent);
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-style: italic;
   line-height: 1.35;
@@ -94,8 +94,7 @@
 .hero h1 span {
   display: block;
 
-  font-family: var(--font-heading);
-  font-style: italic;
+  font-family: var(--font-accent);
   font-weight: 400;
 }
 
@@ -196,14 +195,17 @@
 }
 
 .kids {
-  background-color: color-mix(
-    in srgb,
-    var(--color-background) 90%,
-    var(--color-accent) 10%
-  );
+   background-color: #dfeee4;
 }
 
-/* PRICING */
+.kids .lessonImage {
+  background-color: #cfe3d6;
+  border-color: color-mix(
+    in srgb,
+    var(--color-primary) 18%,
+    #dfeee4
+  );
+}
 
 .pricing {
   padding: clamp(7rem, 11vw, 10rem) 0;
@@ -325,13 +327,14 @@
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
-/* TRIAL */
-
 .trial {
   padding: clamp(6rem, 10vw, 9rem) 0;
 
   background-color: var(--color-primary);
   color: var(--color-text-light);
+
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-background) 45%, transparent);
 }
 
 .trialGrid {

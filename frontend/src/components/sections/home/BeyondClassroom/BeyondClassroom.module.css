@@ -16,24 +16,20 @@
   position: relative;
 }
 
-.imagePlaceholder {
+.image {
+  width: 100%;
+  height: 100%;
   min-height: 620px;
-  padding: 2rem;
-
-  display: flex;
-  align-items: flex-end;
-
-  background-color: rgba(246, 250, 248, 0.1);
-  border: 1px solid rgba(246, 250, 248, 0.18);
-
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 3vw, 3.4rem);
-  font-style: italic;
-  line-height: 1.05;
+  overflow: hidden;
 }
 
-.imagePlaceholder span {
-  max-width: 300px;
+.image img {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .visualNote {
@@ -126,7 +122,7 @@
   min-height: 68px;
 
   display: grid;
-  grid-template-columns: 42px 1fr auto;
+  grid-template-columns: 42px 1fr;
   align-items: center;
   gap: 1rem;
 
@@ -194,10 +190,6 @@
     max-width: 680px;
   }
 
-  .imagePlaceholder {
-    min-height: 480px;
-  }
-
   .visualNote {
     right: 1.5rem;
   }
@@ -210,13 +202,6 @@
 
   .layout {
     gap: 3.5rem;
-  }
-
-  .imagePlaceholder {
-    min-height: 280px;
-    padding: 1.5rem;
-
-    font-size: 1.6rem;
   }
 
   .visualNote {
@@ -240,5 +225,12 @@
 
   .topic {
     grid-template-columns: 34px 1fr auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .image,
+  .image img {
+    min-height: 460px;
   }
 }

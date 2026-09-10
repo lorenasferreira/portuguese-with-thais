@@ -1,0 +1,276 @@
+.story {
+  padding: clamp(6rem, 10vw, 10rem) 0;
+}
+
+.sectionLabel {
+  display: block;
+
+  margin-bottom: 1.3rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.storyIntro {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: clamp(3rem, 7vw, 8rem);
+
+  margin-bottom: clamp(5rem, 9vw, 9rem);
+}
+
+.storyIntro h2 {
+  max-width: 780px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 200;
+  line-height: 1;
+}
+
+.storyIntro h2 span {
+  display: block;
+
+  font-family: var(--font-accent);
+  font-weight: 400;
+}
+
+.storyIntro > p {
+  align-self: end;
+
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(4rem, 9vw, 10rem);
+  align-items: start;
+}
+
+.storyText p {
+  margin: 0 0 1.5rem;
+
+  line-height: 1.8;
+}
+
+.smallImage {
+  min-height: 280px;
+
+  margin-top: clamp(3rem, 6vw, 5rem);
+
+  overflow: hidden;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.smallImage img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.largeStoryImage {
+  position: relative;
+
+  min-height: 600px;
+
+  overflow: hidden;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.largeStoryImage img {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.location {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+
+  padding: 0.55rem 0.8rem;
+
+  background-color: var(--color-background);
+  color: var(--color-primary);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.storyVisual blockquote {
+  position: relative;
+
+  max-width: 620px;
+
+  margin: 2.5rem 0 0;
+  padding: 0 0 0 2rem;
+
+  border-left: 2px solid var(--color-accent);
+}
+
+.storyVisual blockquote svg {
+  margin-bottom: 1rem;
+
+  color: var(--color-accent);
+}
+
+.storyVisual blockquote p {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  line-height: 1.3;
+}
+
+.education {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(4rem, 9vw, 10rem);
+
+  margin-top: clamp(8rem, 13vw, 13rem);
+}
+
+.education h3,
+.students h3 {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: clamp(2.8rem, 4.8vw, 5rem);
+  font-weight: 200;
+  line-height: 1;
+}
+
+.education h3 span,
+.students h3 span {
+  display: block;
+
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.educationContent {
+  border-top: 1px solid var(--color-border);
+}
+
+.educationContent p {
+  margin: 0;
+  padding: 1.5rem 0;
+
+  border-bottom: 1px solid var(--color-border);
+
+  line-height: 1.8;
+}
+
+.students {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(4rem, 8vw, 9rem);
+  align-items: center;
+
+  margin-top: clamp(8rem, 13vw, 13rem);
+}
+
+.studentsImage {
+  min-height: 480px;
+
+  overflow: hidden;
+}
+
+.studentsImage img {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.studentsContent p {
+  margin: 1.5rem 0 0;
+
+  line-height: 1.8;
+}
+
+@media (max-width: 1000px) {
+  .storyIntro,
+  .education {
+    grid-template-columns: 1fr;
+  }
+
+  .storyGrid,
+  .students {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .story {
+    padding: 5rem 0;
+  }
+
+  .storyIntro {
+    margin-bottom: 4rem;
+  }
+
+  .storyIntro h2 span,
+  .education h3 span,
+  .students h3 span {
+    display: inline;
+
+    margin-left: 0.2em;
+  }
+
+  .storyGrid,
+  .students {
+    grid-template-columns: 1fr;
+  }
+
+  .storyVisual {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .largeStoryImage,
+  .largeStoryImage img {
+    min-height: 450px;
+  }
+
+  .storyVisual blockquote {
+    margin-top: 2rem;
+  }
+
+  .education,
+  .students {
+    margin-top: 6rem;
+  }
+
+  .studentsImage,
+  .studentsImage img {
+    min-height: 380px;
+  }
+}

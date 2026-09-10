@@ -30,12 +30,11 @@ function Hero() {
         </div>
       </div>
 
-      <div
-        className={styles.imagePlaceholder}
-        role="img"
-        aria-label="Placeholder for a portrait of Thais"
-      >
-        <span>Photo placeholder</span>
+      <div className={styles.heroImage}>
+        <img
+          src="/images/home/hero-thais.jpg"
+          alt="Thais, Brazilian Portuguese teacher"
+        />
       </div>
     </section>
   );
