@@ -36,7 +36,9 @@ function MusicSection() {
             Dive into
             <span>Brazilian music.</span>
           </h2>
+        </div>
 
+        <div className={styles.copy}>
           <p>
             You can&apos;t truly understand Brazil without exploring its music,
             a rich, diverse universe and one of the most important in the world.
