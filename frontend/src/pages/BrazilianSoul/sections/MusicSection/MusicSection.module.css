@@ -1,23 +1,19 @@
 .section {
-  padding: clamp(7rem, 11vw, 11rem) 0;
+  padding: clamp(6rem, 9vw, 9rem) 0;
 
   background-color: var(--color-primary);
   color: var(--color-text-light);
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 0.4fr 1fr 0.7fr;
-  gap: clamp(2rem, 5vw, 6rem);
-  align-items: end;
-
-  margin-bottom: clamp(4rem, 8vw, 7rem);
+  max-width: 1050px;
+  margin-bottom: clamp(3.5rem, 6vw, 5rem);
 }
 
 .header > span {
-  align-self: start;
+  display: block;
 
-  padding-top: 0.7rem;
+  margin-bottom: 1.5rem;
 
   color: var(--color-accent);
 
@@ -27,6 +23,7 @@
 }
 
 .header h2 {
+  max-width: 900px;
   margin: 0;
 
   font-family: var(--font-body);
@@ -36,7 +33,7 @@
 }
 
 .header h2 span {
-  display: block;
+  margin-left: 0.15em;
 
   font-family: var(--font-heading);
   font-style: italic;
@@ -44,117 +41,58 @@
 }
 
 .header p {
-  margin: 0;
+  max-width: 780px;
+  margin: 2rem 0 0;
 
+  color: rgba(246, 250, 248, 0.78);
+
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
   line-height: 1.8;
 }
 
-.content {
+.header p + p {
+  margin-top: 1rem;
+}
+
+.artistGallery {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(3rem, 7vw, 8rem);
-  align-items: start;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+
+  margin-top: clamp(3rem, 5vw, 4rem);
 }
 
-.image {
-  overflow: hidden;
+.artist {
+  margin: 0;
 }
 
-.image img {
+.artist img {
   width: 100%;
-  min-height: 620px;
+  aspect-ratio: 4 / 5;
+
+  display: block;
 
   object-fit: cover;
 }
 
-.artists {
-  border-top: 1px solid
-    color-mix(in srgb, var(--color-text-light) 22%, transparent);
-}
+.artist figcaption {
+  margin-top: 0.7rem;
 
-.artists article {
-  padding: 1.7rem 0;
+  color: rgba(246, 250, 248, 0.72);
 
-  border-bottom: 1px solid
-    color-mix(in srgb, var(--color-text-light) 22%, transparent);
-}
-
-.artistTop {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  align-items: baseline;
-}
-
-.artistTop h3 {
-  margin: 0;
-
-  font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
-  font-weight: 400;
-}
-
-.artistTop span {
-  color: var(--color-accent);
-
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.artists p {
-  max-width: 550px;
-
-  margin: 0.7rem 0 0;
-
-  line-height: 1.7;
-}
-
-.spotify {
-  margin-top: 3rem;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.spotify iframe {
-  display: block;
-  border: 0;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 5rem 0;
-  }
-
-  .header,
-  .content {
-    grid-template-columns: 1fr;
-  }
-
-  .header h2 span {
-    display: inline;
-    margin-left: 0.2em;
-  }
-
-  .image img {
-    min-height: 440px;
-  }
-
-  .artistTop {
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-}
-
 .playlist {
-  margin-top: clamp(5rem, 9vw, 9rem);
+  margin-top: clamp(4rem, 7vw, 6rem);
+  padding-top: clamp(3rem, 5vw, 4rem);
 
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
   gap: clamp(3rem, 7vw, 7rem);
   align-items: center;
-
-  padding-top: clamp(4rem, 7vw, 6rem);
 
   border-top: 1px solid
     color-mix(in srgb, var(--color-text-light) 22%, transparent);
@@ -189,14 +127,6 @@
   font-weight: 400;
 }
 
-.playlistIntro p {
-  max-width: 470px;
-
-  margin: 1.75rem 0 0;
-
-  line-height: 1.8;
-}
-
 .spotify {
   overflow: hidden;
 
@@ -211,6 +141,12 @@
   border: 0;
 }
 
+@media (max-width: 1000px) {
+  .artistGallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 800px) {
   .playlist {
     grid-template-columns: 1fr;
@@ -223,6 +159,25 @@
 }
 
 @media (max-width: 600px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  .header h2 span {
+    display: block;
+    margin-left: 0;
+  }
+
+  .header p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .artistGallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
   .playlist {
     margin-top: 4rem;
     padding-top: 3rem;

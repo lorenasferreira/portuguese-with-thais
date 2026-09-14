@@ -54,12 +54,6 @@
   text-transform: uppercase;
 }
 
-.visualNote span:last-child {
-  color: rgba(246, 250, 248, 0.5);
-
-  font-size: 0.58rem;
-}
-
 .content {
   max-width: 720px;
 }
@@ -205,12 +199,25 @@
   }
 
   .visualNote {
-    position: static;
+    position: absolute;
+
+    top: auto;
+    right: 0.75rem;
+    bottom: 0.75rem;
 
     width: fit-content;
     min-width: 0;
-    margin-top: 1rem;
-    padding: 1rem 1.2rem;
+    max-width: none;
+
+    padding: 0.65rem 0.85rem;
+
+    display: inline-flex;
+
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+
+    white-space: nowrap;
   }
 
   .title {

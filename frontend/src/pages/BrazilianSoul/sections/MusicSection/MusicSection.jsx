@@ -1,8 +1,29 @@
 import SectionContainer from "../../../../components/common/SectionContainer/SectionContainer";
 
-import { artists } from "../../cultureData";
-
 import styles from "./MusicSection.module.css";
+
+const featuredArtists = [
+  {
+    name: "Gilberto Gil",
+    image: "/images/brazilian-soul/gilberto-gil.jpg",
+  },
+  {
+    name: "Caetano Veloso",
+    image: "/images/brazilian-soul/caetano-veloso.jpg",
+  },
+  {
+    name: "Djavan",
+    image: "/images/brazilian-soul/djavan.jpg",
+  },
+  {
+    name: "Maria Bethânia",
+    image: "/images/brazilian-soul/maria-bethania.jpg",
+  },
+  {
+    name: "Elis Regina",
+    image: "/images/brazilian-soul/elis-regina.jpg",
+  },
+];
 
 function MusicSection() {
   return (
@@ -12,36 +33,32 @@ function MusicSection() {
           <span>01 — Listen</span>
 
           <h2>
-            Start with
-            <span>the sound.</span>
+            Dive into
+            <span>Brazilian music.</span>
           </h2>
 
           <p>
-            Music is one of the richest ways to notice pronunciation, rhythm,
-            vocabulary and emotion in Brazilian Portuguese.
+            You can&apos;t truly understand Brazil without exploring its music,
+            a rich, diverse universe and one of the most important in the world.
+            With icons like Gilberto Gil, Caetano Veloso, Djavan, Maria Bethânia
+            and Elis Regina, Brazilian music is a key to the country&apos;s
+            soul.
+          </p>
+
+          <p>
+            To help you dive deeper, I&apos;ve created a Spotify playlist for my
+            students. Listen, study and discover more about Brazil through its
+            music.
           </p>
         </div>
 
-        <div className={styles.content}>
-          <div className={styles.image}>
-            <img
-              src="/images/method/pandeiro-salvador.png"
-              alt="Pandeiro being played in Salvador"
-            />
-          </div>
-
-          <div className={styles.artists}>
-            {artists.map((artist) => (
-              <article key={artist.name}>
-                <div className={styles.artistTop}>
-                  <h3>{artist.name}</h3>
-                  <span>{artist.suggestion}</span>
-                </div>
-
-                <p>{artist.note}</p>
-              </article>
-            ))}
-          </div>
+        <div className={styles.artistGallery}>
+          {featuredArtists.map((artist) => (
+            <figure key={artist.name} className={styles.artist}>
+              <img src={artist.image} alt={artist.name} />
+              <figcaption>{artist.name}</figcaption>
+            </figure>
+          ))}
         </div>
 
         <div className={styles.playlist}>
@@ -52,11 +69,6 @@ function MusicSection() {
               Keep listening
               <span>beyond the lesson.</span>
             </h3>
-
-            <p>
-              A selection of Brazilian music to explore pronunciation, rhythm,
-              vocabulary and culture through the songs Thais recommends.
-            </p>
           </div>
 
           <div className={styles.spotify}>

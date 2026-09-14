@@ -1,36 +1,3 @@
-export const artists = [
-  {
-    name: "Djavan",
-    suggestion: "Flor de Lis",
-    note: "Poetic vocabulary, rhythm and expressive Brazilian Portuguese.",
-  },
-  {
-    name: "Maria Bethânia",
-    suggestion: "Reconvexo",
-    note: "Powerful interpretation, rich language and Brazilian musical identity.",
-  },
-  {
-    name: "Gilberto Gil",
-    suggestion: "Aquele Abraço",
-    note: "Language, rhythm and references deeply connected to Brazilian culture.",
-  },
-  {
-    name: "Elis Regina",
-    suggestion: "Águas de Março",
-    note: "A classic way to experience pronunciation, musicality and storytelling.",
-  },
-  {
-    name: "Milton Nascimento",
-    suggestion: "Maria, Maria",
-    note: "Emotional songwriting and one of the defining voices of Brazilian music.",
-  },
-  {
-    name: "Tim Maia",
-    suggestion: "Azul da Cor do Mar",
-    note: "Soul, everyday language and an unmistakable Brazilian sound.",
-  },
-];
-
 export const books = [
   {
     level: "Beginner",

@@ -25,8 +25,7 @@ function BeyondClassroom() {
             </div>
 
             <div className={styles.visualNote}>
-              <span>Brazil</span>
-              <span>Culture / Language / Life</span>
+              <span>Salvador, Brazil</span>
             </div>
           </div>
 

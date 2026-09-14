@@ -1,12 +1,19 @@
-# Portuguese with Thaís — Roadmap
+# Portuguese with Thais — Roadmap
 
 ## Current Status
 
-**Home MVP completed — August 11, 2026.**
+Project is in the final development stage.
 
-⏸️ Development paused until client payment and first review.
+Most pages, content and visual work are complete.
 
-The Home is ready for the first presentation.
+Main priorities now:
+
+- Booking + payment flow
+- Final client review
+- Automated tests
+- QA
+- SEO + favicon
+- Production delivery
 
 ---
 
@@ -17,91 +24,165 @@ The Home is ready for the first presentation.
 - [x] Project structure
 - [x] Visual direction
 - [x] Local fonts
-- [x] Reusable components
-- [x] Initial Design System
+- [x] CSS Modules
+- [x] Design System
+- [x] Reusable shared components
 
 ---
 
-# Phase 2 — Home ✅
+# Phase 2 — Main Pages ✅
 
+- [x] Home
+- [x] About
+- [x] Lessons
+- [x] Method
+- [x] The Brazilian Soul
+- [x] Book a Lesson structure
 - [x] Header
-- [x] Hero
-- [x] Intro / Manifesto
-- [x] Lessons Preview
-- [x] Beyond the Classroom
-- [x] Method Preview
-- [x] Testimonials Preview
-- [x] Final CTA
 - [x] Footer
+- [x] Route navigation
 - [x] Scroll to Top
-- [x] Desktop refinement
-- [x] Tablet responsiveness
-- [x] Mobile responsiveness
+- [x] Scroll Reveal
 
-**Milestone:** Home ready for client review.
+Testimonials and FAQ are included in the Home instead of dedicated pages.
 
 ---
 
-# Phase 3 — Client Review
+# Phase 3 — Content & Client Feedback ✅
 
-- [ ] Receive first payment
-- [ ] Present Home
-- [ ] Collect feedback
-- [ ] Confirm final content
-- [ ] Confirm photos
-- [ ] Confirm English-only scope
-- [ ] Confirm lesson formats
-- [ ] Confirm booking workflow
-- [ ] Confirm level test / quiz requirements
-- [ ] Apply approved Home changes
+- [x] Brand direction approved
+- [x] Main lesson formats confirmed
+- [x] Pricing confirmed
+- [x] About content implemented
+- [x] Testimonials implemented
+- [x] Placement Test requirements confirmed
+- [x] Placement Test content implemented
+- [x] Main photography added
+- [x] Main social links added
+- [x] Major visual feedback applied
 
----
+Still open:
 
-# Phase 4 — Internal Pages
-
-- [ ] About
-- [ ] Lessons
-- [ ] Method
-- [ ] The Brazilian Soul
-- [ ] Testimonials
-- [ ] FAQ
-- [ ] Book a Lesson
-
-Each Home preview should lead to its corresponding full page.
+- [ ] Final client review
+- [ ] Final image replacements, if requested
+- [ ] Final content corrections, if requested
+- [ ] WhatsApp number, if client wants it added
+- [ ] Domain decision
 
 ---
 
-# Phase 5 — Final Integration
+# Phase 4 — Learning Experience ✅
 
-- [ ] Final navigation and routes
-- [ ] Booking integration
-- [ ] Final external links
-- [ ] Final testimonials
-- [ ] Final social links
-- [ ] Replace remaining placeholder content
+- [x] 30-question Placement Test
+- [x] A1–C2 scoring logic
+- [x] Local frontend score calculation
+- [x] Result screen
+- [x] Responsive quiz interface
+
+Pending:
+
+- [ ] Automated tests for scoring logic
+- [ ] Automated tests for CEFR thresholds
 
 ---
 
-# Phase 6 — Launch
+# Phase 5 — Booking & Payment 🚧
 
-- [ ] SEO
-- [ ] Accessibility review
-- [ ] Performance review
-- [ ] Final responsive QA
-- [ ] Production deployment
-- [ ] Custom domain
+- [x] Book a Lesson page structure
+- [ ] Confirm Google Calendar Appointment Schedule access
+- [ ] Configure lesson availability
+- [ ] Configure Google Meet
+- [ ] Connect Stripe if supported
+- [ ] Connect final booking flow to site
+- [ ] Test successful booking
+- [ ] Test payment flow
+- [ ] Test confirmation flow
+
+Preferred flow:
+
+```text
+Choose lesson
+↓
+Choose availability
+↓
+Pay
+↓
+Booking confirmed
+↓
+Google Meet
+````
+
+This is the main remaining functional milestone before delivery.
+
+---
+
+# Phase 6 — Final QA
+
+* [ ] Test desktop
+* [ ] Test tablet
+* [ ] Test mobile
+* [ ] Test all routes
+* [ ] Test Header and Footer links
+* [ ] Test all CTAs
+* [ ] Test direct Vercel URLs
+* [ ] Test Placement Test logic
+* [ ] Check image loading
+* [ ] Check scroll behavior
+* [ ] Check booking flow
+* [ ] Check payment flow
+* [ ] Remove remaining placeholders
+* [ ] Remove dead CSS
+* [ ] Check broken links
+
+---
+
+# Phase 7 — SEO & Polish
+
+* [ ] Add favicon
+* [ ] Review page titles
+* [ ] Add meta descriptions
+* [ ] Review image alt text
+* [ ] Accessibility review
+* [ ] Performance review
+* [ ] Final visual consistency review
+
+---
+
+# Phase 8 — Delivery
+
+* [ ] Receive final client approval
+* [ ] Receive remaining project payment
+* [ ] Connect custom domain, if purchased
+* [ ] Final production deployment
+* [ ] Deliver final project
+* [ ] Create final release commit/tag
+
+---
+
+# Future Scope
+
+Not part of the current V1 unless separately agreed:
+
+* Conversation Club
+* Paid digital materials
+* Downloadable resources
+* Additional languages
+* New lesson products
+* Admin area
+* Further automation
+* New content sections
 
 ---
 
 # Next Step
 
-**STOP DEVELOPMENT HERE.**
+Resume with:
 
-When the project resumes:
+1. Booking + payment integration
+2. Automated tests
+3. Final client review
+4. QA
+5. Favicon + SEO
+6. Production delivery
 
-1. Review the Home with Thaís
-2. Confirm remaining requirements
-3. Apply approved feedback
-4. Start the About page
-
-Do not start new features before the first client review.
+Do not add new features before V1 delivery unless they are required to complete the agreed user journey.
