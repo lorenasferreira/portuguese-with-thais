@@ -1,6 +1,8 @@
 .section {
   padding: clamp(5rem, 9vw, 8rem) 0;
-  background-color: var(--color-background);
+
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
 }
 
 .header {
@@ -27,7 +29,7 @@
   width: 3rem;
   height: 1px;
 
-  background-color: var(--color-border);
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 .intro h2 {
@@ -71,13 +73,10 @@
   min-height: 430px;
   padding: clamp(2rem, 3vw, 2.7rem);
 
-  background-color: color-mix(
-    in srgb,
-    var(--color-background) 88%,
-    var(--color-surface) 12%
-  );
+  color: var(--color-primary);
+  background-color: var(--color-background);
 
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .featured {
@@ -181,8 +180,6 @@
   font-weight: 400;
 }
 
-/* FOOTER */
-
 .footer {
   display: flex;
   justify-content: flex-end;
@@ -230,8 +227,35 @@
 
   .plans {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+
+    padding: 0.75rem 1.5rem 1.25rem 0;
+
+    scrollbar-width: none;
+  }
+
+  .plans::-webkit-scrollbar {
+    display: none;
+  }
+
+  .plan {
+    flex: 0 0 84%;
+    min-height: 430px;
+    padding: 1.75rem;
+
+    scroll-snap-align: start;
+
+    border: 1px solid var(--color-border);
+  }
+
+  .featured {
+    margin-top: 0;
+
+    border: 2px solid var(--color-accent);
   }
 
   .plan {
