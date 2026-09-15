@@ -23,8 +23,8 @@ function MethodHero() {
         <div className={styles.visual}>
           <div className={styles.imageWrapper}>
             <img
-              src="/images/method/method-culture.png"
-              alt="People experiencing Brazilian music and culture in Salvador"
+              src="/images/method/method-class.jpeg"
+              alt="Students in Thais' classroom"
             />
           </div>
 

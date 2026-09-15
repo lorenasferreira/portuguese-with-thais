@@ -31,9 +31,9 @@ export const books = [
   },
   {
     level: "Advanced",
-    title: "Dom Casmurro",
+    title: "Memórias Póstumas de Brás de Cubas",
     author: "Machado de Assis",
-    note: "A Brazilian classic full of irony, ambiguity and sophisticated language.",
+    note: "A Brazilian classic known for its irony, social criticism and unconventional narrator, with rich language and a distinctive literary style.",
   },
 ];
 

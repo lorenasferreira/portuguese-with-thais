@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import SectionContainer from "../../common/SectionContainer/SectionContainer";
@@ -23,6 +23,11 @@ const socialLinks = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/thais-d-26894577",
     icon: <FaLinkedinIn aria-hidden="true" />,
+  },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/33766516346",
+    icon: <FaWhatsapp aria-hidden="true" />,
   },
 ];
 

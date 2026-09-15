@@ -149,7 +149,7 @@
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(4rem, 9vw, 10rem);
 
-  margin-top: clamp(8rem, 13vw, 13rem);
+  margin-top: clamp(5rem, 8vw, 7rem);
 }
 
 .education h3,
@@ -190,7 +190,7 @@
   gap: clamp(4rem, 8vw, 9rem);
   align-items: center;
 
-  margin-top: clamp(8rem, 13vw, 13rem);
+  margin-top: clamp(5rem, 8vw, 7rem);
 }
 
 .studentsImage {

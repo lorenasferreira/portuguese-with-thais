@@ -23,26 +23,36 @@
   margin: 0;
 
   font-family: var(--font-body);
-  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-size: clamp(1.8rem, 3.5vw, 3.4rem);
   font-weight: 200;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .content strong {
   display: block;
+
   margin-top: 1.5rem;
 
   font-family: var(--font-accent);
-  font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
   font-weight: 400;
 }
 
 @media (max-width: 768px) {
-  .section {
+   .section {
     padding: 5rem 0;
   }
 
   .content {
     text-align: left;
+  }
+
+  .content p {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .content strong {
+    font-size: 1.8rem;
   }
 }

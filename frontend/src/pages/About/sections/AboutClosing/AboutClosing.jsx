@@ -52,8 +52,8 @@ function AboutClosing() {
           <span>Begin your journey</span>
 
           <h2>
-            You do not need to climb
-            <span>the whole mountain today.</span>
+            You don't need to climb
+            <span>the whole mountain at once.</span>
           </h2>
 
           <p>

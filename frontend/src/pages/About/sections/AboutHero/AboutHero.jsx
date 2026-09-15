@@ -16,9 +16,9 @@ function AboutHero() {
             </h1>
 
             <p>
-              A Brazilian Portuguese teacher shaped by language, culture,
-              curiosity and more than a decade of experience helping people find
-              their own way into the language.
+              Hi! My name is Thais, I am your Brazilian Portuguese teacher, and
+              I want to share a little bit of my story and my connection with
+              Brazil and the teaching of Brazilian Portuguese.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ function AboutHero() {
               <img src="/images/about/about-hero.jpg" alt="Thais" />
             </div>
 
-            <span className={styles.imageCaption}>01 · Meet the teacher</span>
+            <span className={styles.imageCaption}>Salvador, Brazil</span>
           </div>
         </div>
       </SectionContainer>

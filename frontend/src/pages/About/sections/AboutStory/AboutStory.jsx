@@ -15,39 +15,51 @@ function AboutStory() {
             </span>
 
             <h2>
-              A story shaped by
-              <span>language, people and culture.</span>
+              A life shaped by
+              <span>movement and language.</span>
             </h2>
           </div>
 
           <p>
-            Born in São Paulo and raised with strong connections to different
-            parts of Brazil, Thais grew up surrounded by different accents,
-            regional expressions and ways of experiencing Brazilian culture.
+            My journey across Brazil began when I was just two months old, on a
+            long bus ride from São Paulo to Ceará with my parents.
           </p>
         </div>
 
         <div className={styles.storyGrid}>
           <div className={styles.storyText}>
             <p>
-              Her parents are from Ceará, in the northeast of Brazil, and family
-              trips across the country became part of her childhood. Over the
-              years, she continued travelling through Brazil, lived in different
-              places and eventually called Salvador, Bahia, home.
+              Raised by parents from the Northeast, I grew up constantly
+              crossing the country by bus, car, plane and even hitchhiking.
+              Experiencing this constant movement exposed me early on to the
+              incredible diversity of Brazilian Portuguese: its vibrant accents,
+              regional expressions and distinct ways of life.
             </p>
 
             <p>
-              Those experiences gave her a relationship with Brazilian
-              Portuguese that goes far beyond one accent or one region. Although
-              her own accent comes from São Paulo, she grew up listening to
-              different registers of Portuguese at home and discovering many
-              others through travel and daily life.
+              Those childhood journeys sparked a lifelong passion for travel and
+              languages. Being encouraged by my parents from a very young age
+              led me to live in the United States for two years to study and
+              travel, explore South America and, eventually, find myself in
+              Europe.
+            </p>
+
+            <p>
+              Today, I teach Brazilian Portuguese to international students,
+              mostly online, while traveling the world myself. Beyond my native
+              Portuguese, I speak fluent English and Spanish, and I am currently
+              learning French.
+            </p>
+
+            <p>
+              Knowing what it feels like to step into a new language gives me a
+              deep appreciation for every student&apos;s learning journey.
             </p>
 
             <div className={styles.smallImage}>
               <img
-                src="/images/about/about-lifestyle.jpg"
-                alt="Thais during her travels"
+                src="/images/about/about-climbing.jpg"
+                alt="Thais rock climbing"
               />
             </div>
           </div>
@@ -55,11 +67,11 @@ function AboutStory() {
           <div className={styles.storyVisual}>
             <div className={styles.largeStoryImage}>
               <img
-                src="/images/about/about-salvador.jpg"
-                alt="Thais in Salvador, Bahia"
+                src="/images/about/about-sao-paulo.jpg"
+                alt="São Paulo, Brazil"
               />
 
-              <span className={styles.location}>Salvador · Bahia</span>
+              <span className={styles.location}>Salvador, Brazil</span>
             </div>
 
             <blockquote>
@@ -78,30 +90,30 @@ function AboutStory() {
             <span className={styles.sectionLabel}>Language as a path</span>
 
             <h3>
-              From studying language
-              <span>to teaching it.</span>
+              From curiosity
+              <span>to a life&apos;s mission.</span>
             </h3>
           </div>
 
           <div className={styles.educationContent}>
             <p>
-              Thais studied Literature and Linguistics at the University of São
-              Paulo, with a strong focus on Portuguese, Brazilian language and
-              culture.
+              I believe it was my curiosity, fueled by growing up in a country
+              as diverse and beautiful as Brazil, my early travels and my
+              passion for Brazilian literature, that revealed my life&apos;s
+              mission: to introduce Brazilian Portuguese to the world.
             </p>
 
             <p>
-              She began teaching Portuguese while still at university, working
-              as a volunteer in a social project for low income students
-              preparing for university entrance exams.
+              Driven by this passion, I spent five years earning my degree in
+              Literature and Linguistics at the University of São Paulo (USP),
+              focusing on Brazilian Literature and the Portuguese language.
             </p>
 
             <p>
-              Teaching soon expanded into schools, informal educational
-              institutions and classrooms with children, teenagers and adults.
-              Today, she has around ten years of teaching experience and has
-              spent the last few years teaching Brazilian Portuguese to
-              international students.
+              My teaching journey started during my university years,
+              volunteering in a social project preparing low-income students for
+              entrance exams. Over the last decade, that work expanded into
+              classrooms with children, teenagers and adults.
             </p>
           </div>
         </div>
@@ -109,35 +121,35 @@ function AboutStory() {
         <div className={styles.students}>
           <div className={styles.studentsImage}>
             <img
-              src="/images/about/about-culture.jpg"
-              alt="Brazilian culture and everyday life"
+              src="/images/about/about-classroom.jpg"
+              alt="Thais teaching in a classroom"
             />
           </div>
 
           <div className={styles.studentsContent}>
-            <span className={styles.sectionLabel}>Around the world</span>
+            <span className={styles.sectionLabel}>Today</span>
 
             <h3>
-              Different people.
-              <span>Different reasons to learn.</span>
+              Every student arrives
+              <span>with a different story.</span>
             </h3>
 
             <p>
-              Her students range from A1 to C2 and live across countries such as
-              Canada, Australia, the United States, France and Italy.
+              Today, my students range from absolute beginners at A1 to advanced
+              speakers at C2, living across countries like Canada, Australia,
+              the United States, France and Italy.
             </p>
 
             <p>
-              Some want to travel through Brazil. Some are preparing to work
-              there. Others want to communicate with a Brazilian partner or
-              their partner&apos;s family. She also teaches children growing up
-              between Brazilian and international cultures.
+              Whether you are learning to travel through Brazil, preparing for
+              work, connecting with a partner and their family, or raising
+              children between cultures, I believe every student arrives with a
+              unique background.
             </p>
 
             <p>
-              That variety of backgrounds is one of the things she values most
-              about teaching. Every student arrives with a different story, and
-              every learning path can be built differently.
+              Every learning path can be built differently, and I am here to
+              help you find yours.
             </p>
           </div>
         </div>

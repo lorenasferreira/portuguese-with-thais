@@ -194,17 +194,21 @@
   text-transform: uppercase;
 }
 
+
 .kids {
    background-color: #dfeee4;
 }
 
 .kids .lessonImage {
   background-color: #cfe3d6;
+
   border-color: color-mix(
     in srgb,
     var(--color-primary) 18%,
     #dfeee4
   );
+
+  min-height: 0;
 }
 
 .pricing {
