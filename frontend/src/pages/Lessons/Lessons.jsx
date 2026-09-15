@@ -26,7 +26,7 @@ const plans = [
   {
     name: "Pace",
     frequency: "8 classes / month",
-    price: "$305",
+    price: "$280",
     description:
       "Build fluency and confidence through a more consistent learning routine.",
     details: ["2 classes / week", "8 classes / month"],
@@ -35,7 +35,7 @@ const plans = [
   {
     name: "Mastery",
     frequency: "12 classes / month",
-    price: "$460",
+    price: "$400",
     description:
       "A more immersive rhythm for learners looking for faster and deeper progress.",
     details: ["3 classes / week", "12 classes / month"],
