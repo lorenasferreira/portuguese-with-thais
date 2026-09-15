@@ -62,7 +62,7 @@ function Footer() {
               </ul>
             </nav>
 
-            <div>
+            <div className={styles.startLearning}>
               <p className={styles.columnTitle}>Start learning</p>
 
               <Link to="/book-a-lesson" className={styles.bookingLink}>

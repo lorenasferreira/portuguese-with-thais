@@ -141,14 +141,17 @@
   text-transform: uppercase;
 }
 
-.socials {
+.startLearning {
   width: fit-content;
+}
+
+.socials {
+  width: 100%;
   margin-top: 1.5rem;
-  margin-inline: auto;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -239,7 +242,7 @@
   .socials {
     margin-top: 1.5rem;
 
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .bottom {
