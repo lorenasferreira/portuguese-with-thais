@@ -2,8 +2,6 @@ import { FaArrowRight } from "react-icons/fa";
 
 import SectionContainer from "../../../common/SectionContainer/SectionContainer";
 
-import methodStudy from "../../../../assets/images/method/method-study.jpg";
-
 import styles from "./MethodPreview.module.css";
 
 function MethodPreview() {
@@ -65,13 +63,6 @@ function MethodPreview() {
               communicate beyond rehearsed textbook dialogues.
             </p>
           </article>
-
-          <div className={styles.imageWrapper}>
-            <img
-              src={methodStudy}
-              alt="Student exploring language and culture through study"
-            />
-          </div>
         </div>
 
         <div className={styles.footer}>
