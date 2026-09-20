@@ -71,7 +71,7 @@ function AboutStory() {
                 alt="São Paulo, Brazil"
               />
 
-              <span className={styles.location}>Salvador, Brazil</span>
+              <span className={styles.location}>São Paulo, Brazil</span>
             </div>
 
             <blockquote>

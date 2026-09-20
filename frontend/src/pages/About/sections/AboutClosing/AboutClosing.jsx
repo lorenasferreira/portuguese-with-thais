@@ -43,7 +43,7 @@ function AboutClosing() {
             ”
           </span>
 
-          <span className={styles.student}>Jimmy</span>
+          <span className={styles.student}>Jimmy - England</span>
         </div>
 
         <div className={styles.closingDivider} />
