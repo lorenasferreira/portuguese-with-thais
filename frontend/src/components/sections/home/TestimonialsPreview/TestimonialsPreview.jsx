@@ -38,28 +38,28 @@ const testimonials = [
     quote:
       "Thais is fantastic. She makes the lesson fun, moves at a great pace that's challenging yet not overwhelming, and sets homework and goals for you. Couldn't recommend her more!",
     author: "Mike",
-    country: "Preply student",
+    country: "Australia",
   },
   {
     id: "sabina",
     quote:
       "Thais is awesome! Her lessons are well planned, and she's willing to adapt to my needs. Whenever I need extra clarification or want to dive deeper into a topic, she's always happy to slow down and make sure I understand.",
     author: "Sabina",
-    country: "Preply student",
+    country: "United States",
   },
   {
-    id: "elfassy",
+    id: "sylvain",
     quote:
       "Super cool learning with Thais. She's very dynamic and enthusiastic, and we learn a lot of things. She prepares each lesson well and gives me a recap of each lesson plus exercises.",
-    author: "Elfassy",
-    country: "Preply student",
+    author: "Sylvain",
+    country: "France",
   },
   {
-    id: "anonymous",
+    id: "alexia",
     quote:
       "A truly dedicated and flexible teacher. Exactly what you need to grow and make real progress in a language. Her guidance makes my Portuguese journey both smooth and enjoyable.",
-    author: "Anonymous",
-    country: "Preply student",
+    author: "Alexia",
+    country: "France",
   },
 ];
 

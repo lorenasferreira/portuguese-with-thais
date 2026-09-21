@@ -4,6 +4,7 @@ import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
 
 import RouteScrollTop from "./components/common/RouteScrollTop/RouteScrollTop";
+import RouteMetadata from "./components/common/RouteMetadata/RouteMetadata";
 import ScrollReveal from "./components/common/ScrollReveal/ScrollReveal";
 import ScrollToTopButton from "./components/common/ScrollToTopButton/ScrollToTopButton";
 
@@ -17,6 +18,7 @@ import BookLesson from "./pages/BookLesson/BookLesson";
 function App() {
   return (
     <BrowserRouter>
+      <RouteMetadata />
       <RouteScrollTop />
       <ScrollReveal />
 
