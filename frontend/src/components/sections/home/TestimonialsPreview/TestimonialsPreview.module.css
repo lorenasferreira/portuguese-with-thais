@@ -139,23 +139,38 @@
 
 .dot {
   width: 26px;
-  height: 2px;
+  height: 34px;
   padding: 0;
 
+  display: grid;
+  place-items: center;
   border: 0;
 
-  background-color: var(--color-border);
+  background: transparent;
 
   cursor: pointer;
 
-  transition:
-    width var(--transition),
-    background-color var(--transition);
+  transition: width var(--transition);
+}
+
+.dot::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-border);
+  transition: background-color var(--transition);
+}
+
+.dot:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .activeDot {
   width: 48px;
+}
 
+.activeDot::before {
   background-color: var(--color-accent);
 }
 
@@ -357,18 +372,26 @@
   }
 
   .controls {
-    align-items: flex-end;
+    align-items: center;
   }
 
   .dots {
-    gap: 0.45rem;
+    gap: 0;
   }
 
   .dot {
+    width: 24px;
+  }
+
+  .dot::before {
     width: 16px;
   }
 
   .activeDot {
+    width: 30px;
+  }
+
+  .activeDot::before {
     width: 30px;
   }
 

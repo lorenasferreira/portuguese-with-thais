@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiArrowLeft, FiArrowRight, FiRotateCcw } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -12,6 +12,15 @@ function LevelQuiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [isComplete, setIsComplete] = useState(false);
+  const headingRef = useRef(null);
+  const shouldFocusHeading = useRef(false);
+
+  useEffect(() => {
+    if (shouldFocusHeading.current) {
+      headingRef.current?.focus();
+      shouldFocusHeading.current = false;
+    }
+  }, [currentQuestionIndex, isComplete]);
 
   const currentQuestion = quizQuestions[currentQuestionIndex];
   const selectedOptionIndex = answers[currentQuestion?.id];
@@ -32,6 +41,7 @@ function LevelQuiz() {
       return;
     }
 
+    shouldFocusHeading.current = true;
     setCurrentQuestionIndex((currentIndex) => currentIndex - 1);
   }
 
@@ -39,6 +49,8 @@ function LevelQuiz() {
     if (selectedOptionIndex === undefined) {
       return;
     }
+
+    shouldFocusHeading.current = true;
 
     if (currentQuestionIndex === quizQuestions.length - 1) {
       setIsComplete(true);
@@ -49,6 +61,7 @@ function LevelQuiz() {
   }
 
   function restartQuiz() {
+    shouldFocusHeading.current = true;
     setAnswers({});
     setCurrentQuestionIndex(0);
     setIsComplete(false);
@@ -113,7 +126,7 @@ function LevelQuiz() {
 
           {!isComplete ? (
             <div className={styles.questionArea} key={currentQuestion.id}>
-              <h3>{currentQuestion.question}</h3>
+              <h3 ref={headingRef} tabIndex={-1}>{currentQuestion.question}</h3>
 
               <div className={styles.options}>
                 {currentQuestion.options.map((option, index) => {
@@ -174,7 +187,7 @@ function LevelQuiz() {
                   <span>/ {quizQuestions.length} correct</span>
                 </div>
 
-                <h3>
+                <h3 ref={headingRef} tabIndex={-1}>
                   {result.level}
                   <span>{result.title}</span>
                 </h3>

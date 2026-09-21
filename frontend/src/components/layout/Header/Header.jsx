@@ -16,6 +16,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const headerRef = useRef(null);
+  const menuButtonRef = useRef(null);
 
   function toggleMenu() {
     setIsMenuOpen((currentValue) => !currentValue);
@@ -36,10 +37,23 @@ function Header() {
       }
     }
 
+    function handleKeyDown(event) {
+      if (
+        event.key === "Escape" &&
+        isMenuOpen &&
+        menuButtonRef.current?.offsetParent !== null
+      ) {
+        closeMenu();
+        menuButtonRef.current?.focus();
+      }
+    }
+
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isMenuOpen]);
 
@@ -50,7 +64,20 @@ function Header() {
           Portuguese <span>with</span> Thais
         </Link>
 
+        <button
+          ref={menuButtonRef}
+          type="button"
+          className={styles.menuButton}
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="main-navigation"
+        >
+          {isMenuOpen ? <FiX /> : <FiMenu />}
+        </button>
+
         <nav
+          id="main-navigation"
           className={`${styles.navigation} ${
             isMenuOpen ? styles.navigationOpen : ""
           }`}
@@ -71,15 +98,6 @@ function Header() {
           </Link>
         </nav>
 
-        <button
-          type="button"
-          className={styles.menuButton}
-          onClick={toggleMenu}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? <FiX /> : <FiMenu />}
-        </button>
       </div>
     </header>
   );
