@@ -76,6 +76,11 @@
     text-align: left;
   }
 
+  .content h2 {
+    font-size: clamp(2.5rem, 12vw, 3.2rem);
+    overflow-wrap: anywhere;
+  }
+
   .content h2 span {
     display: inline;
     margin-left: 0.2em;

@@ -20,11 +20,11 @@ function Hero() {
         </p>
 
         <div className={styles.actions}>
-          <a href="#booking" className={styles.primaryButton}>
+          <a href="/book-a-lesson" className={styles.primaryButton}>
             Book a Trial
           </a>
 
-          <a href="#lessons" className={styles.secondaryButton}>
+          <a href="#method" className={styles.secondaryButton}>
             Discover the Method
           </a>
         </div>

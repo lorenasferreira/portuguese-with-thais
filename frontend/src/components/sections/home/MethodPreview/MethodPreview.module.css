@@ -157,7 +157,7 @@
   padding: 0;
 
   display: grid;
-  grid-template-columns: minmax(180px, 0.55fr) minmax(280px, 0.9fr) minmax(320px, 1.2fr);
+  grid-template-columns: minmax(0, 0.55fr) minmax(0, 0.9fr) minmax(0, 1.2fr);
   align-items: center;
   gap: clamp(2rem, 4vw, 4rem);
 
@@ -282,4 +282,3 @@
     justify-content: flex-start;
   }
 }
-

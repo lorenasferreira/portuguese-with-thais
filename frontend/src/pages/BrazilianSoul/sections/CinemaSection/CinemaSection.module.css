@@ -125,7 +125,12 @@
   }
 
   .header {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .header h2 {
+    font-size: clamp(2.5rem, 12vw, 3rem);
+    overflow-wrap: anywhere;
   }
 
   .header h2 span {
@@ -141,5 +146,12 @@
   .featured {
     grid-column: auto;
     min-height: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header h2 span {
+    display: block;
+    margin-left: 0;
   }
 }
