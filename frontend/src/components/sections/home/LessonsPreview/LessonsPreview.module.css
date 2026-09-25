@@ -35,6 +35,10 @@
   opacity: 0.45;
 }
 
+.sectionLabel > span:first-child {
+  color: var(--color-accent-text);
+}
+
 .intro {
   max-width: 760px;
 }
@@ -92,7 +96,7 @@
 }
 
 .number {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3vw, 3rem);

@@ -30,7 +30,10 @@ function AboutCulture() {
           <article className={styles.climbing}>
             <div className={styles.climbingImage}>
               <img
-                src="/images/about/about-climbing.jpg"
+                src="/images/about/about-climbing-1536.webp"
+                width="3024"
+                height="4032"
+                loading="lazy"
                 alt="Thais climbing"
               />
             </div>
@@ -56,7 +59,10 @@ function AboutCulture() {
           <article className={styles.music}>
             <div className={styles.musicImage}>
               <img
-                src="/images/about/about-pandeiro.jpg"
+                src="/images/about/about-pandeiro-1536.webp"
+                width="4160"
+                height="3327"
+                loading="lazy"
                 alt="Thais playing pandeiro"
               />
             </div>

@@ -23,7 +23,10 @@ function BrazilianSoulHero() {
 
         <div className={styles.visual}>
           <img
-            src="/images/method/brazilian-culture-collage.png"
+            src="/images/method/brazilian-culture-collage-1401.webp"
+            srcSet="/images/method/brazilian-culture-collage-640.webp 640w, /images/method/brazilian-culture-collage-960.webp 960w, /images/method/brazilian-culture-collage-1401.webp 1401w"
+            sizes="min(1150px, calc(100vw - clamp(2.8rem, 8vw, 8rem)))"
+            loading="eager"
             alt="Collage inspired by Brazilian music, cinema and literature"
           />
 

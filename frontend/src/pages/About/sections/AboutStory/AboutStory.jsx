@@ -58,7 +58,10 @@ function AboutStory() {
 
             <div className={styles.smallImage}>
               <img
-                src="/images/about/about-climbing.jpg"
+                src="/images/about/about-climbing-1536.webp"
+                width="3024"
+                height="4032"
+                loading="lazy"
                 alt="Thais rock climbing"
               />
             </div>
@@ -67,7 +70,10 @@ function AboutStory() {
           <div className={styles.storyVisual}>
             <div className={styles.largeStoryImage}>
               <img
-                src="/images/about/about-sao-paulo.jpg"
+                src="/images/about/about-sao-paulo-1600.webp"
+                width="3971"
+                height="3120"
+                loading="lazy"
                 alt="São Paulo, Brazil"
               />
 
@@ -121,7 +127,10 @@ function AboutStory() {
         <div className={styles.students}>
           <div className={styles.studentsImage}>
             <img
-              src="/images/about/about-classroom.jpg"
+              src="/images/about/about-classroom-1536.webp"
+              width="4160"
+              height="3328"
+              loading="lazy"
               alt="Thais teaching in a classroom"
             />
           </div>

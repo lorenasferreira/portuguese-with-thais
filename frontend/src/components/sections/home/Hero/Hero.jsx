@@ -32,7 +32,12 @@ function Hero() {
 
       <div className={styles.heroImage}>
         <img
-          src="/images/home/hero-thais.jpg"
+          src="/images/home/hero-thais-1680.webp"
+          srcSet="/images/home/hero-thais-640.webp 640w, /images/home/hero-thais-960.webp 960w, /images/home/hero-thais-1680.webp 1680w"
+          sizes="(max-width: 900px) max(345px, calc(100vw - max(2.8rem, 8vw))), (max-width: 1440px) max(465px, 40.4vw), 600px"
+          width="2316"
+          height="3088"
+          loading="eager"
           alt="Thais, Brazilian Portuguese teacher"
         />
       </div>

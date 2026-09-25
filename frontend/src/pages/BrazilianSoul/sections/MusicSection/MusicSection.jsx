@@ -57,7 +57,11 @@ function MusicSection() {
         <div className={styles.artistGallery}>
           {featuredArtists.map((artist) => (
             <figure key={artist.name} className={styles.artist}>
-              <img src={artist.image} alt={artist.name} />
+              <img
+                src={artist.image}
+                alt={artist.name}
+                loading="lazy"
+              />
               <figcaption>{artist.name}</figcaption>
             </figure>
           ))}

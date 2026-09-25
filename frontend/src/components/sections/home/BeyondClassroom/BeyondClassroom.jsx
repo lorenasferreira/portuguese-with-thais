@@ -19,7 +19,10 @@ function BeyondClassroom() {
           <div className={styles.visual}>
             <div className={styles.image}>
               <img
-                src="/images/home/beyond-classroom.jpg"
+                src="/images/home/beyond-classroom-1440.webp"
+                width="3024"
+                height="4032"
+                loading="lazy"
                 alt="Brazilian cultural scene"
               />
             </div>

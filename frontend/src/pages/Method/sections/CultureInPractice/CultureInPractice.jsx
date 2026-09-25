@@ -29,7 +29,12 @@ function CultureInPractice() {
         <div className={styles.gallery}>
           <div className={styles.largeVisual}>
             <img
-              src="/images/method/brazilian-culture-collage.png"
+              src="/images/method/brazilian-culture-collage-1401.webp"
+              srcSet="/images/method/brazilian-culture-collage-640.webp 640w, /images/method/brazilian-culture-collage-960.webp 960w, /images/method/brazilian-culture-collage-1401.webp 1401w"
+              sizes="(max-width: 768px) max(537px, calc(100vw - max(2.8rem, 8vw))), (max-width: 1440px) max(811px, 72vw), 1040px"
+              width="1401"
+              height="1123"
+              loading="lazy"
               alt="Brazilian culture collage with cinema, literature and music"
             />
           </div>
@@ -37,7 +42,10 @@ function CultureInPractice() {
           <div className={styles.side}>
             <div className={styles.smallVisual}>
               <img
-                src="/images/method/pandeiro-salvador.png"
+                src="/images/method/pandeiro-salvador-1122.webp"
+                width="1122"
+                height="1402"
+                loading="lazy"
                 alt="Hands playing pandeiro in Salvador"
               />
             </div>

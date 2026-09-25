@@ -100,6 +100,8 @@ function FAQSection() {
 
                   <div
                     id={`${faq.id}-answer`}
+                    aria-hidden={!isOpen}
+                    inert={!isOpen}
                     className={`${styles.answer} ${
                       isOpen ? styles.answerOpen : ""
                     }`}

@@ -71,6 +71,10 @@
   text-transform: uppercase;
 }
 
+.eyebrow > span:last-child {
+  color: var(--color-accent);
+}
+
 .eyebrowLine {
   width: 42px;
   height: 1px;

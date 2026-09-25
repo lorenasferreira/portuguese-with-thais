@@ -24,7 +24,15 @@ function AboutHero() {
 
           <div className={styles.heroVisual}>
             <div className={styles.heroImage}>
-              <img src="/images/about/about-hero.jpg" alt="Thais" />
+              <img
+                src="/images/about/about-hero-2560.webp"
+                srcSet="/images/about/about-hero-640.webp 640w, /images/about/about-hero-960.webp 960w, /images/about/about-hero-2560.webp 2560w"
+                sizes="(max-width: 768px) max(667px, calc(100vw - max(2.8rem, 8vw) - 2px)), (max-width: 1000px) max(87vw, calc(92vw - 2px)), min(1014px, max(720px, 86.667vw))"
+                width="4032"
+                height="3024"
+                loading="eager"
+                alt="Thais"
+              />
             </div>
 
             <span className={styles.imageCaption}>Salvador, Brazil</span>

@@ -51,7 +51,10 @@ function Lessons() {
             <div className={styles.heroVisual}>
               <div className={styles.heroImage}>
                 <img
-                  src="/images/lessons/lessons-hero.jpeg"
+                  src="/images/lessons/lessons-hero-1872.webp"
+                  srcSet="/images/lessons/lessons-hero-640.webp 640w, /images/lessons/lessons-hero-960.webp 960w, /images/lessons/lessons-hero-1872.webp 1872w"
+                  sizes="(max-width: 1000px) calc(100vw - max(2.8rem, 8vw) - 2px), (max-width: 1440px) calc(48.3vw - 2px), 700px"
+                  loading="eager"
                   alt="Brazilian Portuguese lesson with Thais"
                 />
               </div>
@@ -113,6 +116,7 @@ function Lessons() {
             <div className={styles.lessonImage}>
               <img
                 src="/images/lessons/one-on-one.jpeg"
+                loading="lazy"
                 alt="One-on-one Brazilian Portuguese lesson"
               />
             </div>
@@ -128,6 +132,7 @@ function Lessons() {
             <div className={styles.lessonImage}>
               <img
                 src="/images/lessons/kids.jpeg"
+                loading="lazy"
                 alt="Portuguese learning activities for children"
               />
             </div>
@@ -182,7 +187,8 @@ function Lessons() {
 
             <div className={styles.lessonImage}>
               <img
-                src="/images/lessons/celpe-bras.jpeg"
+                src="/images/lessons/celpe-bras-1254.webp"
+                loading="lazy"
                 alt="CELPE-Bras preparation and study"
               />
             </div>

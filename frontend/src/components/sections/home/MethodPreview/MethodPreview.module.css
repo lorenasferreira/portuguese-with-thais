@@ -166,7 +166,7 @@
 }
 
 .smallCard > span {
-  color: var(--color-accent-subtle, #a88422);
+  color: var(--color-accent-text);
 
   font-size: 0.61rem;
   font-weight: 600;

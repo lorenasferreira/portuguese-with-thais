@@ -65,6 +65,13 @@ const testimonials = [
 
 function TestimonialsPreview() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [hasFocus, setHasFocus] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(
+    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
+  const isRotating = !isPaused && !isHovered && !hasFocus && !reducedMotion;
 
   const showPrevious = () => {
     setActiveIndex((current) =>
@@ -79,10 +86,19 @@ function TestimonialsPreview() {
   };
 
   useEffect(() => {
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = (event) => setReducedMotion(event.matches);
+    preference.addEventListener("change", updatePreference);
+    return () => preference.removeEventListener("change", updatePreference);
+  }, []);
+
+  useEffect(() => {
+    if (!isRotating) return;
+
     const interval = window.setInterval(showNext, 6500);
 
     return () => window.clearInterval(interval);
-  }, []);
+  }, [isRotating]);
 
   const activeTestimonial = testimonials[activeIndex];
 
@@ -105,22 +121,40 @@ function TestimonialsPreview() {
             </p>
           </div>
 
-          <div className={styles.carousel}>
+          <div
+            className={styles.carousel}
+            onPointerEnter={(event) => {
+              if (event.pointerType !== "touch") setIsHovered(true);
+            }}
+            onPointerLeave={() => setIsHovered(false)}
+            onPointerDown={(event) => {
+              if (
+                event.pointerType === "touch" &&
+                !event.target.closest(`.${styles.rotationControl}`)
+              ) {
+                setIsPaused(true);
+              }
+            }}
+            onFocusCapture={() => setHasFocus(true)}
+            onBlurCapture={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) {
+                setHasFocus(false);
+              }
+            }}
+          >
             <span className={styles.quoteMark} aria-hidden="true">
               “
             </span>
 
-            <div
-              className={styles.review}
-              key={activeTestimonial.id}
-              aria-live="polite"
-            >
-              <blockquote>{activeTestimonial.quote}</blockquote>
+            <div aria-live={isRotating ? "off" : "polite"}>
+              <div className={styles.review} key={activeTestimonial.id}>
+                <blockquote>{activeTestimonial.quote}</blockquote>
 
-              <footer>
-                <strong>{activeTestimonial.author}</strong>
-                <span>{activeTestimonial.country}</span>
-              </footer>
+                <footer>
+                  <strong>{activeTestimonial.author}</strong>
+                  <span>{activeTestimonial.country}</span>
+                </footer>
+              </div>
             </div>
 
             <div className={styles.controls}>
@@ -162,6 +196,16 @@ function TestimonialsPreview() {
                 </button>
               </div>
             </div>
+            {!reducedMotion && (
+              <button
+                type="button"
+                className={styles.rotationControl}
+                onClick={() => setIsPaused((paused) => !paused)}
+                aria-label={`${isPaused ? "Resume" : "Pause"} automatic testimonial rotation`}
+              >
+                {isPaused ? "Resume" : "Pause"} auto-rotation
+              </button>
+            )}
           </div>
         </div>
       </SectionContainer>
