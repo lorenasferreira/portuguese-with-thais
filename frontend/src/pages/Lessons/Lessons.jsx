@@ -10,7 +10,7 @@ const plans = [
   {
     name: "Single Session",
     frequency: "Pay as you go",
-    price: "$40",
+    price: "€40",
     description:
       "A flexible option for focused feedback, occasional practice or a single class when you need it.",
     details: ["1 class", "50-minute lesson"],
@@ -18,7 +18,7 @@ const plans = [
   {
     name: "Flow",
     frequency: "4 classes / month",
-    price: "$150",
+    price: "€150",
     description:
       "Build consistency while keeping a comfortable and flexible learning rhythm.",
     details: ["1 class / week", "4 classes / month"],
@@ -26,7 +26,7 @@ const plans = [
   {
     name: "Pace",
     frequency: "8 classes / month",
-    price: "$280",
+    price: "€280",
     description:
       "Build fluency and confidence through a more consistent learning routine.",
     details: ["2 classes / week", "8 classes / month"],
@@ -35,7 +35,7 @@ const plans = [
   {
     name: "Mastery",
     frequency: "12 classes / month",
-    price: "$400",
+    price: "€400",
     description:
       "A more immersive rhythm for learners looking for faster and deeper progress.",
     details: ["3 classes / week", "12 classes / month"],
@@ -133,7 +133,7 @@ function Lessons() {
               <img
                 src="/images/lessons/kids.jpeg"
                 loading="lazy"
-                alt="Portuguese learning activities for children"
+                alt="Brazilian Portuguese heritage language lessons for children"
               />
             </div>
 
@@ -141,19 +141,25 @@ function Lessons() {
               <span className={styles.sectionLabel}>Portuguese for Kids</span>
 
               <h2>
-                Learning can feel <span>like play.</span>
+                Heritage <span>Language.</span>
               </h2>
 
               <p>
-                Lessons for children bring Portuguese into a playful,
-                age-appropriate environment using music, stories, movement and
-                cultural references that make the language memorable.
+                Designed for children from diverse backgrounds, these lessons
+                make learning Brazilian Portuguese fun, engaging, and
+                age-appropriate. With a special focus on heritage language
+                learning, they also help children of Brazilian families around
+                the world connect with their roots through music, stories,
+                movement, and cultural expression.
               </p>
 
+              <p>Available online worldwide or in person in Paris.</p>
+
               <ul className={styles.lessonList}>
-                <li>Music and songs</li>
-                <li>Playful activities</li>
+                <li>Heritage language and identity building</li>
+                <li>Music, stories, and creative expression</li>
                 <li>Brazilian cultural references</li>
+                <li>Flexible format: online or in person (Paris)</li>
               </ul>
             </div>
           </div>
@@ -261,7 +267,7 @@ function Lessons() {
             <div className={styles.trialInfo}>
               <div>
                 <span>Trial Lesson</span>
-                <strong>$25</strong>
+                <strong>€25</strong>
               </div>
 
               <p>

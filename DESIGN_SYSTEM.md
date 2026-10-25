@@ -41,12 +41,27 @@ Main tokens:
 --color-primary-dark
 --color-accent
 --color-accent-hover
+--color-accent-text
 --color-background
 --color-surface
 --color-text
 --color-text-light
 --color-border
-````
+```
+
+### Accent usage
+
+Bright yellow `#f2b84b` is an important visual accent and may be used for decorative elements and where contrast is sufficient.
+
+For small text on light backgrounds, use the accessible mustard token:
+
+```css
+--color-accent-text: #8c671a;
+```
+
+This treatment was reviewed and approved by the client.
+
+Do not change accessible colors back to brighter variants without checking WCAG contrast.
 
 ---
 
@@ -62,19 +77,13 @@ Current font roles:
 
 Use:
 
-* Body font for paragraphs, UI, navigation and clean headings
-* Heading serif for editorial moments and quotes
-* Accent font for selected words and expressive highlights
+- Body font for paragraphs, UI, navigation and clean headings
+- Heading serif for editorial moments and quotes
+- Accent font for selected words and expressive highlights
 
 Do not use the same serif treatment on every heading.
 
-Hierarchy should also come from:
-
-* Scale
-* Weight
-* Spacing
-* Color
-* Layout
+Hierarchy should also come from scale, weight, spacing, color and layout.
 
 ---
 
@@ -86,13 +95,13 @@ Sections should feel connected without looking identical.
 
 Create variation through:
 
-* Photography
-* Grids
-* Negative space
-* Borders
-* Asymmetry
-* Different heading treatments
-* Background changes
+- Photography
+- Grids
+- Negative space
+- Borders
+- Asymmetry
+- Different heading treatments
+- Background changes
 
 Consistency should come from the design language, not repeated layouts.
 
@@ -136,6 +145,25 @@ transform: translateY(-2px);
 ```
 
 Hover effects should support interaction without distracting from content.
+
+Maintain visible keyboard focus states for interactive elements.
+
+---
+
+## Images
+
+Production photography has been optimized to WebP.
+
+Use:
+
+- Responsive `srcSet` for major hero images when available
+- Eager loading for important above-the-fold hero imagery
+- `loading="lazy"` for below-the-fold imagery
+- Existing optimized derivatives instead of archived original files
+
+Do not unnecessarily reintroduce large original photographs into `public/images/`.
+
+The social sharing image is separate from regular page photography.
 
 ---
 
@@ -191,6 +219,33 @@ Mobile
 
 Mobile should be intentionally adapted, not simply scaled down.
 
+Important QA widths currently include:
+
+```text
+320px
+375px
+768px
+1024px
+1440px
+```
+
+Avoid page-wide horizontal overflow.
+
+---
+
+## Accessibility
+
+Maintain:
+
+- WCAG-compatible text contrast
+- Keyboard-accessible interactions
+- Visible focus states
+- Semantic expanded/collapsed states
+- Reduced-motion behavior where applicable
+- Appropriate image alt text
+
+Accessibility fixes already implemented should not be reverted only for visual preference without reviewing their impact.
+
 ---
 
 ## Code Conventions
@@ -216,6 +271,30 @@ Import order:
 
 ---
 
+## QA Workflow
+
+Codex is used as a development and QA assistant for audits, repetitive fixes, responsive testing and regression checks.
+
+For significant changes:
+
+```text
+Inspect
+↓
+Implement
+↓
+Lint + Build
+↓
+Browser QA
+↓
+Manual review
+↓
+Commit
+```
+
+Do not let automated fixes override intentional design decisions without manual review.
+
+---
+
 ## Core Principles
 
 Before building or changing a section, ask:
@@ -225,5 +304,6 @@ Before building or changing a section, ask:
 3. Is it visually distinct enough from the surrounding sections?
 4. Can an existing component already solve it?
 5. Does it work across desktop, tablet and mobile?
+6. Does it preserve accessibility and performance?
 
 Reuse the system, not the exact visual identity, in future projects.

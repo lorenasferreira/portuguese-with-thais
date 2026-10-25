@@ -16,7 +16,7 @@ const steps = [
   {
     number: "03",
     title: "Complete payment",
-    text: "The $25 trial payment will be completed securely through the booking flow.",
+    text: "The €25 trial payment will be completed securely through the booking flow.",
   },
   {
     number: "04",

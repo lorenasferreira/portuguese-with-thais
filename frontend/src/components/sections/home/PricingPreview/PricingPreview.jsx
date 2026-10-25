@@ -8,7 +8,7 @@ const plans = [
   {
     name: "Single Session",
     frequency: "Pay as you go",
-    price: "$40",
+    price: "€40",
     description:
       "A flexible option for focused feedback, occasional practice or a single class when you need it.",
     details: ["1 class", "50-minute lesson"],
@@ -16,7 +16,7 @@ const plans = [
   {
     name: "Flow",
     frequency: "4 classes / month",
-    price: "$150",
+    price: "€150",
     description:
       "Build consistency while keeping a comfortable and flexible learning rhythm.",
     details: ["1 class / week", "4 classes / month"],
@@ -24,7 +24,7 @@ const plans = [
   {
     name: "Pace",
     frequency: "8 classes / month",
-    price: "$280",
+    price: "€280",
     description:
       "Build fluency and confidence through a more consistent learning routine.",
     details: ["2 classes / week", "8 classes / month"],
@@ -33,7 +33,7 @@ const plans = [
   {
     name: "Mastery",
     frequency: "12 classes / month",
-    price: "$400",
+    price: "€400",
     description:
       "A more immersive rhythm for learners looking for faster and deeper progress.",
     details: ["3 classes / week", "12 classes / month"],

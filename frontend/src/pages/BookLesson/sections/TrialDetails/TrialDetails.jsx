@@ -11,7 +11,7 @@ function TrialDetails() {
             <span>Trial Lesson</span>
 
             <div className={styles.price}>
-              <strong>$25</strong>
+              <strong>€25</strong>
               <span>/ 50 min</span>
             </div>
           </div>

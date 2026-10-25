@@ -1,3 +1,4 @@
+
 .section {
   padding: clamp(6rem, 10vw, 10rem) 0;
 
@@ -48,79 +49,70 @@
   line-height: 1.8;
 }
 
-.integration {
-  min-height: 540px;
-  padding: clamp(2rem, 5vw, 4rem);
+.lessonDetails {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
 
-  display: grid;
-  place-items: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.lessonDetails > span {
+  display: block;
+  margin-bottom: 0.75rem;
+
+  color: var(--color-primary);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lessonDetails strong {
+  display: block;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+}
+
+.lessonDetails p {
+  margin-top: 0.75rem;
+
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.integration {
+  width: 100%;
+  min-width: 0;
+  min-height: 650px;
+  padding: 1rem;
 
   border: 1px solid var(--color-border);
 
   background-color: var(--color-background);
 }
 
-.integrationInner {
-  max-width: 480px;
-
-  text-align: center;
-}
-
-.integrationInner > span {
-  display: block;
-  margin-bottom: 1.2rem;
-
-  color: var(--color-accent);
-
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.integrationInner p {
-  margin: 0;
-
-  font-family: var(--font-accent);
-  font-size: clamp(1.7rem, 3vw, 2.6rem);
-  line-height: 1.4;
-}
-
-.integrationInner a {
-  margin-top: 2rem;
-  padding: 1rem 1.5rem;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  transition:
-    background-color var(--transition),
-    transform var(--transition);
-}
-
-.integrationInner a:hover {
-  background-color: var(--color-primary-dark);
-
-  transform: translateY(-2px);
+.calendar {
+  width: 100%;
+  min-height: 620px;
 }
 
 @media (max-width: 800px) {
   .bookingArea {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
   .integration {
-    min-height: 440px;
+    min-height: 600px;
   }
+
+ .calendar {
+  width: 100%;
+  min-height: 600px;
+}
 }
 
 @media (max-width: 600px) {
@@ -129,11 +121,17 @@
     margin-left: 0.2em;
   }
 
-  .integration {
-    min-height: 390px;
+  .lessonDetails {
+    margin-top: 2rem;
   }
 
-  .integrationInner a {
-    width: 100%;
+  .integration {
+    min-height: 550px;
+    padding: 0.5rem;
   }
+
+  .calendar {
+  width: 100%;
+  min-height: 600px;
+}
 }

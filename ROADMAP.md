@@ -2,18 +2,13 @@
 
 ## Current Status
 
-Project is in the final development stage.
+Project is in the final development stage and currently **paused pending client input**.
 
-Most pages, content and visual work are complete.
+Most development, content, visual refinement, responsive work, accessibility and SEO setup are complete.
 
-Main priorities now:
+Main remaining functional milestone:
 
-- Booking + payment flow
-- Final client review
-- Automated tests
-- QA
-- SEO + favicon
-- Production delivery
+- Booking + payment integration
 
 ---
 
@@ -44,7 +39,7 @@ Main priorities now:
 - [x] Scroll to Top
 - [x] Scroll Reveal
 
-Testimonials and FAQ are included in the Home instead of dedicated pages.
+Testimonials and FAQ are included in Home instead of dedicated pages.
 
 ---
 
@@ -55,19 +50,20 @@ Testimonials and FAQ are included in the Home instead of dedicated pages.
 - [x] Pricing confirmed
 - [x] About content implemented
 - [x] Testimonials implemented
-- [x] Placement Test requirements confirmed
+- [x] Student names/countries updated
 - [x] Placement Test content implemented
 - [x] Main photography added
-- [x] Main social links added
+- [x] Social links added
+- [x] WhatsApp Business added
 - [x] Major visual feedback applied
+- [x] Main client revision round completed
 
 Still open:
 
-- [ ] Final client review
-- [ ] Final image replacements, if requested
-- [ ] Final content corrections, if requested
-- [ ] WhatsApp number, if client wants it added
-- [ ] Domain decision
+- [ ] Remaining client feedback, if any
+- [ ] Final content/image corrections, if requested
+- [ ] Final booking decision/configuration
+- [ ] Domain purchase and connection
 
 ---
 
@@ -78,21 +74,24 @@ Still open:
 - [x] Local frontend score calculation
 - [x] Result screen
 - [x] Responsive quiz interface
+- [x] Keyboard focus improvements
+- [x] Browser interaction QA
+- [x] Score/result boundary checks during QA
 
-Pending:
+A dedicated automated test suite is not currently configured.
 
-- [ ] Automated tests for scoring logic
-- [ ] Automated tests for CEFR thresholds
+Final regression testing can be completed together with the Booking implementation.
 
 ---
 
 # Phase 5 — Booking & Payment 🚧
 
 - [x] Book a Lesson page structure
-- [ ] Confirm Google Calendar Appointment Schedule access
+- [ ] Finalize Google Calendar Appointment Schedule
 - [ ] Configure lesson availability
-- [ ] Configure Google Meet
-- [ ] Connect Stripe if supported
+- [ ] Configure Google Meet / confirmation flow
+- [ ] Finalize Stripe configuration
+- [ ] Connect Calendar + Stripe
 - [ ] Connect final booking flow to site
 - [ ] Test successful booking
 - [ ] Test payment flow
@@ -101,7 +100,7 @@ Pending:
 Preferred flow:
 
 ```text
-Choose lesson
+Choose lesson/package
 ↓
 Choose availability
 ↓
@@ -109,80 +108,172 @@ Pay
 ↓
 Booking confirmed
 ↓
-Google Meet
-````
+Google Meet / confirmation
+```
 
-This is the main remaining functional milestone before delivery.
+Google Calendar Appointment Schedule + Stripe remains the preferred V1 solution.
 
----
+This phase is currently blocked by client configuration.
 
-# Phase 6 — Final QA
-
-* [ ] Test desktop
-* [ ] Test tablet
-* [ ] Test mobile
-* [ ] Test all routes
-* [ ] Test Header and Footer links
-* [ ] Test all CTAs
-* [ ] Test direct Vercel URLs
-* [ ] Test Placement Test logic
-* [ ] Check image loading
-* [ ] Check scroll behavior
-* [ ] Check booking flow
-* [ ] Check payment flow
-* [ ] Remove remaining placeholders
-* [ ] Remove dead CSS
-* [ ] Check broken links
+If the preferred integration cannot be completed, a simpler manual contact flow may be used as the V1 fallback.
 
 ---
 
-# Phase 7 — SEO & Polish
+# Phase 6 — Technical QA ✅
 
-* [ ] Add favicon
-* [ ] Review page titles
-* [ ] Add meta descriptions
-* [ ] Review image alt text
-* [ ] Accessibility review
-* [ ] Performance review
-* [ ] Final visual consistency review
+Completed with Codex + manual review:
+
+- [x] Lint
+- [x] Production build
+- [x] Desktop QA
+- [x] Tablet QA
+- [x] Mobile QA
+- [x] 320px narrow-screen QA
+- [x] Main routes tested
+- [x] Navigation tested
+- [x] Mobile menu tested
+- [x] Main CTAs tested
+- [x] FAQ interactions tested
+- [x] Placement Test interactions tested
+- [x] Testimonial controls tested
+- [x] Horizontal pricing carousel tested
+- [x] Horizontal overflow audit
+- [x] Console error / React warning checks
+- [x] Responsive image loading checks
+
+Final regression still required after Booking:
+
+- [ ] Test Booking flow
+- [ ] Test payment flow
+- [ ] Test confirmation flow
+- [ ] Test all final production links
+- [ ] Final broken-link check
+- [ ] Final placeholder check
+- [ ] Final regression QA
 
 ---
 
-# Phase 8 — Delivery
+# Phase 7 — Accessibility, SEO & Performance ✅
 
-* [ ] Receive final client approval
-* [ ] Receive remaining project payment
-* [ ] Connect custom domain, if purchased
-* [ ] Final production deployment
-* [ ] Deliver final project
-* [ ] Create final release commit/tag
+## Accessibility
+
+- [x] Mobile navigation keyboard behavior
+- [x] Escape/focus handling
+- [x] Placement Test focus management
+- [x] Larger testimonial interaction targets
+- [x] Testimonial pause/resume behavior
+- [x] Reduced-motion behavior
+- [x] FAQ collapsed-answer semantics
+- [x] WCAG contrast review
+- [x] Accessible mustard accent approved by client
+
+## SEO & Sharing
+
+- [x] Favicon
+- [x] Route-specific page titles
+- [x] Meta descriptions
+- [x] Canonical URLs
+- [x] Open Graph metadata
+- [x] Twitter sharing metadata
+- [x] Dedicated 1200×630 social-sharing image
+
+## Performance
+
+- [x] Production image audit
+- [x] Convert major photography to WebP
+- [x] Responsive hero image variants
+- [x] Lazy loading below the fold
+- [x] Intrinsic image dimensions
+- [x] Retina-aware About hero
+- [x] Browser image-selection QA
+
+Major optimized production images were reduced by approximately 80%.
+
+Remaining final checks:
+
+- [ ] Review final image alt text
+- [ ] Verify metadata after custom domain connection
+- [ ] Verify real social-link preview after domain launch
+
+---
+
+# Phase 8 — Production & Delivery 🚧
+
+- [ ] Receive final client booking configuration
+- [ ] Complete Booking integration
+- [ ] Complete final regression QA
+- [ ] Update README
+- [ ] Client purchases `portuguesewiththais.com`
+- [ ] Connect custom domain to Vercel
+- [ ] Verify production deployment
+- [ ] Verify metadata/social sharing on production domain
+- [ ] Receive final client approval
+- [ ] Receive remaining project payment
+- [ ] Deliver final project
+- [ ] Create final release commit/tag
 
 ---
 
 # Future Scope
 
-Not part of the current V1 unless separately agreed:
+Not part of current V1 unless separately agreed:
 
-* Conversation Club
-* Paid digital materials
-* Downloadable resources
-* Additional languages
-* New lesson products
-* Admin area
-* Further automation
-* New content sections
+- Portuguese Conversation Club
+- Paid digital materials
+- Email-gated downloadable resources
+- Newsletter / email marketing integration
+- Additional languages
+- New lesson products
+- Admin area
+- Custom backend/database
+- Further automation
+- New content sections
+
+---
+
+# Development Workflow
+
+Codex is now part of the development/QA workflow.
+
+Preferred process:
+
+```text
+Inspect
+↓
+Implement
+↓
+Lint + Build
+↓
+Browser QA
+↓
+Manual review
+↓
+Git review
+↓
+Commit
+```
+
+Do not let Codex commit or push automatically unless explicitly requested.
+
+For large or visual changes, inspect/review before committing.
 
 ---
 
 # Next Step
 
+Project is paused until Thaís provides the required Booking/Stripe/Google Calendar information.
+
 Resume with:
 
-1. Booking + payment integration
-2. Automated tests
-3. Final client review
-4. QA
-5. Favicon + SEO
-6. Production delivery
+1. Complete Booking + payment integration
+2. Test Booking/payment end-to-end
+3. Apply any remaining client feedback
+4. Run final regression QA
+5. Update README
+6. Connect `portuguesewiththais.com`
+7. Production verification
+8. Client approval + final payment
+9. Final delivery
+10. Release commit/tag
 
-Do not add new features before V1 delivery unless they are required to complete the agreed user journey.
+Do not add new V1 features while waiting for the Booking dependency.

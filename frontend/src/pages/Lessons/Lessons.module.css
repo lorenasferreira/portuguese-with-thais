@@ -1,3 +1,4 @@
+
 .page {
   background-color: var(--color-background);
   color: var(--color-text);
@@ -194,21 +195,29 @@
   text-transform: uppercase;
 }
 
+/* KIDS */
 
 .kids {
-   background-color: #dfeee4;
+  background-color: #dfeee4;
+}
+
+.kids .lessonContent > p {
+  margin: 1.25rem 0;
+}
+
+.kids .lessonContent > p + p {
+  margin-top: 0;
 }
 
 .kids .lessonImage {
-  background-color: #cfe3d6;
+  min-height: 0;
 
+  background-color: #cfe3d6;
   border-color: color-mix(
     in srgb,
     var(--color-primary) 18%,
     #dfeee4
   );
-
-  min-height: 0;
 }
 
 .pricing {
@@ -449,13 +458,13 @@
     gap: 3rem;
   }
 
-   .heroVisual {
+  .heroVisual {
     width: 100%;
   }
 
   .heroImage {
     width: 100%;
-    ;min-height: 480px;
+    min-height: 480px;
   }
 
   .heroNote {
