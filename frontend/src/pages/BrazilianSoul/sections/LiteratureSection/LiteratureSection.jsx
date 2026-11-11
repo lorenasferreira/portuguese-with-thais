@@ -35,7 +35,13 @@ function LiteratureSection() {
               <span className={styles.level}>{book.level}</span>
 
               <div>
-                <h3>{book.title}</h3>
+                <h3>
+                  <a href={`https://www.amazon.com/s?${new URLSearchParams({ k: `${book.title} ${book.author}` })}`}
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label={`Search Amazon for ${book.title} by ${book.author} (opens in a new tab)`}>
+                    {book.title} <span className={styles.external} aria-hidden="true">↗</span>
+                  </a>
+                </h3>
                 <span className={styles.author}>{book.author}</span>
               </div>
 

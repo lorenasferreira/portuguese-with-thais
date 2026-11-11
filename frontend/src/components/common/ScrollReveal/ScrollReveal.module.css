@@ -1,21 +1,25 @@
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-
-  transition:
-    opacity 650ms ease,
-    transform 650ms ease;
+.imageFrame {
+  overflow: hidden;
 }
 
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+.imageFrame > img {
+  transform: translateY(var(--image-y, 0px)) scale(var(--image-scale, 1.025));
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .imageFrame > img {
+    scale: 1;
+    transition: scale 400ms ease;
+  }
+
+  .imageFrame:hover > img {
+    scale: 1.015;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
+  .imageFrame > img {
     transform: none;
-    transition: none;
+    scale: none;
   }
 }

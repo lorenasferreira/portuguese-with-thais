@@ -117,3 +117,5 @@
     grid-column: 2;
   }
 }
+.book h3 a:hover, .book h3 a:focus-visible { text-decoration: underline; text-underline-offset: 0.15em; }
+.external { display: inline-block; font-family: var(--font-body); font-size: 0.55em; color: var(--color-accent-text); vertical-align: middle; }

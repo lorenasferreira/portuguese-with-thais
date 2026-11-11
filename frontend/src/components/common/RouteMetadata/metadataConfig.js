@@ -1,10 +1,10 @@
 export const siteUrl = "https://portuguesewiththais.com";
 
 export const socialImage = {
-  path: "/images/social/portuguese-with-thais-social.jpg",
-  alt: "Thais with the São Paulo cityscape behind her, Brazil",
-  width: 1200,
-  height: 630,
+  path: "/images/home/hero-thais-1680.webp",
+  alt: "Thais, Brazilian Portuguese teacher",
+  width: 1680,
+  height: 2240,
 };
 
 export const routeMetadata = {

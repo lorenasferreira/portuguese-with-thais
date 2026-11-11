@@ -9,6 +9,7 @@ import styles from "./Lessons.module.css";
 const plans = [
   {
     name: "Single Session",
+    id: "single",
     frequency: "Pay as you go",
     price: "€40",
     description:
@@ -17,6 +18,7 @@ const plans = [
   },
   {
     name: "Flow",
+    id: "flow",
     frequency: "4 classes / month",
     price: "€150",
     description:
@@ -25,6 +27,7 @@ const plans = [
   },
   {
     name: "Pace",
+    id: "pace",
     frequency: "8 classes / month",
     price: "€280",
     description:
@@ -34,6 +37,7 @@ const plans = [
   },
   {
     name: "Mastery",
+    id: "mastery",
     frequency: "12 classes / month",
     price: "€400",
     description:
@@ -131,9 +135,9 @@ function Lessons() {
 
             <div className={styles.lessonImage}>
               <img
-                src="/images/lessons/kids.jpeg"
+                src="/diversas-criancas-lendo-livros_53876-138029.jpg.avif"
                 loading="lazy"
-                alt="Brazilian Portuguese heritage language lessons for children"
+                alt="Children reading books together"
               />
             </div>
 
@@ -141,7 +145,7 @@ function Lessons() {
               <span className={styles.sectionLabel}>Portuguese for Kids</span>
 
               <h2>
-                Heritage <span>Language.</span>
+                Portuguese as a Heritage <span>Language.</span>
               </h2>
 
               <p>
@@ -235,7 +239,11 @@ function Lessons() {
 
                 <span className={styles.frequency}>{plan.frequency}</span>
 
-                <h3>{plan.name}</h3>
+                <h3>
+                  <Link to={`/book-a-lesson?plan=${plan.id}#booking`}>
+                    {plan.name}
+                  </Link>
+                </h3>
 
                 <ul>
                   {plan.details.map((detail) => (

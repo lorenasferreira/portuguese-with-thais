@@ -11,7 +11,8 @@ function ScrollToTopButton() {
       setIsVisible(window.scrollY > 600);
     }
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -19,7 +20,9 @@ function ScrollToTopButton() {
   function scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
     });
   }
 

@@ -17,7 +17,7 @@ function BeyondClassroom() {
       <SectionContainer>
         <div className={styles.layout}>
           <div className={styles.visual}>
-            <div className={styles.image}>
+            <div className={styles.image} data-scroll-image>
               <img
                 src="/images/home/beyond-classroom-1440.webp"
                 width="3024"

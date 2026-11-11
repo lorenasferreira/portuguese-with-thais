@@ -21,13 +21,6 @@ function MethodHero() {
         </div>
 
         <div className={styles.visual}>
-          <div className={styles.imageWrapper}>
-            <img
-              src="/images/method/method-class.jpeg"
-              alt="Students in Thais' classroom"
-            />
-          </div>
-
           <div className={styles.note}>
             <span>01</span>
             <p>

@@ -1,16 +1,32 @@
 import { useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
+import { bookingPlans } from "../../bookingPlans";
 
 import SectionContainer from "../../../../components/common/SectionContainer/SectionContainer";
 
 import styles from "./BookingEmbed.module.css";
 
-const CAL_LINK = "portuguesewiththais/portuguese-private-lesson-50min";
-
 function BookingEmbed() {
   const calendarRef = useRef(null);
+  const sectionRef = useRef(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const requestedPlan = searchParams.get("plan");
+  const selectedId = Object.hasOwn(bookingPlans, requestedPlan)
+    ? requestedPlan
+    : "trial";
+  const plan = bookingPlans[selectedId];
+  const calLink = `portuguesewiththais/${plan.event}`;
 
   useEffect(() => {
-    const namespace = "private-lesson";
+    if (!requestedPlan) return;
+    const frame = requestAnimationFrame(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "instant", block: "start" });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [requestedPlan]);
+
+  useEffect(() => {
+    const namespace = "trial-lesson";
 
     (function (C, A, L) {
       const p = (a, ar) => {
@@ -60,26 +76,38 @@ function BookingEmbed() {
         };
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    window.Cal("init", namespace, {
-      origin: "https://cal.com",
-    });
+    // A separate mount target keeps delayed Cal commands away from later mounts.
+    const host = document.createElement("div");
+    calendarRef.current.appendChild(host);
 
-    window.Cal.ns[namespace]("inline", {
-      elementOrSelector: calendarRef.current,
-      calLink: CAL_LINK,
-      config: {
+    // Defer setup so StrictMode's first setup/cleanup never queues an embed.
+    const setup = window.setTimeout(() => {
+      if (!window.Cal.ns?.[namespace]) {
+        window.Cal("init", namespace, { origin: "https://cal.com" });
+      }
+
+      window.Cal.ns[namespace]("inline", {
+        elementOrSelector: host,
+        calLink,
+        config: {
+          layout: "month_view",
+          iframeAttrs: { title: "Book a Portuguese lesson" },
+        },
+      });
+      window.Cal.ns[namespace]("ui", {
+        theme: "light",
         layout: "month_view",
-      },
-    });
+      });
+    }, 0);
 
-    window.Cal.ns[namespace]("ui", {
-      theme: "light",
-      layout: "month_view",
-    });
-  }, []);
+    return () => {
+      window.clearTimeout(setup);
+      host.remove();
+    };
+  }, [calLink]);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="booking" ref={sectionRef}>
       <SectionContainer>
         <div className={styles.bookingArea}>
           <div className={styles.intro}>
@@ -91,18 +119,42 @@ function BookingEmbed() {
             </h2>
 
             <p>
-              Choose an available time for your private Brazilian Portuguese
-              lesson. Your booking will automatically adjust to your timezone.
+              {selectedId === "trial"
+                ? "Choose an available time for your trial Brazilian Portuguese lesson. Your booking will automatically adjust to your timezone."
+                : "Choose an available time for your Brazilian Portuguese lesson. Your booking will automatically adjust to your timezone."}
             </p>
 
             <div className={styles.lessonDetails}>
-              <span>Private lesson</span>
-              <strong>50 minutes · €40</strong>
-              <p>Online via Google Meet. Secure payment during booking.</p>
+              <label htmlFor="booking-plan">Choose your lesson or package</label>
+              <select id="booking-plan" value={selectedId}
+                aria-describedby={plan.lessons > 1 ? "package-disclosure" : undefined}
+                onChange={(event) => {
+                  const next = new URLSearchParams(searchParams);
+                  next.set("plan", event.target.value);
+                  setSearchParams(next);
+                }}>
+                {Object.entries(bookingPlans).map(([id, option]) => (
+                  <option key={id} value={id}>{option.name} — {option.price}{option.lessons > 1 ? ` / ${option.lessons} lessons` : " / 50 minutes"}</option>
+                ))}
+              </select>
+              <strong>{plan.name} · {plan.price}</strong>
+              <p>{plan.lessons > 1 ? `${plan.lessons} lessons · 50 minutes each` : "50 minutes"}. Online via Google Meet. Secure payment during booking.</p>
             </div>
           </div>
 
           <div className={styles.integration}>
+            {plan.lessons > 1 && (
+              <div className={styles.disclosure} id="package-disclosure" role="status">
+                <strong>Before you book</strong>
+                <p>
+                  Your {plan.price} package payment covers all {plan.lessons} included lessons.
+                  You’ll book only your first lesson now and arrange the remaining
+                  sessions directly with Thais during your first meeting.
+                </p>
+              </div>
+            )}
+            <p className={styles.calendarLinks}><a href={`https://cal.com/${calLink}`} target="_blank" rel="noopener noreferrer">Open {plan.name} booking in a new tab ↗</a></p>
+            <p className={styles.calendarLinks}><a href="https://wa.me/33766516346" target="_blank" rel="noopener noreferrer">Questions? Contact Thais on WhatsApp ↗</a></p>
             <div ref={calendarRef} className={styles.calendar} />
           </div>
         </div>

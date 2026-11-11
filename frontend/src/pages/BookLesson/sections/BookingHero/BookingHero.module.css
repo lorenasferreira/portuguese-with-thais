@@ -48,6 +48,7 @@
 
   .content h1 {
     font-size: clamp(3.3rem, 15vw, 5rem);
+    overflow-wrap: anywhere;
   }
 
   .content h1 span {

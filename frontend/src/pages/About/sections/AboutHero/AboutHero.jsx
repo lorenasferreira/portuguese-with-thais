@@ -23,7 +23,7 @@ function AboutHero() {
           </div>
 
           <div className={styles.heroVisual}>
-            <div className={styles.heroImage}>
+            <div className={styles.heroImage} data-scroll-image>
               <img
                 src="/images/about/about-hero-2560.webp"
                 srcSet="/images/about/about-hero-640.webp 640w, /images/about/about-hero-960.webp 960w, /images/about/about-hero-2560.webp 2560w"

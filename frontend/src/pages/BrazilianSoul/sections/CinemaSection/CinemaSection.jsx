@@ -28,16 +28,22 @@ function CinemaSection() {
               key={film.title}
               className={`${styles.film} ${index === 0 ? styles.featured : ""}`}
             >
-              <div className={styles.meta}>
-                <span>{film.type}</span>
-                {film.year && <span>{film.year}</span>}
+              <div className={styles.poster}>
+                <img src={film.image} width={film.imageWidth} height={film.imageHeight}
+                  loading="lazy" alt={`${film.title}${film.type === "Film" ? " film" : " series"} ${film.title === "Que Horas Ela Volta?" ? "still" : "poster"}`} />
               </div>
+              <div className={styles.filmContent}>
+                <div className={styles.meta}>
+                  <span>{film.type}</span>
+                  {film.year && <span>{film.year}</span>}
+                </div>
 
-              <h3>{film.title}</h3>
+                <h3>{film.title}</h3>
 
-              <span className={styles.level}>{film.level}</span>
+                <span className={styles.level}>{film.level}</span>
 
-              <p>{film.note}</p>
+                <p>{film.note}</p>
+              </div>
             </article>
           ))}
         </div>

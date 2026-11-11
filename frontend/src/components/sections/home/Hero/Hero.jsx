@@ -9,13 +9,13 @@ function Hero() {
         </span>
 
         <h1 className={styles.title}>
-          Unlock the soul
-          <span>of Brazil.</span>
+          Build your voice
+          <span>in Brazilian Portuguese.</span>
         </h1>
 
         <p className={styles.description}>
           Personalized Brazilian Portuguese lessons that combine language,
-          culture and real conversations — helping you feel at home wherever
+          culture and real conversations, helping you feel at home wherever
           Portuguese is spoken.
         </p>
 
@@ -30,7 +30,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className={styles.heroImage}>
+      <div className={styles.heroImage} data-scroll-image>
         <img
           src="/images/home/hero-thais-1680.webp"
           srcSet="/images/home/hero-thais-640.webp 640w, /images/home/hero-thais-960.webp 960w, /images/home/hero-thais-1680.webp 1680w"
