@@ -26,7 +26,10 @@ function BrazilianSoulHero() {
             src="/images/method/brazilian-culture-collage-1401.webp"
             srcSet="/images/method/brazilian-culture-collage-640.webp 640w, /images/method/brazilian-culture-collage-960.webp 960w, /images/method/brazilian-culture-collage-1401.webp 1401w"
             sizes="min(1150px, calc(100vw - clamp(2.8rem, 8vw, 8rem)))"
+            width="1401"
+            height="1123"
             loading="eager"
+            fetchPriority="high"
             alt="Collage inspired by Brazilian music, cinema and literature"
           />
 

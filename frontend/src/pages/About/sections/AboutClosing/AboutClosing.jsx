@@ -61,7 +61,7 @@ function AboutClosing() {
           </p>
 
           <div className={styles.ctaActions}>
-            <Link to="/book-a-lesson" className={styles.primaryButton}>
+            <Link to="/book-a-lesson?plan=trial#booking" className={styles.primaryButton}>
               Book a Trial
             </Link>
 

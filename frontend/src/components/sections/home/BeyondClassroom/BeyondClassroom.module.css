@@ -131,7 +131,8 @@
     color var(--transition);
 }
 
-.topic:hover {
+.topic:hover,
+.topic:focus-visible {
   padding-inline: 0.75rem;
   color: var(--color-accent);
 }
@@ -245,3 +246,4 @@
     min-height: 460px;
   }
 }
+.topic:focus-visible { outline-color: var(--color-accent); }

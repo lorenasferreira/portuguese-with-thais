@@ -6,7 +6,7 @@ import styles from "./EverydayPortuguese.module.css";
 
 function EverydayPortuguese() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="expressions">
       <SectionContainer>
         <div className={styles.header}>
           <div>

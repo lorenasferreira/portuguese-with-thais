@@ -59,6 +59,8 @@ function AboutStory() {
             <div className={styles.smallImage}>
               <img
                 src="/images/about/about-climbing-1536.webp"
+                srcSet="/images/about/about-climbing-640.webp 640w, /images/about/about-climbing-960.webp 960w, /images/about/about-climbing-1536.webp 1536w"
+                sizes="(max-width: 768px) calc(100vw - max(2.8rem, 8vw)), 40vw"
                 width="3024"
                 height="4032"
                 loading="lazy"
@@ -71,6 +73,8 @@ function AboutStory() {
             <div className={styles.largeStoryImage}>
               <img
                 src="/images/about/about-sao-paulo-1600.webp"
+                srcSet="/images/about/about-sao-paulo-640.webp 640w, /images/about/about-sao-paulo-960.webp 960w, /images/about/about-sao-paulo-1600.webp 1600w"
+                sizes="(max-width: 768px) max(573px, calc(100vw - max(2.8rem, 8vw))), 55vw"
                 width="3971"
                 height="3120"
                 loading="lazy"

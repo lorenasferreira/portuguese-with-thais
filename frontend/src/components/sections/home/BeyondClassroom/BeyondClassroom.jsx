@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 import SectionContainer from "../../../common/SectionContainer/SectionContainer";
@@ -5,10 +6,10 @@ import SectionContainer from "../../../common/SectionContainer/SectionContainer"
 import styles from "./BeyondClassroom.module.css";
 
 const topics = [
-  "Brazilian Music",
-  "Literature",
-  "Everyday Expressions",
-  "Brazilian Culture",
+  { label: "Brazilian Music", id: "music" },
+  { label: "Literature", id: "literature" },
+  { label: "Everyday Expressions", id: "expressions" },
+  { label: "Brazilian Culture", id: "cinema" },
 ];
 
 function BeyondClassroom() {
@@ -20,6 +21,8 @@ function BeyondClassroom() {
             <div className={styles.image} data-scroll-image>
               <img
                 src="/images/home/beyond-classroom-1440.webp"
+                srcSet="/images/home/beyond-classroom-640.webp 640w, /images/home/beyond-classroom-960.webp 960w, /images/home/beyond-classroom-1440.webp 1440w"
+                sizes="(max-width: 1000px) min(680px, calc(100vw - max(2.8rem, 8vw))), min(540px, 40vw)"
                 width="3024"
                 height="4032"
                 loading="lazy"
@@ -51,12 +54,14 @@ function BeyondClassroom() {
 
             <ul className={styles.topicList}>
               {topics.map((topic, index) => (
-                <li key={topic} className={styles.topic}>
-                  <span className={styles.topicNumber}>
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                <li key={topic.id}>
+                  <Link to={`/the-brazilian-soul#${topic.id}`} className={styles.topic}>
+                    <span className={styles.topicNumber}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
 
-                  <span>{topic}</span>
+                    <span>{topic.label}</span>
+                  </Link>
                 </li>
               ))}
             </ul>

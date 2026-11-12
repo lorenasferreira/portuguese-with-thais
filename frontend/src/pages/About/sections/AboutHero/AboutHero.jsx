@@ -26,11 +26,12 @@ function AboutHero() {
             <div className={styles.heroImage} data-scroll-image>
               <img
                 src="/images/about/about-hero-2560.webp"
-                srcSet="/images/about/about-hero-640.webp 640w, /images/about/about-hero-960.webp 960w, /images/about/about-hero-2560.webp 2560w"
+                srcSet="/images/about/about-hero-640.webp 640w, /images/about/about-hero-960.webp 960w, /images/about/about-hero-1440.webp 1440w, /images/about/about-hero-2560.webp 2560w"
                 sizes="(max-width: 768px) max(667px, calc(100vw - max(2.8rem, 8vw) - 2px)), (max-width: 1000px) max(87vw, calc(92vw - 2px)), min(1014px, max(720px, 86.667vw))"
                 width="4032"
                 height="3024"
                 loading="eager"
+                fetchPriority="high"
                 alt="Thais"
               />
             </div>

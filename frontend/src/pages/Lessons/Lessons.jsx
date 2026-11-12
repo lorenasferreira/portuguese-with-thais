@@ -56,9 +56,12 @@ function Lessons() {
               <div className={styles.heroImage}>
                 <img
                   src="/images/lessons/lessons-hero-1872.webp"
-                  srcSet="/images/lessons/lessons-hero-640.webp 640w, /images/lessons/lessons-hero-960.webp 960w, /images/lessons/lessons-hero-1872.webp 1872w"
+                  srcSet="/images/lessons/lessons-hero-640.webp 640w, /images/lessons/lessons-hero-960.webp 960w, /images/lessons/lessons-hero-1280.webp 1280w, /images/lessons/lessons-hero-1872.webp 1872w"
                   sizes="(max-width: 1000px) calc(100vw - max(2.8rem, 8vw) - 2px), (max-width: 1440px) calc(48.3vw - 2px), 700px"
+                  width="1872"
+                  height="2496"
                   loading="eager"
+                  fetchPriority="high"
                   alt="Brazilian Portuguese lesson with Thais"
                 />
               </div>
@@ -82,7 +85,7 @@ function Lessons() {
                 goals, rhythm and the way you want to use the language.
               </p>
 
-              <Link to="/book-a-lesson" className={styles.heroLink}>
+              <Link to="/book-a-lesson?plan=trial#booking" className={styles.heroLink}>
                 Book a Trial
                 <FaArrowRight aria-hidden="true" />
               </Link>
@@ -91,7 +94,7 @@ function Lessons() {
         </SectionContainer>
       </section>
 
-      <section className={styles.lessonSection}>
+      <section className={styles.lessonSection} id="one-on-one">
         <SectionContainer>
           <div className={styles.lessonGrid}>
             <div className={styles.lessonNumber}>01</div>
@@ -120,6 +123,8 @@ function Lessons() {
             <div className={styles.lessonImage}>
               <img
                 src="/images/lessons/one-on-one.jpeg"
+                width="999"
+                height="1376"
                 loading="lazy"
                 alt="One-on-one Brazilian Portuguese lesson"
               />
@@ -128,14 +133,16 @@ function Lessons() {
         </SectionContainer>
       </section>
 
-      <section className={`${styles.lessonSection} ${styles.kids}`}>
+      <section className={`${styles.lessonSection} ${styles.kids}`} id="kids">
         <SectionContainer>
           <div className={`${styles.lessonGrid} ${styles.reverse}`}>
             <div className={styles.lessonNumber}>02</div>
 
             <div className={styles.lessonImage}>
               <img
-                src="/diversas-criancas-lendo-livros_53876-138029.jpg.avif"
+                src="/images/lessons/kids-reading.avif"
+                width="740"
+                height="504"
                 loading="lazy"
                 alt="Children reading books together"
               />
@@ -170,7 +177,7 @@ function Lessons() {
         </SectionContainer>
       </section>
 
-      <section className={styles.lessonSection}>
+      <section className={styles.lessonSection} id="celpe-bras">
         <SectionContainer>
           <div className={styles.lessonGrid}>
             <div className={styles.lessonNumber}>03</div>
@@ -198,6 +205,8 @@ function Lessons() {
             <div className={styles.lessonImage}>
               <img
                 src="/images/lessons/celpe-bras-1254.webp"
+                width="1254"
+                height="1254"
                 loading="lazy"
                 alt="CELPE-Bras preparation and study"
               />
@@ -283,7 +292,7 @@ function Lessons() {
                 and understand the best path for your Portuguese.
               </p>
 
-              <Link to="/book-a-lesson">
+              <Link to="/book-a-lesson?plan=trial#booking">
                 Book a Trial
                 <FaArrowRight aria-hidden="true" />
               </Link>

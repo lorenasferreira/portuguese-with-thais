@@ -6,7 +6,7 @@ import styles from "./LiteratureSection.module.css";
 
 function LiteratureSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="literature">
       <SectionContainer>
         <div className={styles.header}>
           <div>

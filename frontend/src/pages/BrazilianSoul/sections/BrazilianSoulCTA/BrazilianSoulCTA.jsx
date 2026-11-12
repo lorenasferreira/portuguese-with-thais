@@ -21,7 +21,7 @@ function BrazilianSoulCTA() {
             lesson built around your own interests and goals.
           </p>
 
-          <Link to="/book-a-lesson">Book a Trial — €25</Link>
+          <Link to="/book-a-lesson?plan=trial#booking">Book a Trial — €25</Link>
         </div>
       </SectionContainer>
     </section>

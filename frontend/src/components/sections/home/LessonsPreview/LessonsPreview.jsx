@@ -8,18 +8,21 @@ import styles from "./LessonsPreview.module.css";
 const experiences = [
   {
     number: "01",
+    section: "one-on-one",
     title: "One-on-One Portuguese",
     description:
       "Personalized lessons built around your goals, interests and pace.",
   },
   {
     number: "02",
+    section: "kids",
     title: "Portuguese for Kids",
     description:
       "Playful, engaging lessons using music, culture and age-appropriate activities.",
   },
   {
     number: "03",
+    section: "celpe-bras",
     title: "CELPE-Bras Preparation",
     description:
       "Focused preparation for learners working toward Brazil’s official Portuguese proficiency exam.",
@@ -60,7 +63,8 @@ function LessonsPreview() {
                 <p>{experience.description}</p>
               </div>
 
-              <Link to="/lessons" className={styles.link}>
+              <Link to={`/lessons#${experience.section}`} className={styles.link}
+                aria-label={`Explore ${experience.title}`}>
                 Explore
                 <FaArrowRight aria-hidden="true" />
               </Link>

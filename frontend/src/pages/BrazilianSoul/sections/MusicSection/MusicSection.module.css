@@ -132,6 +132,7 @@
 }
 
 .spotify {
+  min-height: 352px;
   overflow: hidden;
 
   border-radius: 12px;

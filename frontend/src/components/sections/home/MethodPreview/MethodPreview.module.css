@@ -80,7 +80,7 @@
 }
 
 .mainCard ul {
-  margin: auto 0 0;
+  margin: 1.5rem 0 0;
   padding: 0;
 
   display: grid;
@@ -253,7 +253,7 @@
   }
 
   .mainCard ul {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
 
   .mainCard,

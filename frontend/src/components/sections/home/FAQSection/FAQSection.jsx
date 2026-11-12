@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
 import SectionContainer from "../../../common/SectionContainer/SectionContainer";
@@ -21,26 +22,35 @@ const faqs = [
   {
     id: "kids",
     question: "Are lessons suitable for children?",
-    answer:
-      "Yes. Portuguese for Kids is designed to be more playful and engaging, using activities, conversation, music and age-appropriate materials to make learning feel natural.",
+    answer: (
+      <>
+        Yes. <Link to="/lessons#kids" className={styles.inlineLink}>Portuguese for Kids</Link> is designed to be more playful and engaging, using activities, conversation, music and age-appropriate materials to make learning feel natural.
+      </>
+    ),
   },
   {
     id: "celpe",
     question: "Do you prepare students for CELPE-Bras?",
-    answer:
-      "Yes. CELPE-Bras preparation focuses on the skills and communication strategies needed for the exam, with lessons adapted to your current level and goals.",
+    answer: (
+      <>
+        Yes. <Link to="/lessons#celpe-bras" className={styles.examLink}>CELPE-Bras</Link> preparation focuses on the skills and communication strategies needed for the exam, with lessons adapted to your current level and goals.
+      </>
+    ),
   },
   {
     id: "scheduling",
     question: "How does scheduling work?",
-    answer:
-      "You will be able to choose an available time that works for you when booking your lesson. Available slots are based on Thais's teaching schedule.",
+    answer: (
+      <>
+        Choose an available time, pay and <Link to="/book-a-lesson?plan=trial#booking" className={styles.inlineLink}>book your first lesson</Link> directly through the website, without contacting Thais first. For packages, only the first lesson is scheduled; arrange the remaining lessons with Thais during your first meeting.
+      </>
+    ),
   },
   {
     id: "reschedule",
     question: "What if I need to cancel or reschedule?",
     answer:
-      "If your plans change, get in touch as early as possible. Specific cancellation and rescheduling conditions will be confirmed when booking.",
+      "Please contact Thais as early as possible to request a cancellation or rescheduling.",
   },
 ];
 

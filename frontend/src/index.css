@@ -53,11 +53,19 @@ img {
   }
 }
 
-main a[href^="/book-a-lesson?plan="] {
+main h3 a[href^="/book-a-lesson?plan="] {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
-main a[href^="/book-a-lesson?plan="]:hover {
+main h3 a[href^="/book-a-lesson?plan="]:hover {
   color: var(--color-accent-text);
+}
+
+:where(main section[id]) {
+  scroll-margin-top: 104px;
+}
+
+@media (max-width: 900px) {
+  :where(main section[id]) { scroll-margin-top: 88px; }
 }

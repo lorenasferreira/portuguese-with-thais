@@ -1,3 +1,6 @@
+export const siteName = "Portuguese with Thais";
+export const socialDescription = "Learn Brazilian Portuguese with Thais through personalized lessons, Brazilian culture and a learning experience made for you.";
+
 export const siteUrl = "https://portuguesewiththais.com";
 
 export const socialImage = {

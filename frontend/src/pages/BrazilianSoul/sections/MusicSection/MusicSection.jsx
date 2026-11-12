@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import useNearViewport from "../../../../hooks/useNearViewport";
 import SectionContainer from "../../../../components/common/SectionContainer/SectionContainer";
 
 import styles from "./MusicSection.module.css";
@@ -26,8 +28,10 @@ const featuredArtists = [
 ];
 
 function MusicSection() {
+  const playlistRef = useRef(null);
+  const loadPlaylist = useNearViewport(playlistRef);
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="music">
       <SectionContainer>
         <div className={styles.header}>
           <span>01 — Listen</span>
@@ -77,15 +81,17 @@ function MusicSection() {
             </h3>
           </div>
 
-          <div className={styles.spotify}>
-            <iframe
-              src="https://open.spotify.com/embed/playlist/6yYlhZC2IguO7nJYgJGotf"
-              title="Thais' Brazilian playlist"
-              width="100%"
-              height="352"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            />
+          <div className={styles.spotify} ref={playlistRef}>
+            {loadPlaylist && (
+              <iframe
+                src="https://open.spotify.com/embed/playlist/6yYlhZC2IguO7nJYgJGotf"
+                title="Thais' Brazilian playlist"
+                width="100%"
+                height="352"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              />
+            )}
           </div>
         </div>
       </SectionContainer>

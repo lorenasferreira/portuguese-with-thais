@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import { routeMetadata, siteUrl, socialImage } from "./metadataConfig";
+import { routeMetadata, siteUrl, socialImage, siteName, socialDescription } from "./metadataConfig";
 
 // Reuse an existing tag when present; restore it when this route is left.
 function setHeadTag(tagName, key, value, attribute, content) {
@@ -49,16 +49,17 @@ function RouteMetadata() {
     const tags = [
       ["name", "description", metadata.description],
       ["property", "og:title", metadata.title],
-      ["property", "og:description", metadata.description],
+      ["property", "og:description", socialDescription],
       ["property", "og:url", canonicalUrl],
       ["property", "og:type", "website"],
+      ["property", "og:site_name", siteName],
       ["property", "og:image", imageUrl],
       ["property", "og:image:alt", socialImage.alt],
       ["property", "og:image:width", String(socialImage.width)],
       ["property", "og:image:height", String(socialImage.height)],
       ["name", "twitter:card", "summary_large_image"],
       ["name", "twitter:title", metadata.title],
-      ["name", "twitter:description", metadata.description],
+      ["name", "twitter:description", socialDescription],
       ["name", "twitter:image", imageUrl],
       ["name", "twitter:image:alt", socialImage.alt],
     ];

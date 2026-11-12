@@ -6,7 +6,7 @@ import styles from "./CinemaSection.module.css";
 
 function CinemaSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="cinema">
       <SectionContainer>
         <div className={styles.header}>
           <span>03 — Watch</span>

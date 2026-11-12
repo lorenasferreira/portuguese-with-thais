@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { bookingPlans } from "../../bookingPlans";
+import useNearViewport from "../../../../hooks/useNearViewport";
 
 import SectionContainer from "../../../../components/common/SectionContainer/SectionContainer";
 
@@ -14,6 +15,8 @@ function BookingEmbed() {
   const selectedId = Object.hasOwn(bookingPlans, requestedPlan)
     ? requestedPlan
     : "trial";
+  const { hash } = useLocation();
+  const loadCalendar = useNearViewport(calendarRef, Boolean(requestedPlan) || hash === "#booking");
   const plan = bookingPlans[selectedId];
   const calLink = `portuguesewiththais/${plan.event}`;
 
@@ -26,6 +29,7 @@ function BookingEmbed() {
   }, [requestedPlan]);
 
   useEffect(() => {
+    if (!loadCalendar) return;
     const namespace = "trial-lesson";
 
     (function (C, A, L) {
@@ -104,7 +108,7 @@ function BookingEmbed() {
       window.clearTimeout(setup);
       host.remove();
     };
-  }, [calLink]);
+  }, [calLink, loadCalendar]);
 
   return (
     <section className={styles.section} id="booking" ref={sectionRef}>

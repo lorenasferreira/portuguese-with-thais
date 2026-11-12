@@ -19,6 +19,7 @@ function Header() {
   const dialogRef = useRef(null);
   const menuButtonRef = useRef(null);
   const { pathname } = useLocation();
+  const activePath = pathname.toLowerCase().replace(/\/+$/, "") || "/";
 
   function closeMenu() {
     setIsMenuOpen(false);
@@ -75,7 +76,7 @@ function Header() {
   }, [isMenuOpen, pathname]);
 
   const links = (numbered = false) => navigationLinks.map((link, index) => (
-    <Link key={link.href} to={link.href} onClick={closeMenu} aria-current={pathname === link.href ? "page" : undefined}>
+    <Link key={link.href} to={link.href} onClick={closeMenu} aria-current={activePath === link.href ? "page" : undefined}>
       {numbered && <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>}
       {link.label}
     </Link>
@@ -95,7 +96,7 @@ function Header() {
           </button>
           <nav className={styles.navigation} aria-label="Main navigation">
             {links()}
-            <Link to="/book-a-lesson" className={styles.bookingButton}>Book a Lesson</Link>
+            <Link to="/book-a-lesson" aria-current={activePath === "/book-a-lesson" ? "page" : undefined} className={styles.bookingButton}>Book a Lesson</Link>
           </nav>
         </div>
       </header>
@@ -112,7 +113,7 @@ function Header() {
           </div>
           <nav className={styles.drawerLinks} aria-label="Mobile navigation">
             {links(true)}
-            <Link to="/book-a-lesson" className={styles.bookingButton} onClick={closeMenu}>Book a Lesson <span aria-hidden="true">↗</span></Link>
+            <Link to="/book-a-lesson" aria-current={activePath === "/book-a-lesson" ? "page" : undefined} className={styles.bookingButton} onClick={closeMenu}>Book a Lesson <span aria-hidden="true">↗</span></Link>
           </nav>
           <a className={styles.drawerContact} href="https://wa.me/33766516346" target="_blank" rel="noreferrer">Let’s talk on WhatsApp <span aria-hidden="true">↗</span></a>
         </dialog>, document.body,

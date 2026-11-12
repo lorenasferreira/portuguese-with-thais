@@ -237,7 +237,7 @@ function LevelQuiz() {
                   Take the test again
                 </button>
 
-                <Link to="/book-a-lesson">
+                <Link to="/book-a-lesson?plan=trial#booking">
                   Book a Trial — €25
                   <FiArrowRight aria-hidden="true" />
                 </Link>
