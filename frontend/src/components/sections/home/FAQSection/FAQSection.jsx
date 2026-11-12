@@ -50,7 +50,7 @@ const faqs = [
     id: "reschedule",
     question: "What if I need to cancel or reschedule?",
     answer:
-      "Please contact Thais as early as possible to request a cancellation or rescheduling.",
+      "You must notify Thais at least 24 hours before your scheduled lesson to request rescheduling. With less than 24 hours’ notice, the lesson is considered used.",
   },
 ];
 

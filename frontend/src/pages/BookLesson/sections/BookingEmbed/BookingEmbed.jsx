@@ -118,8 +118,8 @@ function BookingEmbed() {
             <span>Choose your lesson time</span>
 
             <h2>
-              Find a time
-              <span>that works for you.</span>
+              Find the time and plan{" "}
+              <span>that work for you.</span>
             </h2>
 
             <p>
@@ -151,14 +151,20 @@ function BookingEmbed() {
               <div className={styles.disclosure} id="package-disclosure" role="status">
                 <strong>Before you book</strong>
                 <p>
-                  Your {plan.price} package payment covers all {plan.lessons} included lessons.
-                  You’ll book only your first lesson now and arrange the remaining
-                  sessions directly with Thais during your first meeting.
+                  Pay {plan.price} upfront for all {plan.lessons} lessons. Book your
+                  first lesson through Cal.com and arrange the remaining sessions
+                  directly with Thais during your first meeting. You may agree on a
+                  consistent weekly schedule. To renew, purchase another package
+                  through the website.
                 </p>
               </div>
             )}
             <p className={styles.calendarLinks}><a href={`https://cal.com/${calLink}`} target="_blank" rel="noopener noreferrer">Open {plan.name} booking in a new tab ↗</a></p>
             <p className={styles.calendarLinks}><a href="https://wa.me/33766516346" target="_blank" rel="noopener noreferrer">Questions? Contact Thais on WhatsApp ↗</a></p>
+            <p className={styles.calendarLinks}>
+              Rescheduling requires at least 24 hours’ notice to Thais. With less
+              notice, the lesson is considered used.
+            </p>
             <div ref={calendarRef} className={styles.calendar} />
           </div>
         </div>
