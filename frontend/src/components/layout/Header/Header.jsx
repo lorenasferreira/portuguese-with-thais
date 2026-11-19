@@ -87,7 +87,14 @@ function Header() {
       <header className={`${styles.header} ${isHidden && !isMenuOpen ? styles.hidden : ""}`}>
         <div className={styles.container}>
           <Link to="/" className={styles.logo} onClick={closeMenu}>
-            Portuguese <span>with</span> Thais
+            <img
+              src="/images/brand/thais-logo.svg"
+              className={styles.brandIcon}
+              width="1200"
+              height="1112"
+              alt=""
+            />
+            <span>Portuguese <em>with</em> Thais</span>
           </Link>
           <button ref={menuButtonRef} type="button" className={styles.menuButton}
             onClick={() => setIsMenuOpen(true)} aria-label="Open menu"

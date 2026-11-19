@@ -33,11 +33,15 @@ function Hero() {
 
       <div className={styles.heroImage} data-scroll-image>
         <img
-          src="/images/home/hero-thais-1680.webp"
-          srcSet="/images/home/hero-thais-640.webp 640w, /images/home/hero-thais-960.webp 960w, /images/home/hero-thais-1200.webp 1200w, /images/home/hero-thais-1680.webp 1680w"
-          sizes="(max-width: 900px) max(345px, calc(100vw - max(2.8rem, 8vw))), (max-width: 1440px) max(465px, 40.4vw), 600px"
-          width="2316"
-          height="3088"
+          src="/images/home/thais-portrait-1680.webp"
+          srcSet="/images/home/thais-portrait-352.webp 352w,
+            /images/home/thais-portrait-640.webp 640w,
+            /images/home/thais-portrait-960.webp 960w,
+            /images/home/thais-portrait-1200.webp 1200w,
+            /images/home/thais-portrait-1680.webp 1680w"
+          sizes="(max-width: 900px) max(345px, calc(100vw - max(2.8rem, 8vw))), (max-width: 1440px) max(340px, 40.375vw), 581px"
+          width="1680"
+          height="2240"
           loading="eager"
           fetchPriority="high"
           alt="Thais, Brazilian Portuguese teacher"

@@ -4,10 +4,10 @@ export const socialDescription = "Learn Brazilian Portuguese with Thais through 
 export const siteUrl = "https://portuguesewiththais.com";
 
 export const socialImage = {
-  path: "/images/home/hero-thais-1680.webp",
+  path: "/images/social/thais-portrait-social.jpg",
   alt: "Thais, Brazilian Portuguese teacher",
-  width: 1680,
-  height: 2240,
+  width: 1200,
+  height: 630,
 };
 
 export const routeMetadata = {
