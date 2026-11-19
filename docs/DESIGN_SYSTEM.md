@@ -30,7 +30,7 @@ Avoid:
 
 Tokens are defined in:
 
-[`frontend/src/styles/variables.css`](frontend/src/styles/variables.css)
+[`frontend/src/styles/variables.css`](../frontend/src/styles/variables.css)
 
 Use design tokens instead of hardcoded colors whenever possible.
 
@@ -274,7 +274,7 @@ Import order:
 
 ## QA Workflow
 
-Use the [quality checks in the README](README.md#quality-checks) when updating the design.
+Use the [quality checks in the README](../README.md#quality-checks) when updating the design.
 
 ## Core Principles
 

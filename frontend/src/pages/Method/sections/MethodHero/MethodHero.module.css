@@ -1,5 +1,5 @@
 .hero {
-  padding: clamp(7rem, 11vw, 10rem) 0 clamp(6rem, 9vw, 9rem);
+  padding-block: var(--inner-hero-start) clamp(3rem, 5vw, 5rem);
 }
 
 .top {
@@ -80,7 +80,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 5.5rem 0 5rem;
+    padding-block-end: 3rem;
   }
 
   .top {

@@ -14,6 +14,7 @@ import Lessons from "./pages/Lessons/Lessons";
 import Method from "./pages/Method/Method";
 import BrazilianSoul from "./pages/BrazilianSoul/BrazilianSoul";
 import BookLesson from "./pages/BookLesson/BookLesson";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/method" element={<Method />} />
         <Route path="/the-brazilian-soul" element={<BrazilianSoul />} />
         <Route path="/book-a-lesson" element={<BookLesson />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />

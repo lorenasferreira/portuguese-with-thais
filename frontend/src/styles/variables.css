@@ -20,6 +20,7 @@
   --font-ui: "Manrope", Arial, sans-serif;
 
   --container-width: 1440px;
+  --inner-hero-start: clamp(4.5rem, 8vw, 8rem);
   --page-padding: clamp(1.4rem, 4vw, 4rem);
   --transition: 180ms ease;
 }

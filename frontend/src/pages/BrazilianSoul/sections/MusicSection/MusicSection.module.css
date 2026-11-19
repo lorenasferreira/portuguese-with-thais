@@ -1,5 +1,5 @@
 .section {
-  padding: clamp(6rem, 9vw, 9rem) 0;
+  padding-block: clamp(4.5rem, 7vw, 7rem);
 
   background-color: var(--color-primary);
   color: var(--color-text-light);
@@ -196,7 +196,7 @@
 
 @media (max-width: 600px) {
   .section {
-    padding: 5rem 0;
+    padding-block: 4rem;
   }
 
   .header h2 span {

@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
 
-  padding-block: clamp(5rem, 8vw, 7rem);
+  padding-block: clamp(5rem, 8vw, 7rem) clamp(3rem, 5vw, 5rem);
 
   color: var(--color-primary);
   background-color: var(--color-background);
@@ -369,7 +369,7 @@
 
 @media (max-width: 600px) {
   .section {
-    padding-block: 4.5rem;
+    padding-block: 4.5rem 3rem;
   }
 
   .headingLine {

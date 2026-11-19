@@ -52,7 +52,7 @@ Captured from the local production build in Chrome at 1440 × 1000 for desktop a
 
 ## Features
 
-- Six public pages with editorial photography, shared navigation and direct trial booking links.
+- Six public pages with editorial photography, shared navigation and direct trial booking links, plus a fallback for unknown routes.
 - Private lessons for adults and kids, CELPE-Bras preparation, pricing and a 30-question placement test.
 - A cultural guide with music, a Spotify playlist, Brazilian literature, films and series, and everyday expressions.
 - A keyboard-accessible mobile navigation dialog, visible focus indicators and native scroll-snap carousels on small screens.
@@ -77,9 +77,8 @@ Versions below are resolved in the [frontend lockfile](frontend/package-lock.jso
 ```text
 portuguese-with-thais/
 ├── README.md
-├── DESIGN_SYSTEM.md              # Typography, colors and layout conventions
 ├── docs/
-│   ├── client-feedback.md        # Brief notes for possible future discussions
+│   ├── DESIGN_SYSTEM.md          # Typography, colors and layout conventions
 │   └── screenshots/             # Optimized README captures
 └── frontend/
     ├── public/images/           # Published photos, responsive variants and branding
@@ -151,7 +150,7 @@ npm run preview
 
 ## Deployment
 
-Use `frontend/` as the Vercel project root, `npm run build` as the build command and `dist/` as the output directory. The [Vercel configuration](frontend/vercel.json) rewrites deep links to `index.html` so React Router can resolve the path. After release, verify that direct route URLs work and the production social image returns HTTP 200 with an image content type.
+Use `frontend/` as the Vercel project root, `npm run build` as the build command and `dist/` as the output directory. The [Vercel configuration](frontend/vercel.json) rewrites deep links to `index.html` so React Router can resolve the path. Unknown paths render the 404 page with the shared header and footer. The SPA fallback can still return HTTP 200 for those paths. After release, verify that direct route URLs work and the production social image returns HTTP 200 with an image content type.
 
 ## Quality checks
 
@@ -174,7 +173,7 @@ npm test
 
 To use an already installed Chromium-based browser, set `PLAYWRIGHT_CHROMIUM_PATH` to its executable path when running `npm test`. The suite starts its own Vite development server on `127.0.0.1:4179`.
 
-The tests visit all six routes through the header at 320px, 390px, 768px and 1440px, check for horizontal overflow, and exercise mobile keyboard navigation, dialog focus and Escape. The booking test follows the trial CTA, switches through all five plans and verifies a single correctly configured iframe after each selection. The suite serves a Cal.com stub locally and blocks external requests. It never contacts the live booking account or submits a payment. [Test source](frontend/tests/site.spec.js)
+The tests visit all six routes through the header at 320px, 390px, 768px and 1440px, check for horizontal overflow, and exercise mobile keyboard navigation, dialog focus and Escape. A separate test covers direct navigation to an unknown path, refresh and keyboard return to Home. The booking test follows the trial CTA, switches through all five plans and verifies a single correctly configured iframe after each selection. The suite serves a Cal.com stub locally and blocks external requests. It never contacts the live booking account or submits a payment. [Test source](frontend/tests/site.spec.js)
 
 ### Manual browser review
 
@@ -185,7 +184,7 @@ Use the production preview to review layout and typography, image loading, the p
 - Update the booking plan map, visible prices and booking-policy copy together when an offer changes. Confirm the corresponding external Cal.com event and its settings with Thais.
 - Keep production images grouped by purpose. Preserve responsive image widths, intrinsic dimensions and meaningful alt text when replacing a photograph. Keep source-only photos outside `public/`.
 - If the domain or social image changes, update the initial HTML and route metadata together. Use fresh production-preview captures when the README screenshots no longer reflect the interface.
-- Use the [design system](DESIGN_SYSTEM.md) for visual changes and retain the existing font notices under [frontend/src/assets/fonts](frontend/src/assets/fonts).
+- Use the [design system](docs/DESIGN_SYSTEM.md) for visual changes and retain the existing font notices under [frontend/src/assets/fonts](frontend/src/assets/fonts).
 
 ## Credits
 

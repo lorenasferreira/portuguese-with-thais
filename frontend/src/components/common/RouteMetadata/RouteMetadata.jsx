@@ -34,13 +34,14 @@ function RouteMetadata() {
   const path = pathname.toLowerCase().replace(/\/+$/, "") || "/";
 
   useEffect(() => {
-    const metadata = routeMetadata[path];
+    const metadata = Object.hasOwn(routeMetadata, path) ? routeMetadata[path] : null;
+    const previousTitle = document.title;
 
     if (!metadata) {
-      return;
+      document.title = `Page not found | ${siteName}`;
+      return () => { document.title = previousTitle; };
     }
 
-    const previousTitle = document.title;
     document.title = metadata.title;
 
     // Query parameters and hashes never become part of the canonical URL.

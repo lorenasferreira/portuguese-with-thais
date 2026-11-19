@@ -1,5 +1,5 @@
 .section {
-  padding: clamp(5rem, 9vw, 9rem) 0;
+  padding-block: clamp(4.5rem, 7vw, 7rem);
 
   background-color: var(--color-primary);
   color: var(--color-text-light);

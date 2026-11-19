@@ -1,5 +1,5 @@
 .story {
-  padding: clamp(6rem, 10vw, 10rem) 0;
+  padding-block: clamp(3.5rem, 5vw, 5rem) clamp(5rem, 8vw, 8rem);
 }
 
 .sectionLabel {
@@ -18,7 +18,7 @@
   grid-template-columns: 1.3fr 0.7fr;
   gap: clamp(3rem, 7vw, 8rem);
 
-  margin-bottom: clamp(5rem, 9vw, 9rem);
+  margin-bottom: clamp(2.5rem, 5vw, 5rem);
 }
 
 .storyIntro h2 {
@@ -226,11 +226,11 @@
 
 @media (max-width: 768px) {
   .story {
-    padding: 5rem 0;
+    padding-block: 3.5rem 4.5rem;
   }
 
   .storyIntro {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
   }
 
   .storyIntro h2 span,

@@ -107,3 +107,24 @@ test("trial CTA and each booking plan leave exactly one calendar iframe", async 
     }
   }
 });
+
+test("an unknown route survives refresh and offers a keyboard link home", async ({ page }) => {
+  await page.goto("/bananas");
+  const content = page.getByRole("main");
+  const heading = content.getByRole("heading", { name: "Page not found.", level: 1 });
+  const home = content.getByRole("link", { name: "Back to Home" });
+
+  await expect(heading).toBeVisible();
+  await page.reload();
+  await expect(page).toHaveURL(/\/bananas$/);
+  await expect(page).toHaveTitle("Page not found | Portuguese with Thais");
+  await expect(page.getByRole("banner")).toBeVisible();
+  await expect(page.getByRole("contentinfo")).toBeVisible();
+  await expect(heading).toBeVisible();
+
+  await home.focus();
+  await expect(home).toBeFocused();
+  await home.press("Enter");
+  await expect(page).toHaveURL("/");
+  await expect(page.getByRole("heading", { name: "Build your voice in Brazilian Portuguese." })).toBeVisible();
+});

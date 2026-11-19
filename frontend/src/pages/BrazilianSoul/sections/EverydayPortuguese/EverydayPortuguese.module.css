@@ -1,5 +1,5 @@
 .section {
-  padding: clamp(7rem, 11vw, 11rem) 0;
+  padding-block: clamp(4.5rem, 8vw, 8rem);
 }
 
 .header {
@@ -92,7 +92,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 5rem 0;
+    padding-block: 4rem;
   }
 
   .header,

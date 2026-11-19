@@ -5,7 +5,7 @@
 }
 
 .hero {
-  padding: clamp(7rem, 11vw, 10rem) 0 clamp(6rem, 9vw, 9rem);
+  padding-block: var(--inner-hero-start) clamp(3rem, 5vw, 5rem);
 }
 
 .heroGrid {
@@ -125,7 +125,7 @@
 }
 
 .lessonSection {
-  padding: clamp(6rem, 10vw, 10rem) 0;
+  padding-block: clamp(4rem, 7vw, 7rem);
 
   border-top: 1px solid var(--color-border);
 }
@@ -221,7 +221,7 @@
 }
 
 .pricing {
-  padding: clamp(7rem, 11vw, 10rem) 0;
+  padding-block: clamp(4.5rem, 7vw, 7rem);
 }
 
 .pricingHeader {
@@ -341,7 +341,7 @@
 }
 
 .trial {
-  padding: clamp(6rem, 10vw, 9rem) 0;
+  padding-block: clamp(4.5rem, 7vw, 7rem);
 
   background-color: var(--color-primary);
   color: var(--color-text-light);
@@ -449,7 +449,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 5.5rem 0 4.5rem;
+    padding-block-end: 3rem;
   }
 
   .heroGrid {
@@ -498,7 +498,7 @@
   .lessonSection,
   .pricing,
   .trial {
-    padding: 5rem 0;
+    padding-block: 4rem;
   }
 
   .lessonGrid,

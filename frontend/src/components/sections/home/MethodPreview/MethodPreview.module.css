@@ -1,5 +1,5 @@
 .section {
-  padding-block: clamp(5.5rem, 9vw, 8rem);
+  padding-block: clamp(4rem, 6vw, 6rem) clamp(6rem, 9.5vw, 8.5rem);
 
   color: var(--color-primary);
   background-color: var(--color-background);
@@ -235,7 +235,7 @@
 
 @media (max-width: 600px) {
   .section {
-    padding-block: 4.5rem;
+    padding-block: 3.5rem 5rem;
   }
 
   .header {

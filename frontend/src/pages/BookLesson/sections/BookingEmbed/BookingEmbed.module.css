@@ -1,6 +1,6 @@
 
 .section {
-  padding: clamp(6rem, 10vw, 10rem) 0;
+  padding-block: clamp(4.5rem, 7vw, 7rem);
   scroll-margin-top: 88px;
 
   background-color: color-mix(

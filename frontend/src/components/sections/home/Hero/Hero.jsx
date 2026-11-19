@@ -10,8 +10,8 @@ function Hero() {
         </span>
 
         <h1 className={styles.title}>
-          Build your <span className={styles.keepTogether}>voice <em>in</em></span>{" "}
-          <em>Brazilian Portuguese.</em>
+          Build your voice{" "}
+          <em>in Brazilian Portuguese.</em>
         </h1>
 
         <p className={styles.description}>
