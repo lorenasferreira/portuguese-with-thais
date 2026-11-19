@@ -113,3 +113,16 @@
     font-size: clamp(3rem, 17vw, 5rem);
   }
 }
+
+@media (max-width: 600px) {
+  .expressions article {
+    align-content: start;
+    padding: 1.5rem 1rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .expression h3 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+    overflow-wrap: anywhere;
+  }
+}

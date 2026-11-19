@@ -143,8 +143,11 @@ function AboutStory() {
             <span className={styles.sectionLabel}>Today</span>
 
             <h3>
-              Every student arrives
-              <span>with a different story.</span>
+              Every student{" "}
+              <span className={styles.keepTogether}>
+                arrives{" "}<span className={styles.accent}>with</span>
+              </span>{" "}
+              <span className={`${styles.accent} ${styles.accentEnd}`}>a different story.</span>
             </h3>
 
             <p>

@@ -118,8 +118,12 @@ function BookingEmbed() {
             <span>Choose your lesson time</span>
 
             <h2>
-              Find the time and plan{" "}
-              <span>that work for you.</span>
+              Find the time{" "}
+              <span className={styles.keepTogether}>
+                and plan<br className={styles.tabletBreak} />{" "}
+                <span className={styles.accentStart}>that</span>
+              </span>{" "}
+              <span className={styles.accentEnd}>work for you.</span>
             </h2>
 
             <p>

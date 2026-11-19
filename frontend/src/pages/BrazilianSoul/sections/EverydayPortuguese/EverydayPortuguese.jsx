@@ -1,3 +1,4 @@
+import MobileCardRail from "../../../../components/common/MobileCardRail/MobileCardRail";
 import SectionContainer from "../../../../components/common/SectionContainer/SectionContainer";
 
 import { expressions } from "../../cultureData";
@@ -25,7 +26,7 @@ function EverydayPortuguese() {
           </p>
         </div>
 
-        <div className={styles.expressions}>
+        <MobileCardRail className={styles.expressions} label="Everyday expressions">
           {expressions.map((item) => (
             <article key={item.expression}>
               <div className={styles.expression}>
@@ -36,7 +37,7 @@ function EverydayPortuguese() {
               <p>{item.context}</p>
             </article>
           ))}
-        </div>
+        </MobileCardRail>
       </SectionContainer>
     </section>
   );

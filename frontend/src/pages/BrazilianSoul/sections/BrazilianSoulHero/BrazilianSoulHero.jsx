@@ -10,8 +10,11 @@ function BrazilianSoulHero() {
           <span className={styles.eyebrow}>The Brazilian Soul</span>
 
           <h1>
-            Portuguese lives
-            <span>beyond the textbook.</span>
+            Portuguese{" "}
+            <span className={styles.keepTogether}>
+              lives{" "}<span className={styles.accent}>beyond</span>
+            </span>{" "}
+            <span className={`${styles.accent} ${styles.accentEnd}`}>the textbook.</span>
           </h1>
 
           <p>

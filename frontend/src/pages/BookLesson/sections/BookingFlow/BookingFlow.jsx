@@ -1,3 +1,4 @@
+import MobileCardRail from "../../../../components/common/MobileCardRail/MobileCardRail";
 import SectionContainer from "../../../../components/common/SectionContainer/SectionContainer";
 
 import styles from "./BookingFlow.module.css";
@@ -38,7 +39,7 @@ function BookingFlow() {
           </h2>
         </div>
 
-        <div className={styles.steps}>
+        <MobileCardRail className={styles.steps} label="How booking works">
           {steps.map((step) => (
             <article key={step.number}>
               <span className={styles.number}>{step.number}</span>
@@ -48,7 +49,7 @@ function BookingFlow() {
               <p>{step.text}</p>
             </article>
           ))}
-        </div>
+        </MobileCardRail>
       </SectionContainer>
     </section>
   );

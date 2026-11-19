@@ -38,8 +38,11 @@
   letter-spacing: -0.055em;
 }
 
-.title span {
-  display: block;
+.keepTogether {
+  white-space: nowrap;
+}
+
+.title em {
   color: var(--color-accent-text);
   font-style: italic;
 }

@@ -29,9 +29,7 @@
   line-height: 1;
 }
 
-.header h2 span {
-  display: block;
-
+.header h2 .accentStart {
   font-family: var(--font-accent);
   font-weight: 400;
 }
@@ -108,11 +106,6 @@
     grid-template-columns: 1fr;
   }
 
-  .header h2 span {
-    display: inline;
-    margin-left: 0.2em;
-  }
-
   .largeVisual {
     min-height: 430px;
   }
@@ -123,5 +116,12 @@
 
   .side a {
     margin-top: 1rem;
+  }
+}
+
+@media (width > 768px) {
+  .keepTogether {
+    display: inline-block;
+    max-width: 100%;
   }
 }

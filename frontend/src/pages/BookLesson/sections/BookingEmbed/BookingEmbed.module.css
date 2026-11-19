@@ -36,9 +36,8 @@
   line-height: 1;
 }
 
-.intro h2 span {
-  display: block;
-
+.intro h2 .accentStart,
+.intro h2 .accentEnd {
   font-family: var(--font-accent);
   font-weight: 400;
 }
@@ -117,7 +116,11 @@
 }
 
 @media (max-width: 600px) {
-  .intro h2 span {
+  .section {
+    padding-top: 3rem;
+  }
+
+  .intro h2 .accentStart {
     display: inline;
     margin-left: 0.2em;
   }
@@ -152,3 +155,24 @@
 
 .disclosure strong { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
 .calendarLinks { font-size: 0.8rem; line-height: 1.7; margin: 0 0 1rem; }
+
+.tabletBreak {
+  display: none;
+}
+
+@media (600px < width <= 800px) {
+  .tabletBreak {
+    display: inline;
+  }
+}
+
+@media (width > 800px) {
+  .keepTogether {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .intro h2 .accentEnd {
+    display: block;
+  }
+}

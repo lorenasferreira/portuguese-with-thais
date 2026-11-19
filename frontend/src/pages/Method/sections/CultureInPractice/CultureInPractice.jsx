@@ -14,8 +14,10 @@ function CultureInPractice() {
             <span className={styles.label}>Culture in practice</span>
 
             <h2>
-              Sometimes the lesson starts
-              <span>with a song.</span>
+              Sometimes the lesson{" "}
+              <span className={styles.keepTogether}>
+                starts{" "}<span className={styles.accentStart}>with a song.</span>
+              </span>
             </h2>
           </div>
 

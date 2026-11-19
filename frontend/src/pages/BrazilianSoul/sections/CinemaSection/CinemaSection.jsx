@@ -1,3 +1,4 @@
+import MobileCardRail from "../../../../components/common/MobileCardRail/MobileCardRail";
 import SectionContainer from "../../../../components/common/SectionContainer/SectionContainer";
 
 import { films } from "../../cultureData";
@@ -22,7 +23,7 @@ function CinemaSection() {
           </p>
         </div>
 
-        <div className={styles.grid}>
+        <MobileCardRail className={styles.grid} label="Films and series">
           {films.map((film, index) => (
             <article
               key={film.title}
@@ -46,7 +47,7 @@ function CinemaSection() {
               </div>
             </article>
           ))}
-        </div>
+        </MobileCardRail>
       </SectionContainer>
     </section>
   );

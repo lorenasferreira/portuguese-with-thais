@@ -1,3 +1,4 @@
+import MobileCardRail from "../../../../components/common/MobileCardRail/MobileCardRail";
 import SectionContainer from "../../../../components/common/SectionContainer/SectionContainer";
 
 import { books } from "../../cultureData";
@@ -25,7 +26,7 @@ function LiteratureSection() {
           </p>
         </div>
 
-        <div className={styles.library}>
+        <MobileCardRail className={styles.library} label="Literature and books">
           {books.map((book, index) => (
             <article key={book.title} className={styles.book}>
               <span className={styles.number}>
@@ -48,7 +49,7 @@ function LiteratureSection() {
               <p>{book.note}</p>
             </article>
           ))}
-        </div>
+        </MobileCardRail>
       </SectionContainer>
     </section>
   );

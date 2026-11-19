@@ -119,3 +119,11 @@
 }
 .book h3 a:hover, .book h3 a:focus-visible { text-decoration: underline; text-underline-offset: 0.15em; }
 .external { display: inline-block; font-family: var(--font-body); font-size: 0.55em; color: var(--color-accent-text); vertical-align: middle; }
+
+@media (max-width: 600px) {
+  .book {
+    align-content: start;
+    padding: 1.25rem 0.875rem;
+    border: 1px solid var(--color-border);
+  }
+}

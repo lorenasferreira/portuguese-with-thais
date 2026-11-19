@@ -11,7 +11,7 @@ function BookingHero() {
 
           <h1>
             Your Portuguese journey
-            <span>starts with one conversation.</span>
+            <span>starts with one <span className={styles.lastWord}>conversation.</span></span>
           </h1>
 
           <p>
