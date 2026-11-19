@@ -34,7 +34,7 @@
   font-family: var(--font-heading);
   font-size: clamp(4rem, 7vw, 7.5rem);
   font-weight: 600;
-  line-height: 0.92;
+  line-height: 0.97;
   letter-spacing: -0.055em;
 }
 
@@ -164,7 +164,7 @@
 
   .title {
     font-size: clamp(3.1rem, 16vw, 4.8rem);
-    line-height: 0.95;
+    line-height: 1;
   }
 
   .description {

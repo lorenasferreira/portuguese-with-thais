@@ -30,7 +30,7 @@ Avoid:
 
 Tokens are defined in:
 
-`src/styles/variables.css`
+[`frontend/src/styles/variables.css`](frontend/src/styles/variables.css)
 
 Use design tokens instead of hardcoded colors whenever possible.
 
@@ -73,13 +73,15 @@ Current font roles:
 --font-body
 --font-heading
 --font-accent
+--font-ui
 ```
 
 Use:
 
-- Body font for paragraphs, UI, navigation and clean headings
-- Heading serif for editorial moments and quotes
-- Accent font for selected words and expressive highlights
+- DM Sans for body copy and light headings
+- Playfair Display for editorial headings, the wordmark and quotes
+- Fraunces for selected words and expressive highlights
+- Manrope for UI details
 
 Do not use the same serif treatment on every heading.
 
@@ -152,7 +154,7 @@ Maintain visible keyboard focus states for interactive elements.
 
 ## Images
 
-Production photography has been optimized to WebP.
+Key production photographs use responsive WebP variants. Existing JPEG and AVIF files serve specific sections.
 
 Use:
 
@@ -223,9 +225,8 @@ Important QA widths currently include:
 
 ```text
 320px
-375px
+390px
 768px
-1024px
 1440px
 ```
 
@@ -273,27 +274,7 @@ Import order:
 
 ## QA Workflow
 
-Codex is used as a development and QA assistant for audits, repetitive fixes, responsive testing and regression checks.
-
-For significant changes:
-
-```text
-Inspect
-↓
-Implement
-↓
-Lint + Build
-↓
-Browser QA
-↓
-Manual review
-↓
-Commit
-```
-
-Do not let automated fixes override intentional design decisions without manual review.
-
----
+Use the [quality checks in the README](README.md#quality-checks) when updating the design.
 
 ## Core Principles
 

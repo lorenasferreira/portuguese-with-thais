@@ -3,13 +3,10 @@ import { useEffect, useState } from "react";
 // Load an embed once it is close enough to be useful, then retain it while mounted.
 export default function useNearViewport(ref, immediate = false) {
   const [isNear, setIsNear] = useState(false);
+  const canObserve = "IntersectionObserver" in window;
 
   useEffect(() => {
-    if (immediate || isNear) return;
-    if (!("IntersectionObserver" in window)) {
-      setIsNear(true);
-      return;
-    }
+    if (immediate || isNear || !canObserve) return;
     const observer = new IntersectionObserver((entries) => {
       if (entries.some((entry) => entry.isIntersecting)) {
         setIsNear(true);
@@ -18,7 +15,7 @@ export default function useNearViewport(ref, immediate = false) {
     }, { rootMargin: "300px" });
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [ref, immediate, isNear]);
+  }, [ref, immediate, isNear, canObserve]);
 
-  return immediate || isNear;
+  return immediate || isNear || !canObserve;
 }

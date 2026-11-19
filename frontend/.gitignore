@@ -53,3 +53,7 @@ Thumbs.db
 # Vercel
 .vercel/
 frontend/.vercel/
+
+# Playwright
+/test-results/
+/playwright-report/

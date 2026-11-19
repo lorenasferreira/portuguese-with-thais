@@ -32,6 +32,7 @@ function Header() {
       return;
     }
 
+    const menuButton = menuButtonRef.current;
     const previousOverflow = document.documentElement.style.overflow;
     document.documentElement.style.overflow = "hidden";
     dialog.showModal();
@@ -46,7 +47,7 @@ function Header() {
       desktop.removeEventListener("change", onResize);
       window.removeEventListener("popstate", closeMenu);
       dialog.close();
-      if (menuButtonRef.current?.offsetParent !== null) menuButtonRef.current?.focus();
+      if (menuButton && menuButton.offsetParent !== null) menuButton.focus();
     };
   }, [isMenuOpen]);
 
